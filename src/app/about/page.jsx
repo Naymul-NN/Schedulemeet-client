@@ -8,8 +8,8 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className=" aboutPageContainer bg-red-200 ">
-      <div className="aboutPageWrapper bg-sky-200  ">
+    <div className=" aboutPageContainer bg-white ">
+      <div className="aboutPageWrapper   ">
         {/* about banner starts  */}
         <AboutBanner />
         {/* about banner ends  */}
