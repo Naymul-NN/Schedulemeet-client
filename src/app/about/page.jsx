@@ -1,11 +1,23 @@
-import React from 'react';
+import AboutBanner from "@/components/about/AboutBanner";
+import React from "react";
 
-const about = () => {
-    return (
-        <div className='min-h-screen'>
-            this is about us page
-        </div>
-    );
+export const metadata = {
+  title: "About",
+  description: "Created by moniruzzaman",
 };
 
-export default about;
+const About = () => {
+  return (
+    <div className=" aboutPageContainer bg-red-200 ">
+      <div className="aboutPageWrapper bg-sky-200  ">
+        {/* about banner starts  */}
+        <AboutBanner />
+        {/* about banner ends  */}
+
+        {/*  */}
+      </div>
+    </div>
+  );
+};
+
+export default About;
