@@ -7,12 +7,12 @@ const Identity = () => {
         {/* left container starts  */}
         <div className="leftContainer  w-full md:w-[55%] lg:w-[50%] p-3   ">
           {/* heading  */}
-          <h1 className="  text-5xl md:text-4xl lg:text-5xl font-semibold mb-7 ">
+          <h1 className="  text-4xl lg:text-5xl font-semibold mb-5 md:mb-7 ">
             Who are we?
           </h1>
 
           {/* description  */}
-          <p className="  text-lg md:text-base lg:text-lg mb-5  ">
+          <p className="  text-base lg:text-lg mb-5  ">
             We are a diverse, collaborative team committed to perfecting the way
             companies engage with talent. We’re creating a better experience for
             employers, recruiters, and candidates. Each team member has a

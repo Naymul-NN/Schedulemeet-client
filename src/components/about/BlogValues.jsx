@@ -26,9 +26,9 @@ const companyValueData = [
   },
   {
     id: 4,
-    title:
+    title: "We look for creative solutions",
+    description:
       "We never stop improving — we’re committed to building a transformational platform for recruiting teams and their talent. We strive to wow and delight our customers with the value created by our product at every opportunity. We share a passion for automation and AI, but never lose sight of what makes our product exceptional — the human element.",
-    description: "",
   },
   {
     id: 5,
