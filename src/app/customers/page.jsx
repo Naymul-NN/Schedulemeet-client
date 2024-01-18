@@ -1,9 +1,16 @@
+import CustomersPage from '@/components/customers/CustomersPage';
 import React from 'react';
 
+export const metadata = {
+    title: "Customer Stories",
+    description: "Best customer service",
+  };
+
 const customer = () => {
+    
     return (
-        <div className='min-h-screen'>
-            this is customer page
+        <div>
+            <CustomersPage></CustomersPage>
         </div>
     );
 };
