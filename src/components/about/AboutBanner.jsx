@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutBanner = () => {
   return (
-    <div className="aboutBannerContainer">
+    <div className="aboutBannerContainer  py-10 ">
       <div className="bannerWrapper  flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center  ">
         {/* banner left starts  */}
         <div className="bannerLeft  w-[100%] md:w-[55%] lg:w-[58%] p-1 ">

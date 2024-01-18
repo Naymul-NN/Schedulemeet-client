@@ -1,4 +1,5 @@
 import AboutBanner from "@/components/about/AboutBanner";
+import Identity from "@/components/about/Identity";
 import React from "react";
 
 export const metadata = {
@@ -13,6 +14,12 @@ const About = () => {
         {/* about banner starts  */}
         <AboutBanner />
         {/* about banner ends  */}
+
+        {/* identity section starts  */}
+        <div className="identitySection  ">
+          <Identity />
+        </div>
+        {/* identity section ends */}
 
         {/*  */}
       </div>
