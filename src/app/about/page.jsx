@@ -1,4 +1,5 @@
 import AboutBanner from "@/components/about/AboutBanner";
+import BlogValues from "@/components/about/BlogValues";
 import Identity from "@/components/about/Identity";
 import React from "react";
 
@@ -23,9 +24,7 @@ const About = () => {
 
         {/* value section starts  */}
         <div className="valueContainer">
-          <h1>BlogValues </h1>
-          <h1>BlogValues </h1>
-          <h1>BlogValues </h1>
+          <BlogValues />
         </div>
         {/* value section ends  */}
 
