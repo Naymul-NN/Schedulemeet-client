@@ -43,7 +43,7 @@ const AboutBanner = () => {
 
         <div className="bannerRight   w-[90%] md:w-[45%] lg:w-[42%] ">
           {/* banner image section starts  */}
-          <div className="bannerImg   ">
+          <div className="bannerImg  w-[75%] sm:w-[85%] md:w-full  m-auto    ">
             <img
               src="https://i.ibb.co/wBrFvkt/banner-Img.png"
               className=" w-full h-full "
