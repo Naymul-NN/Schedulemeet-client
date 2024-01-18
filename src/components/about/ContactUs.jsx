@@ -2,8 +2,8 @@
 
 const ContactUs = () => {
   return (
-    <section className="bg-gray-300 max-w-6xl mx-auto rounded-xm shadow-xl mt-5 ">
-      <div className=" lg:py-16 px-4 mx-auto max-w-screen-md">
+    <section className="bg-gray-300 max-w-6xl mx-auto rounded-xl my-6 shadow-xl mt-5 ">
+      <div className=" py-3 lg:py-10 px-4 mx-auto max-w-screen-md">
         <h2 className="my-2 text-4xl tracking-tight font-extrabold text-center text-gray-900">
           Contact Us
         </h2>
@@ -64,7 +64,7 @@ const ContactUs = () => {
           </div>
           <button
             type="submit"
-            className="py-3 px-2 rounded-md shadow-xl bg-green-600 active:scale-95"
+            className="py-3 px-2 rounded-md shadow-xl bg-green-700 hover:opacity-60 active:scale-95"
           >
             Send message
           </button>
