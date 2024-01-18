@@ -30,7 +30,7 @@ const Identity = () => {
         {/* left container endss  */}
 
         {/* right container starts  */}
-        <div className="rightCOntainer  bg-blue-300 w-[45%] lg:w-[50%]  ">
+        <div className="rightCOntainer  bg-blue-400 w-[45%] lg:w-[50%]  ">
           <h1>right container</h1>
           <h1>right container</h1>
           <h1>right container</h1>
