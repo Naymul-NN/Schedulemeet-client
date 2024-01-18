@@ -21,6 +21,14 @@ const About = () => {
         </div>
         {/* identity section ends */}
 
+        {/* value section starts  */}
+        <div className="valueContainer">
+          <h1>BlogValues </h1>
+          <h1>BlogValues </h1>
+          <h1>BlogValues </h1>
+        </div>
+        {/* value section ends  */}
+
         {/*  */}
       </div>
     </div>
