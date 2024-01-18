@@ -1,5 +1,6 @@
 import AboutBanner from "@/components/about/AboutBanner";
 import React from "react";
+import Benefits from "./../../components/about/Benefits";
 
 export const metadata = {
   title: "About",
@@ -16,6 +17,8 @@ const About = () => {
 
         {/*  */}
       </div>
+      {/* benefits section */}
+      <Benefits />
     </div>
   );
 };
