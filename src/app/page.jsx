@@ -1,10 +1,14 @@
+import Banner from '@/components/banner/Banner ';
+import Container from '@/components/container/Container';
 import React from 'react';
 
 const page = () => {
   return (
-    <div className='min-h-screen'>
-      <h1>hello</h1>
-    </div>
+    <Container>
+      <div className='min-h-screen'>
+        <Banner></Banner>
+      </div>
+    </Container>
   );
 };
 
