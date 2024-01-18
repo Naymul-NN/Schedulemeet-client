@@ -1,4 +1,7 @@
 import AboutBanner from "@/components/about/AboutBanner";
+import BlogValues from "@/components/about/BlogValues";
+import Identity from "@/components/about/Identity";
+import WorkInfo from "@/components/about/WorkInfo";
 import React from "react";
 import Benefits from "./../../components/about/Benefits";
 
@@ -14,6 +17,24 @@ const About = () => {
         {/* about banner starts  */}
         <AboutBanner />
         {/* about banner ends  */}
+
+        {/* identity section starts  */}
+        <div className="identitySection  ">
+          <Identity />
+        </div>
+        {/* identity section ends */}
+
+        {/* work info section starts */}
+        <div className="workSection">
+          <WorkInfo />
+        </div>
+        {/* work info section ends */}
+
+        {/* value section starts  */}
+        <div className="valueContainer">
+          <BlogValues />
+        </div>
+        {/* value section ends  */}
 
         {/*  */}
       </div>
