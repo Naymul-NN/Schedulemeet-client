@@ -3,18 +3,19 @@ import benefitsImage from "../../assets/benefits.png";
 
 const Benefits = () => {
     // TODO: add more features
+    
   const benefits = [
     "Easy to Navigate",
     "Appoint Swiftly",
     "Create Event seamless",
-    "Organaize Seinar or workshop",
+    "Organize Seminar or workshop",
     "Email Remainders"
   ];
 
   return (
-    <section className="max-6xl min-h-52 mx-auto bg-teal-100 px-4 py-3 my-5">
-      <h2 className="text-gray-800 text-3xl font-bold text-center my-5">
-        Why Should use ScheduleMeet
+    <section className="max-w-6xl min-h-52 mx-auto bg-teal-200 px-4 py-6 my-5 rounded-xl shadow-sm">
+      <h2 className="text-gray-800 text-4xl font-bold text-center my-5">
+        Why Should Use ScheduleMeet
       </h2>
       <div className="flex flex-col lg:flex-row items-center justify-around">
         {/* text section */}
@@ -37,6 +38,7 @@ const Benefits = () => {
             alt="benefits"
             height={500}
             width={350}
+            className="rounded-xl shadow-sm"
           />
         </div>
       </div>
