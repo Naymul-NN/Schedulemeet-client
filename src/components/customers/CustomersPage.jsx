@@ -1,11 +1,14 @@
-"use client"
+
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 
 
- function CustomerPages() {
+
+ const CustomerPages = () => {
+
+
 
 
     return (<>
@@ -19,8 +22,9 @@ import Link from 'next/link';
             
 
 
-          <div className="flex xl:flex-row lg:flex-row flex-col-reverse xl:justify-between lg:justify-between items-center">
-          <div className="xl:w-[55%] lg:w-[80%]">
+          <div className="flex justify-between items-center xl:flex-row lg:flexrow flex-col-reverse">
+            
+          <div className="xl:w-[55%] lg:w-[80%] w-[100%]">
             <h2 className="text-[#33A30F] text-[25px] font-bold">Customer story</h2>
             <p className="xl:text-[40px] lg:text-[30px] md:text-[30px] text-[20px] font-bold my-4">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
 
@@ -55,11 +59,11 @@ import Link from 'next/link';
 
       {/* See how Sense helps recruiting teams achieve their goals */}
       <div className="bg-[#fff] text-black min-h-[600px]">
-<div className="w-[70%] mx-auto">
+<div className="xl:w-[70%] lg:w-[70%] w-[95%] mx-auto">
 
 
       <div>
-         <h2 className="w-[40%] mx-auto text-center text-[45px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
+         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center xl:text-[45px] lg:text-[40px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
       </div>
 
 
@@ -67,7 +71,7 @@ import Link from 'next/link';
       {/* start grid section */}
 <div>
 
- <div className='grid grid-cols-3 gap-8'>
+ <div className='grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-8'>
 
 <div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
 <div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
@@ -262,13 +266,13 @@ import Link from 'next/link';
 {/* Get a customized demo today start */}
 <div className='bg-[#111133] text-white'>
 
-    <div className="w-[70%] mx-auto h-[800px]">
+    <div className="xl:w-[70%] lg:w-[70%] w-[90%] mx-auto h-[800px]">
 
-     <div className='flex justify-center items-center h-full'>
-     <div className='w-[50%]'>
+     <div className='flex justify-center items-center h-full xl:flex-row lg:flex-row flex-col-reverse'>
+     <div className='xl:w-[50%] lg:w-[60%] w-[100%]'>
 
      <div className='my-4'>
-     <h2 className='text-[#33A310] my-4 font-bold text-[60px]'>
+     <h2 className='text-[#33A310] my-4 font-bold xl:text-[60px] lg:text-[35px]'>
         Get a customized demo today
         </h2>
 
@@ -284,8 +288,8 @@ import Link from 'next/link';
     <Image
       src="https://i.ibb.co/kQwV8gx/6411ae2e34027017b4d04c4a-Group-678-p-1600.webp"
       alt="Picture of the author"
-      width={600}
-      height={600}
+      width={500}
+      height={500}
     />
     </div>
 
@@ -304,12 +308,12 @@ import Link from 'next/link';
 {/* More than 1,000 businesses use Sense to scale their hiring start */}
 
 <div className='bg-white text-black'>
-<div className="w-[70%] mx-auto h-[600px]">
+<div className="xl:w-[70%] lg:w-[70%] w-[100%] mx-auto h-[600px]">
 
-<div className='flex gap-10 items-center h-full justify-center'>
+<div className='flex xl:flex-row lg:flex-row flex-col gap-10 items-center h-full justify-center'>
 
 <div className='w-[40%]'>
-  <h2 className='text-[45px]'>
+  <h2 className='xl:text-[45px] lg:text-[40px] md:text-[30px] text-[20px]'>
   More than 1,000 businesses use Sense to scale their hiring
   </h2>
 </div>
