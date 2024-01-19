@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
       <div className="navbar text-white">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-50">
             <div
               tabIndex={0}
               role="button"

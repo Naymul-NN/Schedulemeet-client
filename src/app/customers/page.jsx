@@ -7,7 +7,7 @@ export const metadata = {
     description: "Best customer service",
   };
 
-  function CustomerPage() {
+  const CustomerPage = () => {
 
   return(<>
   
