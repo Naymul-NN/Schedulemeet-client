@@ -26,9 +26,9 @@ const companyValueData = [
   },
   {
     id: 4,
-    title:
+    title: "We look for creative solutions",
+    description:
       "We never stop improving — we’re committed to building a transformational platform for recruiting teams and their talent. We strive to wow and delight our customers with the value created by our product at every opportunity. We share a passion for automation and AI, but never lose sight of what makes our product exceptional — the human element.",
-    description: "",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const companyValueData = [
 const BlogValues = () => {
   return (
     <div className="blogValueCOntainer  py-10 px-3 ">
-      <div className="valueWrapper   m-auto grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-9 ">
+      <div className="valueWrapper  grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-9  w-[96%] sm:w-[94%]  md:w-[92%] lg:w-[90%] m-auto  ">
         {/* card component  */}
 
         {companyValueData &&

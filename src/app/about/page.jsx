@@ -3,6 +3,8 @@ import BlogValues from "@/components/about/BlogValues";
 import Identity from "@/components/about/Identity";
 import WorkInfo from "@/components/about/WorkInfo";
 import React from "react";
+import Benefits from "./../../components/about/Benefits";
+import ContactUs from "@/components/about/ContactUs";
 
 export const metadata = {
   title: "About",
@@ -37,6 +39,10 @@ const About = () => {
 
         {/*  */}
       </div>
+      {/* benefits section */}
+      <Benefits />
+      {/* Contact Us Section */}
+      <ContactUs/>
     </div>
   );
 };

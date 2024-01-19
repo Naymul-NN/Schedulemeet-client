@@ -3,15 +3,15 @@ import React from "react";
 const AboutBanner = () => {
   return (
     <div className="aboutBannerContainer  py-10 ">
-      <div className="bannerWrapper  flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center  ">
+      <div className="bannerWrapper  flex flex-col gap-12 md:gap-0 md:flex-row justify-between items-center w-[96%] sm:w-[94%]  md:w-[92%] lg:w-[90%] m-auto ">
         {/* banner left starts  */}
         <div className="bannerLeft  w-[100%] md:w-[55%] lg:w-[58%] p-1 ">
-          <h1 className=" text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold text-[#33A30F] mb-4 lg:mb-6 ">
+          <h1 className=" text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold text-[#33A30F] mb-2.5 sm:mb-4 lg:mb-6 ">
             About us
           </h1>
 
           {/*  small description  */}
-          <p className=" font-semibold text-3xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight  text-[#111133] mb-6 md:mb-7 lg:mb-9 ">
+          <p className=" font-semibold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight  text-[#111133] mb-6 md:mb-7 lg:mb-9 ">
             We’re changing how companies hire amazing talent
           </p>
 
@@ -41,11 +41,11 @@ const AboutBanner = () => {
 
         {/* bannerRight starts  */}
 
-        <div className="bannerRight  w-full md:w-[45%] lg:w-[42%] ">
+        <div className="bannerRight   w-[90%] md:w-[45%] lg:w-[42%] ">
           {/* banner image section starts  */}
-          <div className="bannerImg   ">
+          <div className="bannerImg  w-[75%] sm:w-[85%] md:w-full  m-auto    ">
             <img
-              src="https://i.ibb.co/YQCT7rn/ABU-UBAIDAH-750x430-1.jpg"
+              src="https://i.ibb.co/wBrFvkt/banner-Img.png"
               className=" w-full h-full "
               alt=""
             />
