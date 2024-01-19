@@ -52,7 +52,7 @@ const WorkInfo = () => {
               {/* card top  */}
 
               {/* card bottom , info  */}
-              <h1 className=" text-base sm:text-lg md:text-xl text-gray-50 ">
+              <h1 className=" text-base sm:text-lg md:text-xl text-gray-50   ">
                 {data?.description}
               </h1>
               {/* card bottom , info  */}
