@@ -30,10 +30,14 @@ const Identity = () => {
         {/* left container endss  */}
 
         {/* right container starts  */}
-        <div className="rightCOntainer  bg-blue-400 w-[45%] lg:w-[50%]  ">
-          <h1>right container</h1>
-          <h1>right container</h1>
-          <h1>right container</h1>
+        <div className="rightCOntainer  hidden md:block md:w-[45%] lg:w-[50%]  ">
+          <div className="imgContainer  ">
+            <img
+              src="https://i.ibb.co/7QrYK9c/ball-2-removebg-preview.png"
+              alt=""
+              className=" w-full h-full "
+            />
+          </div>
         </div>
         {/* right container ends */}
 
