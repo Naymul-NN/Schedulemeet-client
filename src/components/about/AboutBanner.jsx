@@ -3,7 +3,7 @@ import React from "react";
 const AboutBanner = () => {
   return (
     <div className="aboutBannerContainer  py-10 ">
-      <div className="bannerWrapper  flex flex-col gap-12 md:gap-0 md:flex-row justify-between items-center  ">
+      <div className="bannerWrapper  flex flex-col gap-12 md:gap-0 md:flex-row justify-between items-center w-[96%] sm:w-[94%]  md:w-[92%] lg:w-[90%] m-auto ">
         {/* banner left starts  */}
         <div className="bannerLeft  w-[100%] md:w-[55%] lg:w-[58%] p-1 ">
           <h1 className=" text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold text-[#33A30F] mb-2.5 sm:mb-4 lg:mb-6 ">
