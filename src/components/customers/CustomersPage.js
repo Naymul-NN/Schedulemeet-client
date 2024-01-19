@@ -1,10 +1,13 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 
 
+ function CustomerPages() {
 
-const CustomersPage = () => {
+
     return (<>
 
     {/* Customer story */}
@@ -338,9 +341,20 @@ const CustomersPage = () => {
 
 {/* More than 1,000 businesses use Sense to scale their hiring end */}
 
+
+{/* testimonials */}
+<div>
+
+
+
+
+</div>
+
+
+
       
       </>
     );
 };
 
-export default CustomersPage;
+export default CustomerPages;
