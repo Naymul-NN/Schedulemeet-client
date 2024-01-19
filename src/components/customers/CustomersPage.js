@@ -19,10 +19,10 @@ import Link from 'next/link';
             
 
 
-          <div className="flex justify-between">
-          <div className="w-[50%]">
+          <div className="flex xl:flex-row lg:flex-row flex-col-reverse xl:justify-between lg:justify-between items-center">
+          <div className="xl:w-[55%] lg:w-[80%]">
             <h2 className="text-[#33A30F] text-[25px] font-bold">Customer story</h2>
-            <p className="text-[50px] font-bold">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
+            <p className="xl:text-[40px] lg:text-[30px] md:text-[30px] text-[20px] font-bold my-4">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
 
             <button className="px-6 py-2 border-2 hover:bg-[#715FE0] hover:border-transparent font-medium">Read their Story</button>
             </div>

@@ -1,8 +1,11 @@
 import React from 'react';
+import navBarStyle from "../../components/navbar/Navbar.css";
 
 const Footer = () => {
     return (
-        <div className='py-4'>
+
+      <div>
+<div className='py-4 '>
 
 <h2 className='text-center pt-4 py-3'><span className='font-bold'><span className='font-bold text-[20px]'>NextApp</span></span>- Best Service</h2>
 <div className='border-b-[1px] w-[10%] border-[#585858] mx-auto'></div>
@@ -54,7 +57,7 @@ const Footer = () => {
 
 
 
-        </div>
+        </div></div>
     );
 };
 
