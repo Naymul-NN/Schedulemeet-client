@@ -254,7 +254,9 @@ const CustomersPage = () => {
 
  {/* start grid section */}
 </div>
+</div>
 
+{/* Get a customized demo today start */}
 <div className='bg-[#111133] text-white'>
 
     <div className="w-[70%] mx-auto h-[800px]">
@@ -293,13 +295,49 @@ const CustomersPage = () => {
 
 
 </div>
+{/* Get a customized demo today end */}
+
+      
+{/* More than 1,000 businesses use Sense to scale their hiring start */}
+
+<div className='bg-white text-black'>
+<div className="w-[70%] mx-auto h-[600px]">
+
+<div className='flex gap-10 items-center h-full justify-center'>
+
+<div className='w-[40%]'>
+  <h2 className='text-[45px]'>
+  More than 1,000 businesses use Sense to scale their hiring
+  </h2>
+</div>
+
+<div>
+<Image
+      src="https://i.ibb.co/NndVqB0/655b4e8c9706155d1eb47f6a-new-logos111.webp"
+      alt="Picture of the author"
+      width={600}
+      height={600}
+    />
+    <h2 className='text-center'>…and more</h2>
+</div>
+
+
+
+</div>
+
+
+
+</div>
 
 
 
 
 
 </div>
-      
+
+
+{/* More than 1,000 businesses use Sense to scale their hiring end */}
+
       
       </>
     );
