@@ -3,7 +3,7 @@ import React from "react";
 const Identity = () => {
   return (
     <div className="identityContainer py-12 bg-red-50 ">
-      <div className="identityWrapper flex  flex-col md:flex-row  gap-y-6 md:gap-y-0 justify-between items-center text-gray-900   ">
+      <div className="identityWrapper flex  flex-col md:flex-row  gap-y-6 md:gap-y-0 justify-between items-center text-gray-900  w-[96%] sm:w-[94%]  md:w-[92%] lg:w-[90%] m-auto  ">
         {/* left container starts  */}
         <div className="leftContainer  w-full md:w-[55%] lg:w-[50%] p-3   ">
           {/* heading  */}

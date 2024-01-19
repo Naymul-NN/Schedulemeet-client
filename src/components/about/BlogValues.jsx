@@ -41,7 +41,7 @@ const companyValueData = [
 const BlogValues = () => {
   return (
     <div className="blogValueCOntainer  py-10 px-3 ">
-      <div className="valueWrapper   m-auto grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-9 ">
+      <div className="valueWrapper  grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-9  w-[96%] sm:w-[94%]  md:w-[92%] lg:w-[90%] m-auto  ">
         {/* card component  */}
 
         {companyValueData &&
