@@ -2,7 +2,7 @@
 
 const Container = ({children}) => {
     return (
-        <div className=" mx-auto">
+        <div className="max-w-[90%] mx-auto">
             {children}
         </div>
     );
