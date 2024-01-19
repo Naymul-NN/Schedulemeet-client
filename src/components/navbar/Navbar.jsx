@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
+
 const Navbar = () => {
     return (
         <div>
@@ -24,9 +25,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li>
-                        <Link href="/">Home</Link>
-                        </li>
+                        <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About</Link></li>
                         <li><Link href="/customers">Customer</Link></li>
                         <li><Link href="blog">Blog</Link></li>
@@ -34,7 +33,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href="/#" className="btn">Sign up</Link>
+                    <Link href="/#" className="border-2 hover:bg-[#4F43A1] rounded-full px-4 py-[6px]">Sign up</Link>
                 </div>
             </div>
         </div>
