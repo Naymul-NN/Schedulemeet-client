@@ -1,12 +1,13 @@
-import Banner from '@/components/banner/Banner ';
+
 import Container from '@/components/container/Container';
+import Homepage from '@/pages/HomePage/Homepage';
 import React from 'react';
 
 const page = () => {
   return (
     <Container>
       <div className='min-h-screen'>
-        <Banner></Banner>
+        <Homepage></Homepage>
       </div>
     </Container>
   );
