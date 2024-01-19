@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 
@@ -254,15 +255,37 @@ const CustomersPage = () => {
  {/* start grid section */}
 </div>
 
-<div>
+<div className='bg-[#111133] text-white'>
 
-    <div className="w-[70%] mx-auto h-[500px]">
-        <h2>
+    <div className="w-[70%] mx-auto h-[800px]">
+
+     <div className='flex justify-center items-center h-full'>
+     <div className='w-[50%]'>
+
+     <div className='my-4'>
+     <h2 className='text-[#33A310] my-4 font-bold text-[60px]'>
         Get a customized demo today
         </h2>
-        <p>See for yourself how Sense’s all-in-one talent suite helps you and your team hire faster at scale — with a whole lot less work.</p>
 
-        <Link className='border-[1px] rounded-md border-black hover:text-white hover:bg-[#000000] block w-max px-6 p-2' href="/">Get a demo</Link>
+        <p className='text-[25px] font-medium my-6'>See for yourself how Sense’s all-in-one talent suite helps you and your team hire faster at scale — with a whole lot less work.</p>
+     </div>
+
+     <div className='my-4'>
+     <Link className='border-[1px] rounded-md border-white hover:text-white hover:bg-[#715FE0] hover:border-transparent block w-max px-6 p-3' href="/">Get a demo</Link>
+     </div>
+      </div>
+    
+    <div>
+    <Image
+      src="https://i.ibb.co/kQwV8gx/6411ae2e34027017b4d04c4a-Group-678-p-1600.webp"
+      alt="Picture of the author"
+      width={600}
+      height={600}
+    />
+    </div>
+
+     </div>
+    
     </div>
 
 
