@@ -25,9 +25,11 @@ const Navbar = () => {
                     </div>
                    <div className='flex gap-2'>
                   
-                   <Image src="https://i.ibb.co/5LFVvdk/logo-white.webp"
+                   <Image className='rounded-full' src="https://i.ibb.co/5LFVvdk/logo-white.webp"
       alt="Picture of the author" width={50} height={40} />
+       <div className='xl:block lg:block md:block hidden'>
        <Link href="/" className="btn btn-ghost text-xl">ScheduleMeet</Link>
+       </div>
                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
