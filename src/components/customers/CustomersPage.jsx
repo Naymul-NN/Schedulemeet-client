@@ -63,7 +63,7 @@ import Link from 'next/link';
 
 
       <div>
-         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center xl:text-[45px] lg:text-[40px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
+         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
       </div>
 
 
@@ -71,7 +71,7 @@ import Link from 'next/link';
       {/* start grid section */}
 <div>
 
- <div className='grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-8'>
+ <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8'>
 
 <div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
 <div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
