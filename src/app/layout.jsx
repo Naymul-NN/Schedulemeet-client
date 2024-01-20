@@ -16,6 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
     
     <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
+    <link rel="icon" href="https://i.ibb.co/5LFVvdk/logo-white.webp" sizes="any" />
+      <div>
 <div className='navBarStyle static top-0 w-full z-50'>
 <div className='xl:w-[70%] w-[90%] mx-auto'>
        <Navbar></Navbar>
@@ -36,7 +38,8 @@ export default function RootLayout({ children }) {
 </div>
         
 
-        </body>
+       </div> 
+       </body>
     </html>
   )
 }
