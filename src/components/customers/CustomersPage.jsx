@@ -35,12 +35,12 @@ import Link from 'next/link';
             <div className="space-y-5">
 
             <div>
-                <h2 className="text-[60px] font-bold text-[#33A30F]">250K</h2>
+                <h2 className="text-[60px] font-bold text-[#33A30F]">230K</h2>
                 <p>Candidates reached</p>
             </div>
             
             <div>
-            <h2 className="text-[60px] font-bold text-[#33A30F]">250K</h2>
+            <h2 className="text-[60px] font-bold text-[#33A30F]">50K</h2>
                 <p>Recruiter hours saved</p>
             </div>
             <div>
@@ -312,7 +312,7 @@ import Link from 'next/link';
 
 <div className='flex xl:flex-row lg:flex-row flex-col gap-10 items-center h-full justify-center'>
 
-<div className='w-[40%]'>
+<div className='xl:w-[40%] lg:w-[40%] md:w-[40%] w-[100%] xl:text-left lg:text-left md:text-left text-center'>
   <h2 className='xl:text-[45px] lg:text-[40px] md:text-[30px] text-[20px]'>
   More than 1,000 businesses use Sense to scale their hiring
   </h2>

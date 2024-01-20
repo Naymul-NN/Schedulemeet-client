@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -22,7 +23,14 @@ const Navbar = () => {
                             <li><Link href="/dashboard">Dashboard</Link></li>
                         </ul>
                     </div>
-                    <Link href="/" className="btn btn-ghost text-xl">Next app</Link>
+                   <div className='flex gap-2'>
+                  
+                   <Image className='rounded-full' src="https://i.ibb.co/5LFVvdk/logo-white.webp"
+      alt="Picture of the author" width={50} height={40} />
+       <div className='xl:block lg:block md:block hidden'>
+       <Link href="/" className="btn btn-ghost text-xl">ScheduleMeet</Link>
+       </div>
+                   </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

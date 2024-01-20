@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     
     <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
 <div className='navBarStyle static top-0 w-full z-50'>
-<div className='w-full lg:w-[70%] mx-auto'>
+<div className='xl:w-[70%] w-[90%] mx-auto'>
        <Navbar></Navbar>
        </div>
 </div>
