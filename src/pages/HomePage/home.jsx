@@ -1,8 +1,8 @@
-import Banner from "@/components/banner/page";
-import Faq from "@/components/faq/page";
-import Records from "@/components/Records/page";
-import ScheduleFaster from "@/components/ScheduleFaster/page";
-import Reminder from "@/components/Reminder/page";
+import Banner from "@/components/banner/banner";
+import Faq from "@/components/faq/faq";
+import Records from "@/components/Records/records";
+import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
+import Reminder from "@/components/Reminder/reminder";
 
 
 const Homepage = () => {
