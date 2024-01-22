@@ -3,11 +3,12 @@ import Faq from "@/components/faq/faq";
 import Records from "@/components/Records/records";
 import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
-import TestimonialsSection from "@/components/HomePageSections/TestimonialsSection/TestimonialsSection";
+import TestimonialsSection from "@/components/HomePageSections/TestimonialsSection/TestimonialsSections";
 
 
 const Homepage = () => {
     return (
+   
         <div>
             <Banner></Banner>
             <Records></Records>
@@ -16,7 +17,9 @@ const Homepage = () => {
             <Faq></Faq>
             <TestimonialsSection></TestimonialsSection>
         </div>
-    );
+
+        
+ );
 };
 
 export default Homepage;
