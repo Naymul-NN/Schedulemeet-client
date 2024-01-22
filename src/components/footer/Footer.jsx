@@ -1,6 +1,6 @@
 import React from 'react';
 import navBarStyle from "../../components/navbar/Navbar.css";
-
+// Footer Section....
 const Footer = () => {
     return (
 
