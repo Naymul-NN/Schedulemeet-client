@@ -14,7 +14,7 @@ import Link from 'next/link';
     return (<>
 
     {/* Customer story */}
-    <div className='w-[70%] mx-auto'>
+    <div className='w-[70%] mx-auto '>
 
    
       <div className="h-[800px]">
@@ -58,7 +58,7 @@ import Link from 'next/link';
        </div>
 
       {/* See how Sense helps recruiting teams achieve their goals */}
-      <div className="bg-[#fff] text-black min-h-[600px]">
+      <div className="bg-[#fff] text-black h-auto py-10">
 <div className="xl:w-[70%] lg:w-[70%] w-[95%] mx-auto">
 
 
