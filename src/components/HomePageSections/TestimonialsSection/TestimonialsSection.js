@@ -21,7 +21,7 @@ const testimonialsData = [
     {
         username: "হাবিবুর রহমান",
         shortDescription: "Impressive features and user-friendly design.",
-        userImage: "jhttps://i.ibb.co/rfBMtHV/photo-1573603867003-89f5fd7a7576.jpg",
+        userImage: "https://i.ibb.co/rfBMtHV/photo-1573603867003-89f5fd7a7576.jpg",
         rating: [1,]
       },
       {
@@ -64,7 +64,8 @@ const testimonialsData = [
 
         return(<>
         <div>
-          <h2>{dataAll.username}</h2>
+ <h2>{dataAll.username}</h2>
+ <p>{dataAll.shortDescription}</p>
         <Image src={dataAll.userImage} alt="Profile Image" width={80} height={80}></Image>
             
         </div>
