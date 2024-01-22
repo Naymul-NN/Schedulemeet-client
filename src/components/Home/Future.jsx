@@ -3,7 +3,7 @@ import React from "react";
 
 const Future= () => {
   return (
-    <div className="identityContainer py-12 bg-gray-600 ">
+    <div className="identityContainer py-12 ">
       <div className="identityWrapper flex  flex-col md:flex-row  gap-y-6 md:gap-y-0 justify-between items-center text-gray-900   ">
 
         <div className="leftContainer  w-full md:w-[55%] lg:w-[50%] p-3   ">
@@ -23,7 +23,7 @@ const Future= () => {
         <div className="rightCOntainer  hidden md:block md:w-[45%] lg:w-[50%]  ">
           <div className="imgContainer  ">
 
-            <img src="https://i.ibb.co/LShdN5N/interview.jpg"  alt=""  className=" w-[800px] h-full rounded-xl "  />
+            <img src="https://i.ibb.co/LShdN5N/interview.jpg"  alt=""  className=" w-[700px] h-full rounded-xl "  />
           </div>
 
         </div>
