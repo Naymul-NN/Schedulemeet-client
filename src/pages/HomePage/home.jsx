@@ -7,16 +7,18 @@ import TestimonialsSection from "@/components/HomePageSections/TestimonialsSecti
 
 
 const Homepage = () => {
-    return (
+    return (<>
+   
         <div>
             <Banner></Banner>
             <Records></Records>
             <ScheduleFaster></ScheduleFaster>
             <Reminder></Reminder>
             <Faq></Faq>
-            <TestimonialsSection></TestimonialsSection>
         </div>
-    );
+
+        <TestimonialsSection></TestimonialsSection>
+    </> );
 };
 
 export default Homepage;
