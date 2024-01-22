@@ -1,9 +1,13 @@
 import React from 'react';
 
+// Footer Section....
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer grid-rows-2 p-10 bg-neutral text-neutral-content">
+
+      <div>
+<div className='py-4 '>
+
+ <footer className="footer grid grid-rows-2 p-10 bg-neutral justify-evenly items-baseline text-neutral-content">
   <nav>
     <header className="footer-title">Services</header> 
     <a className="link link-hover">Branding</a>
@@ -45,8 +49,19 @@ const Footer = () => {
     <a className="link link-hover">iPhone</a>
     <a className="link link-hover">Android</a>
   </nav>
+
+
+
+
 </footer>
-        </div>
+
+<div className='border-b-[1px] w-[100%] border-[#585858] mx-auto'></div>
+  <h2 className='text-center pt-4 py-3'><span className='font-bold'><span className='font-bold text-[18px]'>ScheduleMeet</span></span> - Best Service</h2>
+
+
+
+
+        </div></div>
     );
 };
 

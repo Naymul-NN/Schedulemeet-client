@@ -1,4 +1,5 @@
-import CustomersPage from '@/components/customers/CustomersPage';
+
+import CustomerPages from '@/components/customers/CustomersPage';
 import React from 'react';
 
 export const metadata = {
@@ -6,13 +7,15 @@ export const metadata = {
     description: "Best customer service",
   };
 
-const customer = () => {
-    
-    return (
-        <div>
-            <CustomersPage></CustomersPage>
-        </div>
-    );
-};
+  const CustomerPage = () => {
 
-export default customer;
+  return(<>
+  
+  <CustomerPages/>
+  
+  </>)
+
+
+   }
+
+   export default CustomerPage;
