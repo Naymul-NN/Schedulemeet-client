@@ -13,7 +13,7 @@ const Future= () => {
           </h1>
 
           <p className="  text-white lg:text-lg mb-5  ">
-          An interview is a formal or informal conversation between two or more people, typically between an interviewer and an interviewee. The purpose of an interview is to gather information, assess qualifications, explore opinions, or make decisions. Interviews are commonly used in various contexts, such as employment, journalism, research, and admissions.
+          An interview is a formal or informal conversation between two or more people, typically between an interviewer and an interviewee. The purpose of an interview is to gather information, assess qualifications, explore opinions, or make decisions. Interviews are commonly used in various contexts, such as employment of development, journalism, research, and admissions.
           </p>
 
           <button class="btn btn-warning px-12 text-xl">Good Interview</button>
