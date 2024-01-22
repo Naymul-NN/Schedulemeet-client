@@ -1,6 +1,6 @@
 
 import Container from '@/components/container/Container';
-import Homepage from '@/pages/HomePage/page';
+import Homepage from '@/pages/HomePage/home';
 import React from 'react';
 
 const page = () => {

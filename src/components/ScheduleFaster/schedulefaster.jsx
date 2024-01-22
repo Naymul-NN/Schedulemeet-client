@@ -1,4 +1,4 @@
-import Title from '@/shared/Title/page';
+import Title from '@/shared/Title/title';
 import React from 'react';
 import img from '../../../public/images/schedule-fast-img.webp';
 import Image from 'next/image';
