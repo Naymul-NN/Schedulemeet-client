@@ -3,11 +3,11 @@ import Faq from "@/components/faq/faq";
 import Records from "@/components/Records/records";
 import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
-import TestimonialsSection from "@/components/HomePageSections/TestimonialsSection/TestimonialsSection";
+import TestimonialsSection from "@/components/HomePageSections/TestimonialsSection/TestimonialsSections";
 
 
 const Homepage = () => {
-    return (<>
+    return (
    
         <div>
             <Banner></Banner>
@@ -15,10 +15,11 @@ const Homepage = () => {
             <ScheduleFaster></ScheduleFaster>
             <Reminder></Reminder>
             <Faq></Faq>
+            <TestimonialsSection></TestimonialsSection>
         </div>
 
-        <TestimonialsSection></TestimonialsSection>
-    </> );
+        
+ );
 };
 
 export default Homepage;

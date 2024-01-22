@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import { IoMdStarOutline } from "react-icons/io";
 const TestimonialsSection = () => {
 
-// .....Testimonials
+// .....Testimonials.....
 const testimonialsData = [
     {
       username: "Naymul Islam",
