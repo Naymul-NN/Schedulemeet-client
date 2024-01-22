@@ -28,7 +28,7 @@ import Link from 'next/link';
             <h2 className="text-[#33A30F] text-[25px] font-bold">Customer story</h2>
             <p className="xl:text-[40px] lg:text-[30px] md:text-[30px] text-[20px] font-bold my-4">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
 
-            <button className="px-6 py-2 border-2 hover:bg-[#715FE0] hover:border-transparent font-medium">Read their Story</button>
+            <button className="px-6 py-2 border-[1px] rounded-md hover:bg-[#715FE0] hover:border-transparent font-medium">Read their Story</button>
             </div>
 
 
