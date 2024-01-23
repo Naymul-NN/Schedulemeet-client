@@ -1,3 +1,4 @@
+import BlogCard from "@/components/blog/BlogCard";
 import TopArticleCard from "@/components/blog/TopArticleCard";
 import Title from "@/shared/Title/title";
 import React from "react";
@@ -5,7 +6,7 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="blogContainer bg-gray-50 text-gray-950  ">
-      <div className="blogWrapper   m-auto py-4  ">
+      <div className="blogWrapper   m-auto pt-6  ">
         {/* title section starts  */}
 
         <Title title={"The Sense Blog"} />
@@ -32,6 +33,27 @@ const Blog = () => {
           </div>
         </div>
         {/* top 3 articles section ends  */}
+
+        {/* main blog section starts  */}
+
+        <div className="allBlogs  bg-red-400 py-3 w-[90%] m-auto  ">
+          {/* title starts  */}
+          <h1 className="  text-3xl text-center font-semibold py-3   ">
+            Our Latest blogs
+          </h1>
+          {/* title ends  */}
+
+          {/* blog cards  */}
+          <div className="blogCards mt-4  bg-orange-400 grid grid-cols-3 gap-x-4 gap-y-9  ">
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+          </div>
+          {/* blog cards ends  */}
+        </div>
+
+        {/* main blog section ends  */}
 
         {/*  */}
       </div>
