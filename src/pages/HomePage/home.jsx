@@ -3,6 +3,7 @@ import Faq from "@/components/faq/faq";
 import Records from "@/components/Records/records";
 import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
+import TestimonialSec from "@/components/HomePageSections/Testimonials/TestimonialSec";
 // homepages
 
 const Homepage = () => {
@@ -14,6 +15,7 @@ const Homepage = () => {
             <ScheduleFaster></ScheduleFaster>
             <Reminder></Reminder>
             <Faq></Faq>
+            <TestimonialSec></TestimonialSec>
            
         </div>
 
