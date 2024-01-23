@@ -47,10 +47,10 @@ const AboutBanner = () => {
           <div className="bannerImg  w-[75%] sm:w-[85%] md:w-full  m-auto    ">
             <Image
               src="https://i.ibb.co/wBrFvkt/banner-Img.png"
-              className=" w-full h-full "
-              alt=""
-              height={0}
-              width={0}
+              className=""
+              alt="about banner"
+              height={500}
+              width={550}
             />
           </div>
           {/* banner image section ends */}
