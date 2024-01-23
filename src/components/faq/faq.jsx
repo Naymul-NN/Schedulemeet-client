@@ -11,7 +11,7 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css';
 import Lottie from 'lottie-react';
 import FAQ from './faq.json';
-import Title from '@/shared/Title/page';
+import Title from '@/shared/Title/title';
 
 
 const accordionStyles = {

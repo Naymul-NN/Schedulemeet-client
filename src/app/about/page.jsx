@@ -42,7 +42,7 @@ const About = () => {
       {/* benefits section */}
       <Benefits />
       {/* Contact Us Section */}
-      <ContactUs/>
+      <ContactUs />
     </div>
   );
 };
