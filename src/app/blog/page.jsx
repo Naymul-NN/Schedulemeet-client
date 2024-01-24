@@ -1,9 +1,11 @@
 import TopArticleCard from "@/components/blog/TopArticleCard";
 import Title from "@/shared/Title/title";
 import React from "react";
+import Layout from "../mainlayout";
 
 const Blog = () => {
   return (
+    <Layout>
     <div className="blogContainer bg-gray-50 text-gray-950  ">
       <div className="blogWrapper   m-auto py-4  ">
         {/* title section starts  */}
@@ -36,6 +38,7 @@ const Blog = () => {
         {/*  */}
       </div>
     </div>
+    </Layout>
   );
 };
 

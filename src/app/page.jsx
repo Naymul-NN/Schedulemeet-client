@@ -6,9 +6,11 @@ import Records from "@/components/Records/records";
 import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
 import React from "react";
+import Layout from "./mainlayout";
 
 const Home = () => {
   return (
+   <Layout>
     <Container>
       <div className="min-h-screen">
         <Banner></Banner>
@@ -18,7 +20,8 @@ const Home = () => {
         <Faq></Faq>
         <Future></Future>
       </div>
-    </Container>
+     </Container>
+    </Layout>
   );
 };
 
