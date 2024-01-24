@@ -2,9 +2,11 @@ import BlogCard from "@/components/blog/BlogCard";
 import TopArticleCard from "@/components/blog/TopArticleCard";
 import Title from "@/shared/Title/title";
 import React from "react";
+import Layout from "../mainlayout";
 
 const Blog = () => {
   return (
+    <Layout>
     <div className="blogContainer bg-gray-50 text-gray-950  ">
       <div className="blogWrapper   m-auto pt-6  ">
         {/* title section starts  */}
@@ -58,6 +60,7 @@ const Blog = () => {
         {/*  */}
       </div>
     </div>
+    </Layout>
   );
 };
 
