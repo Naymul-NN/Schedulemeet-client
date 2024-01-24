@@ -3,8 +3,8 @@ import React from "react";
 const Blog = ({ params }) => {
   const { id } = params;
   return (
-    <div className="detailContainer bg-gray-50 text-gray-950 h-screen py-1 ">
-      <div className="detailWrapper bg-blue-200 w-[95%] m-auto ">
+    <div className="detailContainer bg-gray-50 text-gray-950  py-1 ">
+      <div className="detailWrapper  w-[95%] m-auto ">
         {/* detail top section  */}
         <div className="detailTop   flex flex-col md:flex-row gap-9 md:gap-0 justify-evenly items-center mb-6 sm:mb-7 md:mb-10 xmd:mb-12 lg:mb-16 ">
           {/* detail left starts  */}
@@ -71,6 +71,55 @@ const Blog = ({ params }) => {
           {/* detail right  */}
         </div>
         {/* detail top section  ends */}
+
+        {/* detail paragraph container  */}
+
+        <div className="detailCOntainer  flex justify-between   ">
+          <div className="detailParagraphContainer w-[97%] xsm:w-[94%] sm:w-[90%] xmd:w-[68%] paragraphFont text-sm xsm:text-base sm:text-lg m-auto    ">
+            {/* detail paragraph  */}
+            {/* <div
+                  className="detailParagraph   "
+                  dangerouslySetInnerHTML={{ __html: blog?.description }}
+                ></div> */}
+            <div
+              className="detailParagraph   "
+              // dangerouslySetInnerHTML={{ __html: blog?.description }}
+            >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                tempora natus reprehenderit cumque totam excepturi perspiciatis
+                deserunt reiciendis libero pariatur nostrum quam, cum, voluptas
+                consectetur vero. Vel sint necessitatibus eum alias inventore
+                aspernatur commodi, incidunt deleniti dolor nihil voluptatem
+                debitis voluptas eveniet laudantium doloremque rerum culpa minus
+                pariatur quidem temporibus omnis eos neque? Ad sit aliquam
+                delectus ipsum quo! Aliquid architecto, adipisci expedita sed
+                praesentium ipsa fugit enim dolore! Deserunt, atque unde esse
+                quas dicta temporibus in minus animi, aspernatur iusto corrupti
+                fugit. Dolor magnam amet eveniet neque maiores voluptates, nulla
+                dolorem asperiores nam consequatur consequuntur maxime
+                cupiditate quas. Voluptates inventore ducimus officia corrupti
+                aut nisi aliquam autem voluptatem et voluptate laudantium, illo
+                vel, dignissimos recusandae voluptas cupiditate eligendi, eos
+                sed nam. Temporibus in, maxime natus ex perferendis et iure
+                doloribus quod sunt velit repellendus necessitatibus
+                perspiciatis ipsa libero eius, enim, minus cum quam aperiam
+                modi. Eveniet totam quasi doloremque dolor neque quaerat
+                voluptatum quo exercitationem nam ullam laboriosam, at quidem
+                similique consequuntur. Placeat nulla animi quisquam officiis,
+                odit quibusdam amet doloremque, est rem cupiditate facilis illum
+                ex. Voluptatum temporibus, in, dolore illum vel, nesciunt
+                pariatur deleniti delectus repudiandae amet officia corporis!
+                Commodi, autem ut nemo explicabo illum at reiciendis?
+              </p>
+            </div>
+            {/* detail paragraph ends */}
+
+            {/*  */}
+          </div>
+        </div>
+
+        {/* detail paragraph container  */}
       </div>
     </div>
   );
