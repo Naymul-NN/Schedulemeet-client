@@ -35,10 +35,10 @@ const Identity = () => {
           <div className="imgContainer  ">
             <Image
               src="https://i.ibb.co/7QrYK9c/ball-2-removebg-preview.png"
-              alt=""
-              className=" w-full h-full "
-              width={0}
-              height={0}
+              className=""
+              alt="What are we banner"
+              height={500}
+              width={550}
             />
           </div>
         </div>
