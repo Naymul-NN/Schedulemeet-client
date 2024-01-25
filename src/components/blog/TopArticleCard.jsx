@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const TopArticleCard = () => {
   return (
     <div className="topArticleContainer   ">
-      <div className="topArticleWrapper bg-fuchsia-800 rounded-md py-4 sm:py-6 px-2 sm:px-3 group text-gray-50 cursor-pointer ">
+      <div className="topArticleWrapper bg-fuchsia-700 rounded-md py-4 sm:py-6 px-2 sm:px-3 group text-gray-50 cursor-pointer ">
         {/* title starts  */}
 
         <h1 className="  text-lg md:text-xl font-bold py-1.5 sm:py-2 ">
