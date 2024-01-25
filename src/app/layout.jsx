@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import AuthProvider from '@/components/auth/Authprovider'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -16,13 +18,11 @@ export default function RootLayout({ children }) {
 
       <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
         <link rel="icon" href="https://i.ibb.co/5LFVvdk/logo-white.webp" sizes="any" />
-        <div>
-         
+        
+        <AuthProvider>
           {children}
-         
-
-
-        </div>
+          </AuthProvider>
+          <Toaster />
       </body>
     </html>
   )
