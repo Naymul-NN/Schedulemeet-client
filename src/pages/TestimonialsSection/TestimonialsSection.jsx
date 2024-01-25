@@ -42,7 +42,7 @@ const testimonialsData = await TestimonialsSectionLoad();
 </div>
 
  <h2 className="font-bold my-2">{dataAll.username}</h2>
- <p className="text-[15px]"><span className="text-[25px] font-serif">"</span>{dataAll.shortDescription}<span className="text-[25px] font-serif">"</span></p>            
+ <p className="text-[15px]">{dataAll.shortDescription}</p>            
         </div>
         
         )
