@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="w-[80%] mx-auto flex gap-5 pt-20">
+    <div className="w-[100%] mx-auto flex gap-5 pt-20">
     <div className="w-[30%] bg-pink-700 min-h-screen">
     <header>
         <h1 className="py-3 text-center">Dashboard Header</h1>

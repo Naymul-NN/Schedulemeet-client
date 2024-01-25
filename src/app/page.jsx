@@ -1,17 +1,28 @@
+import Future from "@/components/Home/Future";
+import Banner from "@/components/banner/banner";
+import Container from "@/components/container/Container";
+import Faq from "@/components/faq/faq";
+import Records from "@/components/Records/records";
+import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
+import Reminder from "@/components/Reminder/reminder";
+import React from "react";
+import Layout from "./mainlayout";
 
-import Container from '@/components/container/Container';
-import Homepage from '@/pages/HomePage/home';
-import React from 'react';
-
-const page = () => {
+const Home = () => {
   return (
+   <Layout>
     <Container>
-      <div className='min-h-screen'>
-        <Homepage></Homepage>
+      <div className="min-h-screen">
+        <Banner></Banner>
+        <Records></Records>
+        <ScheduleFaster></ScheduleFaster>
+        <Reminder></Reminder>
+        <Faq></Faq>
+        <Future></Future>
       </div>
-
-    </Container>
+     </Container>
+    </Layout>
   );
 };
 
-export default page;
+export default Home;
