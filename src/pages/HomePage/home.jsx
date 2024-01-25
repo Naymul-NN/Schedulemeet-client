@@ -4,6 +4,7 @@ import Records from "@/components/Records/records";
 import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
 import TestimonialsSection from "../TestimonialsSection/TestimonialsSection";
+import Future from "@/components/Home/Future";
 
 // homepages
 
@@ -14,11 +15,12 @@ const Homepage = () => {
             <Banner></Banner>
             <Records></Records>
             <ScheduleFaster></ScheduleFaster>
-            <Reminder></Reminder>
+            <Reminder></Reminder>     
+            <Future></Future>
             <Faq></Faq>
+       
             <TestimonialsSection></TestimonialsSection>
     
-           
         </div>
 
         
