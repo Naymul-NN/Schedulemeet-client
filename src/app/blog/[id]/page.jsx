@@ -1,7 +1,17 @@
 import React from "react";
+import GetPost from "@/lib/GetPost";
 
-const Blog = ({ params }) => {
+const Blog = async ({ params }) => {
   const { id } = params;
+
+  console.log(id);
+
+  const responseData = await GetPost(id);
+
+  console.log(responseData?.result[0]);
+
+  // ! effect to get data from databse
+
   return (
     <div className="detailContainer bg-gray-50 text-gray-950  py-1 ">
       <div className="detailWrapper  w-[95%] m-auto ">

@@ -5,7 +5,6 @@ import TopArticleCard from "@/components/blog/TopArticleCard";
 import Title from "@/shared/Title/title";
 import React, { useEffect, useState } from "react";
 import Layout from "../mainlayout";
-import Link from "next/link";
 import axios from "axios";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
