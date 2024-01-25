@@ -4,11 +4,9 @@ import GetPost from "@/lib/GetPost";
 const Blog = async ({ params }) => {
   const { id } = params;
 
-  console.log(id);
+  // console.log(id);
 
   const responseData = await GetPost(id);
-
-  // console.log(responseData?.result[0]);
 
   const {
     _id,
@@ -20,10 +18,6 @@ const Blog = async ({ params }) => {
     date,
     category,
   } = responseData?.result[0];
-
-  // console.log(title);
-
-  // ! effect to get data from databse
 
   return (
     <div className="detailContainer bg-gray-50 text-gray-950  py-1 ">
@@ -54,7 +48,6 @@ const Blog = async ({ params }) => {
               <div className="writerImg   ">
                 <img
                   class=" w-8 h-8 xsm:w-9 xsm:h-9 sm:w-10 sm:h-10 rounded-full"
-                  // src={`https://i.ibb.co/K2Dbx8R/Hilary-Yeganegi-Calendly-ezgif-com-webp-to-jpg-converter.jpg`}
                   src={writerImg}
                   alt="Rounded avatar "
                 />
@@ -86,7 +79,6 @@ const Blog = async ({ params }) => {
             <div className="rightImg  h-[18rem] sm:h-[19rem]  md:h-[15rem] xmd:h-[16rem] lg:h-[18rem] rounded-md overflow-auto ">
               <img
                 src={titleImg}
-                // src={`https://i.ibb.co/fHSXD9B/Calendly-Dynamics-Hero-1-ezgif-com-webp-to-jpg-converter.jpg`}
                 className=" w-full h-full   bg-cover bg-center "
                 alt=""
               />
@@ -105,7 +97,6 @@ const Blog = async ({ params }) => {
             <div
               className="detailParagraph   "
               dangerouslySetInnerHTML={{ __html: description }}></div>
-
             {/* detail paragraph ends */}
 
             {/*  */}
