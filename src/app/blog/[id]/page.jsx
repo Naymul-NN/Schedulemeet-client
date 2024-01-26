@@ -1,5 +1,6 @@
 import React from "react";
 import GetPost from "@/lib/GetPost";
+import Image from "next/image";
 
 const Blog = async ({ params }) => {
   const { id } = params;
@@ -46,7 +47,9 @@ const Blog = async ({ params }) => {
             <div className="writerInfo  flex items-center gap-2  ">
               {/* writer image  */}
               <div className="writerImg   ">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className=" w-8 h-8 xsm:w-9 xsm:h-9 sm:w-10 sm:h-10 rounded-full"
                   src={writerImg}
                   alt="Rounded avatar "
