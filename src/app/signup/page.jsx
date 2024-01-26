@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Signup from '@/components/auth/Signup';
 const joinus = () => {
     return (
         <div>
-            <h1>suin up here</h1>
+           <Signup></Signup>
         </div>
     );
 };
