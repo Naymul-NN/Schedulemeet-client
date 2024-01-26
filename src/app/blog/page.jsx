@@ -6,6 +6,7 @@ import Title from "@/shared/Title/title";
 import React, { useEffect, useState } from "react";
 import Layout from "../mainlayout";
 import axios from "axios";
+import BlogLoading from "@/components/blog/BlogLoading";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [blogsLoading, setBlogsLoading] = useState("true");
@@ -17,7 +18,7 @@ const Blogs = () => {
       // .get("https://schedule-meet-server.vercel.app/api/v1/blogs/getblogs")
       .get("http://localhost:5000/api/v1/blogs/getblogs")
       .then((response) => {
-        console.log(response?.data?.result);
+        // console.log(response?.data?.result);
 
         setBlogs(response?.data?.result);
 
@@ -30,7 +31,7 @@ const Blogs = () => {
 
   // ! show loading page  ,,  untill data come from DB
   if (blogsLoading) {
-    return <p>loading ......</p>;
+    return <BlogLoading />;
   }
 
   return (
