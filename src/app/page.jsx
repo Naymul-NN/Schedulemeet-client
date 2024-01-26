@@ -20,11 +20,22 @@ const Home = () => {
         <Reminder></Reminder>
         <Faq></Faq>
         <Future></Future>
-        <Testimonials></Testimonials>
+   
       </div>
-     </Container>
+     </Container>     
+
+<div>
+<div className="bg-[#fff]">
+<Container>
+<Testimonials></Testimonials>
+</Container>
+</div>
+</div>
+
     </Layout>
-  );
+
+
+ );
 };
 
 export default Home;
