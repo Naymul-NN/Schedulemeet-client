@@ -1,0 +1,26 @@
+# Build artifacts
+.next/
+/out/
+build/
+dist/
+node_modules/
+
+# Testing
+coverage/
+jest/
+
+# Next.js internals
+/_next/
+__tmp__/
+
+# Configuration files
+**/.gitignore
+.env*.local
+vercel.json
+next.config.js
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*

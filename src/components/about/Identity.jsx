@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Identity = () => {
   return (
@@ -14,8 +15,8 @@ const Identity = () => {
           {/* description  */}
           <p className="  text-base lg:text-lg mb-5  ">
             We are a diverse, collaborative team committed to perfecting the way
-            companies engage with talent. We’re creating a better experience for
-            employers, recruiters, and candidates. Each team member has a
+            companies engage with talent. We{"'"}re creating a better experience
+            for employers, recruiters, and candidates. Each team member has a
             meaningful opportunity to make a huge impact, and together, our team
             is evolving an entire industry. Join us in shaping the workforce of
             the future!
@@ -24,18 +25,20 @@ const Identity = () => {
           {/* button  */}
 
           <button className="  seeOpen py-2.5 px-5 md:py-2 md:px-4 lg:py-2.5 lg:px-5 border border-gray-900 rounded text-gray-800 font-bold hover:border-transparent hover:bg-gray-900  hover:text-gray-50  transition-all duration-200  ">
-            See open posttion
+            See open position
           </button>
         </div>
-        {/* left container endss  */}
+        {/* left container ends  */}
 
         {/* right container starts  */}
         <div className="rightCOntainer  hidden md:block md:w-[45%] lg:w-[50%]  ">
           <div className="imgContainer  ">
-            <img
+            <Image
               src="https://i.ibb.co/7QrYK9c/ball-2-removebg-preview.png"
-              alt=""
-              className=" w-full h-full "
+              className=""
+              alt="What are we banner"
+              height={500}
+              width={550}
             />
           </div>
         </div>

@@ -1,8 +1,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/navbar/Navbar'
-import Footer from '@/components/footer/Footer'
-import "../components/navbar/Navbar.css"
+import AuthProvider from '@/components/auth/Authprovider'
+import { Toaster } from 'react-hot-toast'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,29 +15,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    
-    <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
-<div className='navBarStyle fixed top-0 w-full z-50'>
-<div className='w-full lg:w-[70%] mx-auto'>
-       <Navbar></Navbar>
-       </div>
-</div>
 
-
-    {children}
-
-
-       <div className='bg-[#2B3440]'>
-
-       <div className='w-[70%] mx-auto'>
-
-    
-         <Footer></Footer>
-        </div>
-</div>
+      <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
+        <link rel="icon" href="https://i.ibb.co/5LFVvdk/logo-white.webp" sizes="any" />
         
-
-        </body>
+        <AuthProvider>
+          {children}
+          </AuthProvider>
+          <Toaster />
+      </body>
     </html>
   )
 }

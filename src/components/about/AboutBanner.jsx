@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutBanner = () => {
   return (
@@ -44,10 +45,12 @@ const AboutBanner = () => {
         <div className="bannerRight   w-[90%] md:w-[45%] lg:w-[42%] ">
           {/* banner image section starts  */}
           <div className="bannerImg  w-[75%] sm:w-[85%] md:w-full  m-auto    ">
-            <img
+            <Image
               src="https://i.ibb.co/wBrFvkt/banner-Img.png"
-              className=" w-full h-full "
-              alt=""
+              className=""
+              alt="about banner"
+              height={500}
+              width={550}
             />
           </div>
           {/* banner image section ends */}

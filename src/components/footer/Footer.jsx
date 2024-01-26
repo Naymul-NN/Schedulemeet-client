@@ -1,14 +1,12 @@
 import React from 'react';
-import navBarStyle from "../../components/navbar/Navbar.css";
 
+// Footer Section....
 const Footer = () => {
     return (
 
       <div>
 <div className='py-4 '>
 
-<h2 className='text-center pt-4 py-3'><span className='font-bold'><span className='font-bold text-[20px]'>NextApp</span></span>- Best Service</h2>
-<div className='border-b-[1px] w-[10%] border-[#585858] mx-auto'></div>
  <footer className="footer grid grid-rows-2 p-10 bg-neutral justify-evenly items-baseline text-neutral-content">
   <nav>
     <header className="footer-title">Services</header> 
@@ -51,8 +49,14 @@ const Footer = () => {
     <a className="link link-hover">iPhone</a>
     <a className="link link-hover">Android</a>
   </nav>
+
+
+
+
 </footer>
 
+<div className='border-b-[1px] w-[100%] border-[#585858] mx-auto'></div>
+  <h2 className='text-center pt-4 py-3'><span className='font-bold'><span className='font-bold text-[18px]'>ScheduleMeet</span></span> - Best Service</h2>
 
 
 
