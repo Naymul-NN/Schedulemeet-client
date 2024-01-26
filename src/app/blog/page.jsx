@@ -14,6 +14,7 @@ const Blogs = () => {
   useEffect(() => {
     setBlogsLoading(true);
     axios
+      // .get("https://schedule-meet-server.vercel.app/api/v1/blogs/getblogs")
       .get("http://localhost:5000/api/v1/blogs/getblogs")
       .then((response) => {
         // console.log(response?.data?.result);
