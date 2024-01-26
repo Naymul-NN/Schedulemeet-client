@@ -80,7 +80,9 @@ const Blog = async ({ params }) => {
           <div className="detailRight  w-[92%] xsm:w-[85%] sm:w-[72%] md:w-[44%]  ">
             {/* right image  */}
             <div className="rightImg  h-[18rem] sm:h-[19rem]  md:h-[15rem] xmd:h-[16rem] lg:h-[18rem] rounded-md overflow-auto ">
-              <img
+              <Image
+                height={500}
+                width={500}
                 src={titleImg}
                 className=" w-full h-full   bg-cover bg-center "
                 alt=""
