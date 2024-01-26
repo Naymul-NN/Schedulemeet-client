@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const NotFoundPage = () => {
     return (
-        <div className="xl:h-[800px] lg:h-[800px] md:h-[800px] h-[500px] w-full bg-white text-black">
+        <div className="h-[100vh] w-full bg-white text-black">
 
     
     <div className="flex xl:flex-row lg:flex-row md:flex-col flex-col justify-center items-center h-full">
