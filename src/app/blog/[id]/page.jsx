@@ -20,7 +20,7 @@ const Blog = async ({ params }) => {
   } = responseData?.result[0];
 
   return (
-    <div className="detailContainer bg-gray-50 text-gray-950  py-1 ">
+    <div className="detailContainer bg-gray-50 text-gray-950  pt-4 pb-2 ">
       <div className="detailWrapper  w-[95%] m-auto ">
         {/* detail top section  */}
         <div className="detailTop   flex flex-col md:flex-row gap-9 md:gap-0 justify-evenly items-center mb-6 sm:mb-7 md:mb-10 xmd:mb-12 lg:mb-16 ">
