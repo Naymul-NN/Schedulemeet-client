@@ -1,6 +1,6 @@
 
 
-  import NotFoundPage from '@/components/NotFoundPage/NotFoundPage';
+  import NotFoundPage from '../components/NotFoundPage/NotFoundPage.jsx';
 import React from 'react';
   
   const NotFound = () => {
