@@ -47,7 +47,7 @@ const Blog = async ({ params }) => {
               {/* writer image  */}
               <div className="writerImg   ">
                 <img
-                  class=" w-8 h-8 xsm:w-9 xsm:h-9 sm:w-10 sm:h-10 rounded-full"
+                  className=" w-8 h-8 xsm:w-9 xsm:h-9 sm:w-10 sm:h-10 rounded-full"
                   src={writerImg}
                   alt="Rounded avatar "
                 />
