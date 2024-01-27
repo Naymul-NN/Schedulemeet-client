@@ -14,6 +14,7 @@ const SetUpEvent = () => {
      
       const onSubmit = (data) => {
         console.log(data);
+        toast.success('Interview scheduled successfully!');
       } 
 
     return (
