@@ -1,0 +1,11 @@
+.navbarsStyles a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+}
+
+.navbarsStyles a:hover {
+
+    background-color: #F2F8FF;
+
+}
