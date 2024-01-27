@@ -7,6 +7,7 @@ import ScheduleFaster from "@/components/ScheduleFaster/schedulefaster";
 import Reminder from "@/components/Reminder/reminder";
 import React from "react";
 import Layout from "./mainlayout";
+import Testimonials from "../components/Testimonials/Testimonials.jsx";
 
 const Home = () => {
   return (
@@ -19,10 +20,22 @@ const Home = () => {
         <Reminder></Reminder>
         <Faq></Faq>
         <Future></Future>
+   
       </div>
-     </Container>
+     </Container>     
+
+<div>
+<div className="bg-[#fff]">
+<Container>
+<Testimonials></Testimonials>
+</Container>
+</div>
+</div>
+
     </Layout>
-  );
+
+
+ );
 };
 
 export default Home;

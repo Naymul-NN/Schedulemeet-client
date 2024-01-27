@@ -5,6 +5,7 @@ import { useContext } from "react";
 
 import toast from "react-hot-toast";
 import { AuthContext } from "./Authprovider";
+import SocialLogin from "./SocialLogin";
 
 
 
@@ -59,6 +60,7 @@ const Register = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Signup</button>
         </div>
+        <SocialLogin></SocialLogin>
       </form>
       <p className="text-black text-center">if you have alrady an account !<Link href='/login' className="text-green-500 font-bold"> login</Link></p>
 

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { AuthContext } from './Authprovider';
+import SocialLogin from './SocialLogin';
 
 
 const Signin = () => {
@@ -61,6 +62,7 @@ const Signin = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
+        <SocialLogin></SocialLogin>
       </form>
       <p className='text-black text-center'>If you are new here! 
       <Link href='/signup' className="text-green-400 font-bold" > Sign up</Link></p>
