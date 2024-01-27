@@ -30,19 +30,19 @@ const SetUpEvent = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input {...register("email")} type="email" placeholder="email" className="input input-bordered text-black" required />
+                            <input {...register("hostEmail")} type="email" placeholder="email" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Event Title</span>
                             </label>
-                            <input {...register("event-title")} type="text" placeholder="Event Title" className="input input-bordered text-black" required />
+                            <input {...register("eventTitle")} type="text" placeholder="Event Title" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Host Name</span>
                             </label>
-                            <input {...register("host-name")} type="text" placeholder="Host Name" className="input input-bordered text-black" required />
+                            <input {...register("hostName")} type="text" placeholder="Host Name" className="input input-bordered text-black" required />
                         </div>
 
                     </div>
@@ -65,7 +65,7 @@ const SetUpEvent = () => {
                             <label className="label">
                                 <span className="label-text">Meeting Link</span>
                             </label>
-                            <input {...register("meeting-link")} type="text" placeholder="Meeting Link" className="input input-bordered text-black" required />
+                            <input {...register("meetingLink")} type="text" placeholder="Meeting Link" className="input input-bordered text-black" required />
                         </div>
 
                     </div>
