@@ -1,6 +1,4 @@
-import SetUpInterview from '@/components/setUpInterview/SetUpInterview';
-import Title from '@/shared/Title/title';
-import TitleDashboard from '@/shared/TitleDashboard/TitleDashboard';
+import SetUpInterview from '../../../components/setUpInterview/SetUpInterview.jsx';
 import React from 'react';
 
 const Setupinterview = () => {

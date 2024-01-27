@@ -1,5 +1,5 @@
 
-import SetUpEvent from '@/components/setUpEvent/setUpEvent';
+import SetUpEvent from '../../../components/setUpEvent/SetUpEvent.jsx';
 import React from 'react';
 
 

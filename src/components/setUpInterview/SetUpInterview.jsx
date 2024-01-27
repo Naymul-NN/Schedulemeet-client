@@ -1,7 +1,8 @@
 'use client'
-import TitleDashboard from '@/shared/TitleDashboard/TitleDashboard';
+import TitleDashboard from '../../shared/TitleDashboard/TitleDashboard.jsx';
 import React from 'react';
 import { useForm } from "react-hook-form"
+import toast from 'react-hot-toast';
 
 const SetUpInterview = () => {
 
