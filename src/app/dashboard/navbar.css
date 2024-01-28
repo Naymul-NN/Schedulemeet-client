@@ -6,6 +6,7 @@
 
 .navbarsStyles a:hover {
 
-    background-color: #F2F8FF;
+    background-color:rgb(192, 222, 135);
+    border-radius: 5px;
 
 }
