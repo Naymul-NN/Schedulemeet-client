@@ -12,11 +12,11 @@ import { RxDashboard } from "react-icons/rx";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="w-[100%] mx-auto flex gap-1 text-black bg-white">
+    <div className="w-[100%] mx-auto flex gap-1 text-white bg-white">
 
-      <div className="w-[20%] h-[100vh] shadow-md shadow-[#8a8a8a]">
+      <div className="w-[20%] bg-[#312B6C] h-[100vh] shadow-md shadow-[#8a8a8a]">
 
-        <div className="flex items-center gap-1 justify-center bg-[#ededed] text-black">
+        <div className="flex items-center gap-1 justify-center bg-[#6F5DDC] text-white">
           <RxDashboard></RxDashboard><h1 className="py-3 text-center">Dashboard</h1>
         </div>
 
