@@ -59,7 +59,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {/* <Link href="/#" className="border-[2px] hover:bg-[#4F43A1] hover:border-transparent rounded-full px-4 py-[5px]">Sign up</Link> */}
                     {
-                        user && <h1 className="pr-2"><span className="font-bold">user:</span>{user.displayName}</h1>
+                        user && <h1 className="pr-2"><Link href="/dashboard"><button className='btn btn-sm btn-primary'>My Account</button></Link></h1>
                     }
                     {
                         user ?
