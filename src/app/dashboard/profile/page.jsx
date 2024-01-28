@@ -3,7 +3,7 @@ import React from 'react';
 const profile = () => {
     return (
         <div>
-            <p className='text-black'>
+            <p>
                 
             this is your profile
             </p>
