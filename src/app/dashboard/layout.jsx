@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "../dashboard/navbar.css"
+import "../../app/dashboard/navbar.css"
 
 import { LuActivitySquare } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
