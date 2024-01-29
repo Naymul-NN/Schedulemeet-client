@@ -28,7 +28,7 @@ const Signin = () => {
          .then(result =>{
           console.log(result.user)
           toast.success('log in successfull')
-         home.push("/")
+           home.push("/")
          })
          .catch(error=>{
           console.error(error)

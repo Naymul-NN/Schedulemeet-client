@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <div>
          <div className="w-full h-max py-8 relative top-0">
          <div className='navBarStyle fixed h-max top-0 w-full z-50'>
-            <div className='xl:w-[70%] w-[90%] mx-auto'>
+            <div className='xl:w-[80%] w-[90%] mx-auto'>
               <Navbar></Navbar>
             </div>
           </div>

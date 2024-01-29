@@ -1,36 +1,28 @@
 import Link from "next/link";
 import "../../app/dashboard/navbar.css"
-
-import { LuActivitySquare } from "react-icons/lu";
-import { CgProfile } from "react-icons/cg";
-import { MdGroups } from "react-icons/md";
-import { MdManageHistory } from "react-icons/md";
-import { MdOutlineGroup } from "react-icons/md";
-import { IoHome } from "react-icons/io5";
-import { RxDashboard } from "react-icons/rx";
+import { AiOutlineProfile } from "react-icons/ai";
+import { FiActivity } from "react-icons/fi";
+import { GrHistory, GrSchedulePlay } from "react-icons/gr";
+import { IoHomeOutline } from "react-icons/io5";
 
 
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="w-[100%] mx-auto flex gap-1 text-white bg-white">
+    <div className="w-[100%] mx-auto flex gap-1 bg-white text-black">
 
-      <div className="w-[20%] bg-[#312B6C] h-[100vh] shadow-md shadow-[#8a8a8a]">
-
-        <div className="flex items-center gap-1 justify-center bg-[#6F5DDC] text-white">
-          <RxDashboard></RxDashboard><h1 className="py-3 text-center">Dashboard</h1>
-        </div>
-
-  
+      <div className="w-[20%] min-h-screen bg-[#fff] border-r-[1px] shadow-md ">
+        <header>
+          <h1 className="py-3 text-center">Dashboard Header</h1>
+        </header>
         <nav>
-          <ul className="navbarsStyles px-4 py-2">
-            <li><Link  href="/dashboard"><div className="flex items-center gap-2"><LuActivitySquare></LuActivitySquare> <h2>Activity</h2></div></Link></li>
-            <li className="py-3"><Link href="/dashboard/profile"><div className="flex items-center gap-2"><CgProfile></CgProfile> <h2>Profile</h2></div></Link></li>
-            <li><Link href="/dashboard/setupinterview"><div className="flex items-center gap-2">
-              <MdGroups className="text-[20px]"></MdGroups><h2>Setup Interview</h2></div></Link></li>
-            <li className="py-3"><Link href="/dashboard/setupevents"><div className="flex items-center gap-2"><MdOutlineGroup></MdOutlineGroup> <h2>Setup Events</h2></div></Link></li>
-            <li className="pb-3"><Link href="/dashboard/history"><div className="flex items-center gap-2"><MdManageHistory></MdManageHistory> <h2>History</h2></div></Link></li>
-            <hr className="mr-10 border-[#cddff3]"/>
-            <li className="pt-4"><Link href="/"><div className="flex items-center gap-2"><IoHome></IoHome><h2>Home</h2></div></Link></li>
+          <ul className="navbarsStyles px-2 pl-4">
+            <li><Link href="/dashboard" className="hover:bg-red-500"> <FiActivity className="inline-flex mb-1 text-xl" /> Activity</Link></li>
+            <li className="py-3 "><Link href="/dashboard/profile" > <AiOutlineProfile  className="inline-flex mb-1 text-xl "/> Profile</Link></li>
+            <li><Link href="/dashboard/setupinterview"> <GrSchedulePlay className="inline-flex mb-1 text-xl" /> Setup Interview</Link></li>
+            <li className="py-3"><Link href="/dashboard/setupevents"> <GrSchedulePlay className="inline-flex mb-1 text-xl" /> Setup Events</Link></li>
+            <li className="pb-3"><Link href="/dashboard/history"> <GrHistory className="inline-flex mb-1 text-xl" /> History</Link></li>
+            <hr className="mr-10"/>
+            <li className="pt-4"><Link href="/"> <IoHomeOutline className="inline-flex mb-1 text-xl" />  Home</Link></li>
           </ul>
         </nav>
       </div>
