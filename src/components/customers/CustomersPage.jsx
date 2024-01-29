@@ -14,7 +14,7 @@ import Link from 'next/link';
     return (<>
 
     {/* Customer story */}
-    <div className='w-[70%] mx-auto '>
+    <div className='w-[70%] mx-auto bg-[#0d0c22]'>
 
    
       <div className="h-[800px]">

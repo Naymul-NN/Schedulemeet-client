@@ -1,16 +1,14 @@
 import Link from "next/link";
 import "../../app/dashboard/navbar.css"
-// import { AiFillProfile } from "react-icons/ai";
 import { AiOutlineProfile } from "react-icons/ai";
 import { FiActivity } from "react-icons/fi";
 import { GrHistory, GrSchedulePlay } from "react-icons/gr";
 import { IoHomeOutline } from "react-icons/io5";
 
 
-
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="w-[100%] mx-auto flex text-black border-r-[1px]">
+    <div className="w-[100%] mx-auto flex gap-1 bg-white text-black">
 
       <div className="w-[20%] min-h-screen bg-[#fff] border-r-[1px] shadow-md ">
         <header>
@@ -29,10 +27,10 @@ const DashboardLayout = ({ children }) => {
         </nav>
       </div>
 
-      <div className="flex-1 bg-[#FAFAFA]">
-        <main>
+      <div className="flex-1 bg-[#fafafa] h-[100vh] w-full p-4">
+
           {children}
-        </main>
+
       </div>
     </div>
   );
