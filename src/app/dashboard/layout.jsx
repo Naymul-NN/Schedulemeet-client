@@ -27,7 +27,7 @@ const DashboardLayout = ({ children }) => {
         </nav>
       </div>
 
-      <div className="flex-1 bg-[#fafafa] h-full w-full">
+      <div className="flex-1 bg-[#fafafa] h-[100vh] w-full p-4">
 
           {children}
 
