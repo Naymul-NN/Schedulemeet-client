@@ -1,4 +1,4 @@
-import UserProfile from "../../../components/dashboard/userProfile/userProfile.jsx";
+import UserProfile from "@/components/dashboard/userProfile/UserProfile";
 
 
 const Profile = () => {
