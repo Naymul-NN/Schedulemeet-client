@@ -7,14 +7,6 @@ import { IoHomeOutline } from "react-icons/io5";
 
 
 const DashboardLayout = ({ children }) => {
-
-
-
-
-
-
-
-
   
   return (<> 
 
