@@ -7,8 +7,8 @@ import { IoHomeOutline } from "react-icons/io5";
 
 
 const DashboardLayout = ({ children }) => {
-  
-  return (<> 
+
+  return (
 
     <div className="w-[100%] mx-auto flex gap-1 bg-white ">
 
@@ -37,7 +37,7 @@ const DashboardLayout = ({ children }) => {
           {children}
 
       </div>
-    </div></>
+    </div>
   );
 };
 
