@@ -33,7 +33,7 @@ const DashboardLayout = ({ children }) => {
             <li className="pb-3"><Link href="/dashboard/history"> <GrHistory className="inline-flex mb-1 text-xl" /> History</Link></li>
             <hr className="mr-10"/>
             <li className="pt-4"><Link href="/"> <IoHomeOutline className="inline-flex mb-1 text-xl" />  Home</Link></li>
-           <li className="pt-4"><Link href="/dashboard/testfolder"> <IoHomeOutline className="inline-flex mb-1 text-xl" />  Test</Link></li>
+          
           
           
           </ul>
