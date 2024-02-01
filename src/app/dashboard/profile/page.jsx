@@ -2,7 +2,7 @@ import UserProfile from "@/components/dashboard/userProfile/UserProfile";
 
 const Profile = () => {
   return (
-    <div className="  h-screen  ">
+    <div className=" min-h-screen  ">
       <UserProfile></UserProfile>
     </div>
   );

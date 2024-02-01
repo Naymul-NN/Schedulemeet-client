@@ -32,23 +32,22 @@ const userData = {
 
 const UserProfile = () => {
   return (
-    // <div className=" h-full userProfileContainer flex justify-center items-center  ">
-    <div className="  userProfileContainer flex justify-center items-center  ">
-      <div className=" userProfileWrapper flex gap-2    ">
+    <div className="  h-full  userProfileContainer flex justify-center items-center p-2  ">
+      <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
         {/* profile left section starts  */}
-        <div className=" profileLeftSection w-[50%]  ">
+        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
           {/* profile left top starts  */}
-          <div className=" profileLefftTopSection border-[1px] rounded-md p-4 h-max shadow-md bg-fuchsia-400 mb-6 -z-[1] ">
+          <div className=" profileLefftTopSection border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100  ">
             <div>
               <Image
-                className="rounded-full w-[4.5rem] h-[4.5rem] xmd:w-[5.5rem] xmd:h-[5.5rem] lg:w-[7rem] lg:h-[7rem] block mx-auto  object-cover border-2 border-black"
+                className="rounded-full w-[4.5rem] h-[4.5rem] xmd:w-[5.5rem] xmd:h-[5.5rem] lg:w-[7rem] lg:h-[7rem] block mx-auto  object-cover border-2 border-black  "
                 src={userData.userimage}
                 width={500}
                 height={500}
                 alt="Profile Image"
               />
 
-              <div className="  z-[1]  flex relative justify-center items-center gap-2 my-2 border rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
+              <div className="  z-[1]  flex relative justify-center items-center gap-2 my-3 border border-gray-400 rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
                 <div className="  bg-orange-500 absolute left-0 bottom-0 rounded-l-md top-0 text-white h-full px-2">
                   <div className="flex justify-center items-center w-full h-full">
                     <h2>Start {userData.userRating.length}</h2>
@@ -73,21 +72,23 @@ const UserProfile = () => {
           {/* profile left top ends  */}
 
           {/* profile left middle starts  */}
-          <div className=" bg-violet-400 profileMiddleSection border-[1px] rounded-md p-3 lg:p-4 h-max shadow-md mb-6  ">
+          <div className=" bg-gray-100  profileMiddleSection border-[1px] rounded-md p-3 lg:p-4 h-max shadow-md mb-6  ">
             <div className="flex gap-1 items-center">
               <FcAbout className="text-[18px]"></FcAbout>{" "}
-              <h2 className="text-left font-bold text-[1rem] flex gap-1 items-center">
+              <h2 className="text-left font-bold text-[1rem] flex gap-1 items-center text-lg sm:text-base lg:text-lg ">
                 About
               </h2>
             </div>
 
-            <p className="p-2 text-sm lg:text-base ">{userData.userabout}</p>
+            <p className="p-2 text-base sm:text-sm lg:text-base ">
+              {userData.userabout}
+            </p>
           </div>
           {/* profile left middle ends  */}
 
           {/* profile left bottom starts  */}
-          <div className=" bg-yellow-200 profileLeftBottom border-[1px] rounded-md p-4 h-max shadow-md my-2">
-            <h2 className="text-center font-medium  text-[1rem] lg:text-[1.2rem]">
+          <div className=" bg-gray-100  profileLeftBottom border-[1px] rounded-md p-4 h-max shadow-md my-2">
+            <h2 className="text-center font-medium  text-[1.3rem] sm:text-[1rem] lg:text-[1.2rem]">
               Social Link
             </h2>
 
@@ -115,7 +116,7 @@ const UserProfile = () => {
         {/* profile left section ends  */}
 
         {/* profile right section starts  */}
-        <div className=" profileRightSection bg-green-400 border-[1px] rounded-md h-max w-[100%] shadow-md">
+        <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
           <div className="bg-[#4A69BD] rounded-tr-md  rounded-tl-md text-white">
             <h2 className="text-[20px] p-2 text-center">Personal Details</h2>
           </div>
@@ -130,55 +131,55 @@ const UserProfile = () => {
             </div>
           </div>
 
-          <div className="bg-red-400 my-6 ">
+          <div className=" my-6 ">
             <div>
-              <h2 className="text-center mb-4 bg-[#4A69BD] text-white py-2 px-4 w-max mx-auto rounded-md">
+              <h2 className="text-center mb-4 bg-[#4A69BD] hover:bg-blue-700 cursor-pointer text-white py-2 px-4 w-max mx-auto rounded-md">
                 User Address
               </h2>
             </div>
 
-            <div className=" m-auto  p-4 grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 w-full">
-              <div className="flex">
-                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold">
+            <div className="    p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 w-full">
+              <div className="flex  justify-center md:justify-start  ">
+                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300 ">
                   #Street
                 </h2>
-                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md">
+                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
                   {userData.useraddress.street}
                 </h2>
               </div>
 
-              <div className="flex">
-                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold">
+              <div className="flex  justify-center md:justify-start">
+                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   City
                 </h2>
-                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md">
+                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
                   {userData.useraddress.city}
                 </h2>
               </div>
 
-              <div className="flex">
-                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold">
+              <div className="flex  justify-center md:justify-start">
+                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   State
                 </h2>
-                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md">
+                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
                   {userData.useraddress.state}
                 </h2>
               </div>
 
-              <div className="flex">
-                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold">
+              <div className="flex  justify-center md:justify-start ">
+                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   Zip Code
                 </h2>
-                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md">
+                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
                   {userData.useraddress.zipcode}
                 </h2>
               </div>
 
-              <div className="flex">
-                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold">
+              <div className="flex  justify-center md:justify-start  ">
+                <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   Country
                 </h2>
-                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md">
+                <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
                   {userData.useraddress.country}
                 </h2>
               </div>
@@ -186,7 +187,7 @@ const UserProfile = () => {
           </div>
 
           <div>
-            <h2 className="text-center my-2 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white p-2 w-max mx-auto rounded-md">
+            <h2 className="text-center my-2 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max mx-auto rounded-md">
               Edit Profile
             </h2>
           </div>
