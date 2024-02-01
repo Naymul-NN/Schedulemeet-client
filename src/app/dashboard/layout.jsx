@@ -107,6 +107,9 @@ const DashboardLayout = ({ children }) => {
       <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    text-black  ">
         {children}
       </div>
+
+
+      
     </div>
   );
 };
