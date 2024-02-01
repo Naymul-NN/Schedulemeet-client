@@ -32,7 +32,7 @@ const userData = {
 
 const UserProfile = () => {
   return (
-    <div className="  h-full  userProfileContainer flex justify-center items-center p-2  ">
+    <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
