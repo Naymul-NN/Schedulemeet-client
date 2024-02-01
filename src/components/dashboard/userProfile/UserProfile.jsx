@@ -1,6 +1,5 @@
-"use client"
-
 import Image from "next/image";
+
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa6";
@@ -8,11 +7,14 @@ import { FaPinterest } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import Link from "next/link";
 import { IoMdStarOutline } from "react-icons/io";
+<<<<<<< HEAD
 import { useContext, useState } from "react";
 import { AuthContext } from "@/components/auth/Authprovider";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
+=======
+>>>>>>> 76c092959c9ecae3c5cbc6029047b3a8662b4891
 
 const userData = {
   name: "Jhon Doe",
@@ -39,6 +41,7 @@ const userData = {
 };
 
 const UserProfile = () => {
+<<<<<<< HEAD
 const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
 const [showUpdate, setShowUpdate] = useState(false)
@@ -70,8 +73,13 @@ const shower = () => {
     
     <div className="h-full relative  userProfileContainer flex justify-center items-center p-2  ">
       <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
+=======
+  return (
+    <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
+      <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
+>>>>>>> 76c092959c9ecae3c5cbc6029047b3a8662b4891
         {/* profile left section starts  */}
-        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0 ">
+        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
           {/* profile left top starts  */}
           <div className=" profileLefftTopSection border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100  ">
             <div>
@@ -148,19 +156,8 @@ const shower = () => {
             </div>
           </div>
           {/* profile left bottom ends  */}
-
-
-          <div>
-            <button onClick={logOuters} className="text-center block mx-auto my-4 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
-              Log Out
-          </button>
-          </div>
-
-
-
-
         </div>
-
+        {/* profile left section ends  */}
 
         {/* profile right section starts  */}
         <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
