@@ -57,8 +57,13 @@ try {
 
 
   return (
+<<<<<<< HEAD
+    <div className="   h-full  userProfileContainer flex justify-center items-center p-3  ">
+      <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-3  lg:gap-x-4   ">
+=======
     <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
+>>>>>>> f05677532e51b9bb6e692a90d7c91aeab07eae2d
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0 ">
           {/* profile left top starts  */}
