@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <div className="FooterContainer">
       <div className="  FooterWrapper">
-        {/* <footer className="footer grid grid-rows-2 p-10  justify-evenly items-baseline text-neutral-content"> */}
         <footer className="footer grid grid-rows-2 p-10  justify-evenly items-baseline text-neutral-content">
           <nav className=" ">
             <header className="footer-title">Services</header>

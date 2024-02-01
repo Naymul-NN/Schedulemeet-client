@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
@@ -12,7 +12,6 @@ import { useContext } from "react";
 import { AuthContext } from "@/components/auth/Authprovider";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-
 
 const userData = {
   name: "Jhon Doe",
@@ -37,33 +36,23 @@ const userData = {
 };
 
 const UserProfile = () => {
-const homeRouters = useRouter();
-const {logOut} = useContext(AuthContext)
+  const homeRouters = useRouter();
+  const { logOut } = useContext(AuthContext);
 
-const logOuters = () => {
-
-try {
- logOut();
-    toast.success('Sign out successful');
-      homeRouters.push("/")
-  } catch (error) {
-    console.error('Logout failed:', error);
-    toast.error('Sign out failed. Please try again.');
-  }
-
-
-
-}
-
+  const logOuters = () => {
+    try {
+      logOut();
+      toast.success("Sign out successful");
+      homeRouters.push("/");
+    } catch (error) {
+      console.error("Logout failed:", error);
+      toast.error("Sign out failed. Please try again.");
+    }
+  };
 
   return (
-<<<<<<< HEAD
     <div className="   h-full  userProfileContainer flex justify-center items-center p-3  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-3  lg:gap-x-4   ">
-=======
-    <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
-      <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
->>>>>>> f05677532e51b9bb6e692a90d7c91aeab07eae2d
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0 ">
           {/* profile left top starts  */}
@@ -143,18 +132,14 @@ try {
           </div>
           {/* profile left bottom ends  */}
 
-
           <div>
-            <button onClick={logOuters} className="text-center block mx-auto my-4 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
+            <button
+              onClick={logOuters}
+              className="text-center block mx-auto my-4 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
               Log Out
-          </button>
+            </button>
           </div>
-
-
-
-
         </div>
-
 
         {/* profile right section starts  */}
         <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
