@@ -19,7 +19,7 @@ const DashboardLayout = ({ children }) => {
           isSidebarActive ? " left-[0] " : " left-[-100%] "
         }  md:left-0  px-4 xmd:px-5  bg-[#4a69bd] border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
         <header>
-          <h1 className="py-3 text-center ">Dashboard Header</h1>
+          <h1 className="py-6 text-center text-[20px] font-semibold">User Dashboard</h1>
         </header>
         <nav>
           <ul className="navbarsStyles px-4   ">
