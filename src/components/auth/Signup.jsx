@@ -6,7 +6,8 @@ import { useContext } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "./Authprovider";
 import SocialLogin from "./SocialLogin";
-
+import logo from '../../assets/logo/page.png';
+import Image from "next/image"
 
 
 const Register = () => {
@@ -34,15 +35,22 @@ const Register = () => {
 };
 
     return (
-      <div className="hero min-h-screen bg-green-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      {/* <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
+      <div className="hero min-h-screen bg-blue-200">
+  <div className="hero-content flex-col lg:flex-row">
+  <div className="text-center lg:text-left  mr-24">
+  <Image
+              src={logo}
+              alt=""
+              className="  rounded-xl "
+              width={600}
+              height={550}
+            />
+          
     </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-pink-200">
+    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-pink-100">
       <form onSubmit={handleRegister}  className="card-body text-black">
         <div className="form-control">
+        <h1 className="text-3xl font-bold text-center">Sign Up</h1>
           <label className="label">
             <span className="label-text">Email</span>
           </label>
@@ -58,11 +66,11 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Signup</button>
+          <button className="btn btn-warning">Signup</button>
         </div>
         <SocialLogin></SocialLogin>
       </form>
-      <p className="text-black text-center">if you have alrady an account !<Link href='/login' className="text-green-500 font-bold"> login</Link></p>
+      <p className="text-black text-center my-4">if you have alrady an account !<Link href='/login' className="text-orange-600 font-bold"> login</Link></p>
 
     </div>
   </div>
