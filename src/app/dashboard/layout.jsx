@@ -14,9 +14,9 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">
       <div
-        className={`fixed top-0 ${
+        className={` h-screen fixed top-0 ${
           isSidebarActive ? " left-[0] " : " left-[-100%] "
-        }  md:left-0 h-screen px-4 xmd:px-5  bg-[#4a69bd] border-r-[1px] shadow-md text-white duration-200 `}>
+        }  md:left-0  px-4 xmd:px-5  bg-[#4a69bd] border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
         <header>
           <h1 className="py-3 text-center ">Dashboard Header</h1>
         </header>
