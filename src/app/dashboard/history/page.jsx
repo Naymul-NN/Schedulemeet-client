@@ -4,6 +4,8 @@ const History = () => {
       <p className="text-black">See your and i history here</p>
 
       <p>this paragraph isd added by moniruzzaman</p>
+      <p>this paragraph isd added by moniruzzaman</p>
+      <p>this paragraph isd added by moniruzzaman</p>
     </div>
   );
 };
