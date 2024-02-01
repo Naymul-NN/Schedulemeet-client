@@ -8,7 +8,7 @@ import { FaPinterest } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import Link from "next/link";
 import { IoMdStarOutline } from "react-icons/io";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "@/components/auth/Authprovider";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
@@ -31,15 +31,18 @@ const userData = {
   sociallinks: {
     twitter: "https://twitter.com/jhonDoe434",
     facebook: "https://www.facebook.com/jhonDoe434",
-    instagram: "https://www.instagram.com/jhonDoe434",
+    linkedin: "https://www.instagram.com/jhonDoe434",
+    pinterest: "https://www.instagram.com/jhonDoe434"
+
   },
   userRating: [1, 2, 3],
 };
 
 const UserProfile = () => {
 const homeRouters = useRouter();
-const {logOut} = useContext(AuthContext)
-
+const {logOut, user} = useContext(AuthContext)
+const [showUpdate, setShowUpdate] = useState(false)
+console.log(user)
 const logOuters = () => {
 
 try {
@@ -56,8 +59,16 @@ try {
 }
 
 
-  return (
-    <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
+
+const shower = () => {
+  setShowUpdate(true)
+}
+
+
+
+  return (<div>
+    
+    <div className="h-full relative  userProfileContainer flex justify-center items-center p-2  ">
       <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0 ">
@@ -159,22 +170,22 @@ try {
           <div className="p-4">
             <div>
               <h2>
-                <span className="font-bold">Name:</span> {userData.name}
+                <span className="font-bold">Name:</span> {user.displayName}
               </h2>
               <h2>
-                <span className="font-bold">Email:</span> {userData.useremail}
+                <span className="font-bold">Email:</span> {user.email}
               </h2>
             </div>
           </div>
 
-          <div className=" my-6 ">
+          <div className="my-6">
             <div>
-              <h2 className="text-center mb-4 bg-[#4A69BD] hover:bg-blue-700 cursor-pointer text-white py-2 px-4 w-max mx-auto rounded-md">
+              <h2 className="text-center mb-4 bg-[#4A69BD] cursor-pointer text-white py-2 px-4 w-max mx-auto rounded-md">
                 User Address
               </h2>
             </div>
 
-            <div className="    p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 w-full">
+            <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 w-full">
               <div className="flex  justify-center md:justify-start  ">
                 <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300 ">
                   #Street
@@ -184,7 +195,7 @@ try {
                 </h2>
               </div>
 
-              <div className="flex  justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
                 <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   City
                 </h2>
@@ -193,7 +204,7 @@ try {
                 </h2>
               </div>
 
-              <div className="flex  justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
                 <h2 className="border-l-[1px] bg-[#ddd] border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-l-md font-bold border-gray-300">
                   State
                 </h2>
@@ -222,14 +233,88 @@ try {
             </div>
           </div>
 
-          <div>
-            <h2 className="text-center my-2 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max mx-auto rounded-md">
-              Edit Profile
-            </h2>
-          </div>
+         <div>
+    <button onClick={shower} className="w-max my-2 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
+         </div>
+
+   
+  
         </div>
         {/* profile right section ends  */}
       </div>
+    </div>
+    
+    
+    
+<div className={`h-max ${showUpdate ? 'block' : "hidden"} w-[50%] left-[25%] absolute top-[100px] right-[25%] bg-white z-50 py-10 shadow-md border-[1px] p-4 rounded-md`}>
+  <h2 className="text-center font-bold">Updated Profile</h2>
+<form>
+<div className="p-4 space-y-5">
+
+
+<div className="flex gap-2">
+<div>
+<input defaultValue={userData.username ? userData.username : "Write Your Full Name..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
+</div>
+
+
+<div>
+<textarea className="border-[1px] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="60" rows="0"></textarea>
+</div>
+
+</div>
+
+<div>
+  <h2 className="font-bold my-4">Social Link</h2>
+
+<div className="flex flex-wrap gap-2">
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.facebook : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="facebookLink" placeholder="Write your facebook link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.twitter : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="twitterLink" placeholder="Write your twitter link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.linkedin : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="linkdinLink" placeholder="Write your linkdin link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.pinterest : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="pinterestLink" placeholder="Write your pinterest link..." />
+</div>
+</div>
+
+<div>
+
+  <h2 className="font-bold my-4">Personal Details</h2>
+  <div className="flex flex-wrap gap-2">
+
+
+<input defaultValue={userData.name ? userData.name : "write your name"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
+
+<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-2 rounded-md px-4 py-2 outline-none" type="email" name="email" placeholder="Enter your email..." />
+</div>
+  </div>
+
+<div>
+
+  <h2 className="font-bold my-4">User Address</h2>
+<div className="flex flex-wrap gap-2">
+<input defaultValue={userData.useraddress.street ? userData.useraddress.street : "write your street..."}  className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="street" placeholder="Write Your Street..." />
+
+<input defaultValue={userData.useraddress.city ? userData.useraddress.city : "write your city..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="city" placeholder="Write Your City..." />
+
+<input defaultValue={userData.useraddress.state ? userData.useraddress.state : "write your state..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="state" placeholder="Write Your State..." />
+
+<input defaultValue={userData.useraddress.zipcode ? userData.useraddress.zipcode : "write your zip code..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="zipCode" placeholder="Write Your Zip code..." />
+
+<input defaultValue={userData.useraddress.country ? userData.useraddress.country : "write your country..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="country" placeholder="Write Your Country..." />
+</div>
+  
+</div>
+
+<input className="bg-[#4A69BD] my-2 hover:bg-[#577CE1] font-semibold cursor-pointer text-white px-6 py-2 rounded-md mx-auto block w-max" type="submit" value="Update" />
+</div>
+</form>
+ <div className="flex justify-end">
+ <button onClick={() => setShowUpdate(false)} className="bg-red-500 px-2 py-1 text-white rounded-md">Cancel</button> 
+ </div>
+    </div>
+
+
+    
+    
     </div>
   );
 };
