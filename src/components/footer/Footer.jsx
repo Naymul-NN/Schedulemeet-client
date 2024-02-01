@@ -1,68 +1,65 @@
-import React from 'react';
+import React from "react";
 
 // Footer Section....
 const Footer = () => {
-    return (
+  return (
+    <div className="FooterContainer">
+      <div className="  FooterWrapper">
+        {/* <footer className="footer grid grid-rows-2 p-10  justify-evenly items-baseline text-neutral-content"> */}
+        <footer className="footer grid grid-rows-2 p-10  justify-evenly items-baseline text-neutral-content">
+          <nav className=" ">
+            <header className="footer-title">Services</header>
+            <a className="link link-hover">Branding</a>
+            <a className="link link-hover">Design</a>
+            <a className="link link-hover">Marketing</a>
+            <a className="link link-hover">Advertisement</a>
+          </nav>
+          <nav className="  ">
+            <header className="footer-title">Company</header>
+            <a className="link link-hover">About us</a>
+            <a className="link link-hover">Contact</a>
+            <a className="link link-hover">Jobs</a>
+            <a className="link link-hover">Press kit</a>
+          </nav>
+          <nav className="  ">
+            <header className="footer-title">Legal</header>
+            <a className="link link-hover">Terms of use</a>
+            <a className="link link-hover">Privacy policy</a>
+            <a className="link link-hover">Cookie policy</a>
+          </nav>
+          <nav className="  ">
+            <header className="footer-title">Social</header>
+            <a className="link link-hover">Twitter</a>
+            <a className="link link-hover">Instagram</a>
+            <a className="link link-hover">Facebook</a>
+            <a className="link link-hover">Github</a>
+          </nav>
+          <nav className=" ">
+            <header className="footer-title">Explore</header>
+            <a className="link link-hover">Features</a>
+            <a className="link link-hover">Enterprise</a>
+            <a className="link link-hover">Security</a>
+            <a className="link link-hover">Pricing</a>
+          </nav>
+          <nav className=" ">
+            <header className="footer-title">Apps</header>
+            <a className="link link-hover">Mac</a>
+            <a className="link link-hover">Windows</a>
+            <a className="link link-hover">iPhone</a>
+            <a className="link link-hover">Android</a>
+          </nav>
+        </footer>
 
-      <div>
-<div className='py-4 '>
-
- <footer className="footer grid grid-rows-2 p-10 bg-neutral justify-evenly items-baseline text-neutral-content">
-  <nav>
-    <header className="footer-title">Services</header> 
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav> 
-  <nav>
-    <header className="footer-title">Company</header> 
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav> 
-  <nav>
-    <header className="footer-title">Legal</header> 
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav> 
-  <nav>
-    <header className="footer-title">Social</header> 
-    <a className="link link-hover">Twitter</a>
-    <a className="link link-hover">Instagram</a>
-    <a className="link link-hover">Facebook</a>
-    <a className="link link-hover">Github</a>
-  </nav> 
-  <nav>
-    <header className="footer-title">Explore</header> 
-    <a className="link link-hover">Features</a>
-    <a className="link link-hover">Enterprise</a>
-    <a className="link link-hover">Security</a>
-    <a className="link link-hover">Pricing</a>
-  </nav> 
-  <nav>
-    <header className="footer-title">Apps</header> 
-    <a className="link link-hover">Mac</a>
-    <a className="link link-hover">Windows</a>
-    <a className="link link-hover">iPhone</a>
-    <a className="link link-hover">Android</a>
-  </nav>
-
-
-
-
-</footer>
-
-<div className='border-b-[1px] w-[100%] border-[#585858] mx-auto'></div>
-  <h2 className='text-center pt-4 py-3'><span className='font-bold'><span className='font-bold text-[18px]'>ScheduleMeet</span></span> - Best Service</h2>
-
-
-
-
-        </div></div>
-    );
+        <div className="border-b-[1px] w-[100%] border-[#585858] mx-auto"></div>
+        <h2 className="text-center pt-4 py-3">
+          <span className="font-bold">
+            <span className="font-bold text-[18px]">ScheduleMeet</span>
+          </span>{" "}
+          - Best Service
+        </h2>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
