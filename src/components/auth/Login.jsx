@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { AuthContext } from './Authprovider';
 import SocialLogin from './SocialLogin';
-import logo from '../../assets/image.svg';
+import logo from '../../assets/logo/loginPge.png';
 import Image from "next/image"
 
 const Signin = () => {
@@ -48,15 +48,16 @@ const Signin = () => {
               src={logo}
               alt=""
               className="  rounded-xl "
-              width={450}
+              width={600}
               height={550}
             />
           
     </div>
 
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-green-100 text-black">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
+        <h1 className="text-4xl font-bold text-center text-red-400">Login</h1>
           <label className="label">
             <span className="label-text">Email</span>
           </label>
@@ -76,8 +77,8 @@ const Signin = () => {
         </div>
         <SocialLogin></SocialLogin>
       </form>
-      <p className='text-black text-center'>If you are new here! 
-      <Link href='/signup' className="text-green-400 font-bold" > Sign up</Link></p>
+      <p className='my-4 text-center text-black'>If you are new here! 
+      <Link href='/signup' className="text-orange-600 font-bold" > Sign up</Link></p>
 
     </div>
   </div>
