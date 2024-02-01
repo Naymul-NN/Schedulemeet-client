@@ -14,8 +14,7 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 =======
->>>>>>> 76c092959c9ecae3c5cbc6029047b3a8662b4891
-
+>>>>>>> 76c092959c9ecae3c5cbc6029047b3a8662b48
 const userData = {
   name: "Jhon Doe",
   username: "jhonDoe434",
@@ -41,43 +40,9 @@ const userData = {
 };
 
 const UserProfile = () => {
-<<<<<<< HEAD
-const homeRouters = useRouter();
-const {logOut, user} = useContext(AuthContext)
-const [showUpdate, setShowUpdate] = useState(false)
-console.log(user)
-const logOuters = () => {
-
-try {
- logOut();
-    toast.success('Sign out successful');
-      homeRouters.push("/")
-  } catch (error) {
-    console.error('Logout failed:', error);
-    toast.error('Sign out failed. Please try again.');
-  }
-
-
-
-}
-
-
-
-const shower = () => {
-  setShowUpdate(true)
-}
-
-
-
-  return (<div>
-    
-    <div className="h-full relative  userProfileContainer flex justify-center items-center p-2  ">
-      <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
-=======
   return (
     <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
->>>>>>> 76c092959c9ecae3c5cbc6029047b3a8662b4891
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
           {/* profile left top starts  */}
