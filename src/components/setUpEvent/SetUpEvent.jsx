@@ -18,98 +18,112 @@ const SetUpEvent = () => {
   };
 
   return (
-    <div>
-      <TitleDashboard
-        title={"Set Your Event , monir sdfasdads "}></TitleDashboard>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="card-body">
-        {/* dividing the form elements */}
-        <div className="flex gap-5">
-          {/* left side elements */}
-          <div className="flex-1">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                {...register("hostEmail")}
-                type="email"
-                placeholder="email"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Event Title</span>
-              </label>
-              <input
-                {...register("eventTitle")}
-                type="text"
-                placeholder="Event Title"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Host Name</span>
-              </label>
-              <input
-                {...register("hostName")}
-                type="text"
-                placeholder="Host Name"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-          </div>
+    <div className="setEventContainer min-h-screen  flex justify-center items-center bg-gray-50  ">
+      <div className=" setEventWrapper   ">
+        {/* title starts  */}
+        <TitleDashboard title={"Set Your Event "}></TitleDashboard>
+        {/* title ends */}
 
-          {/* right side elements */}
-          <div className="flex-1">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Date</span>
-              </label>
-              <input
-                {...register("date")}
-                type="date"
-                placeholder="Date"
-                className="input input-bordered text-black"
-                required
-              />
+        {/* form section starts  */}
+
+        <div className="formSection bg-gray-300  border border-gray-200 rounded mt-8 shadow-md w-[92%]  xmd:w-[98%] lg:w-full  m-auto">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="card-body">
+            {/* dividing the form elements */}
+            <div className="flex  flex-col xsm:flex-row  gap-0 xsm:gap-5">
+              {/* left side elements */}
+              <div className="flex-1">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">Email</span>
+                  </label>
+                  <input
+                    {...register("hostEmail")}
+                    type="email"
+                    placeholder="email"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">
+                      Event Title
+                    </span>
+                  </label>
+                  <input
+                    {...register("eventTitle")}
+                    type="text"
+                    placeholder="Event Title"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">Host Name</span>
+                  </label>
+                  <input
+                    {...register("hostName")}
+                    type="text"
+                    placeholder="Host Name"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* right side elements */}
+              <div className="flex-1">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">Date</span>
+                  </label>
+                  <input
+                    {...register("date")}
+                    type="date"
+                    placeholder="Date"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">Time</span>
+                  </label>
+                  <input
+                    {...register("time")}
+                    type="time"
+                    placeholder="Time"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-gray-950">
+                      Meeting Link
+                    </span>
+                  </label>
+                  <input
+                    {...register("meetingLink")}
+                    type="text"
+                    placeholder="Meeting Link"
+                    className="w-full sm:w-[97%] xmd:w-full input input-bordered text-gray-950 bg-gray-200"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Time</span>
-              </label>
-              <input
-                {...register("time")}
-                type="time"
-                placeholder="Time"
-                className="input input-bordered text-black"
-                required
-              />
+            <div className="form-control mt-6">
+              <button className="btn bg-green-500 text-white">Submit</button>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Meeting Link</span>
-              </label>
-              <input
-                {...register("meetingLink")}
-                type="text"
-                placeholder="Meeting Link"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-          </div>
+          </form>
         </div>
-        <div className="form-control mt-6">
-          <button className="btn bg-green-500 text-white">Submit</button>
-        </div>
-      </form>
+
+        {/* form section ends  */}
+      </div>
     </div>
   );
 };
