@@ -57,10 +57,10 @@ try {
 
 
   return (
-    <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
-      <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
+    <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
+      <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
         {/* profile left section starts  */}
-        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
+        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0 ">
           {/* profile left top starts  */}
           <div className=" profileLefftTopSection border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100  ">
             <div>
@@ -140,7 +140,7 @@ try {
 
 
           <div>
-            <button onClick={logOuters} className="text-center block mx-auto my-2 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
+            <button onClick={logOuters} className="text-center block mx-auto my-4 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
               Log Out
           </button>
           </div>
