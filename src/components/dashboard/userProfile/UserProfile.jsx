@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client"
 
+import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa6";
@@ -7,6 +8,11 @@ import { FaPinterest } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import Link from "next/link";
 import { IoMdStarOutline } from "react-icons/io";
+import { useContext } from "react";
+import { AuthContext } from "@/components/auth/Authprovider";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+
 
 const userData = {
   name: "Jhon Doe",
@@ -31,6 +37,25 @@ const userData = {
 };
 
 const UserProfile = () => {
+const homeRouters = useRouter();
+const {logOut} = useContext(AuthContext)
+
+const logOuters = () => {
+
+try {
+ logOut();
+    toast.success('Sign out successful');
+      homeRouters.push("/")
+  } catch (error) {
+    console.error('Logout failed:', error);
+    toast.error('Sign out failed. Please try again.');
+  }
+
+
+
+}
+
+
   return (
     <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
@@ -112,8 +137,19 @@ const UserProfile = () => {
             </div>
           </div>
           {/* profile left bottom ends  */}
+
+
+          <div>
+            <button onClick={logOuters} className="text-center block mx-auto my-2 bg-[#4A69BD] hover:bg-[#577ce1] cursor-pointer text-white py-2 px-5 w-max  rounded-md">
+              Log Out
+          </button>
+          </div>
+
+
+
+
         </div>
-        {/* profile left section ends  */}
+
 
         {/* profile right section starts  */}
         <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
