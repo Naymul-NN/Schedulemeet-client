@@ -3,7 +3,7 @@ import React from "react";
 
 const setupevents = () => {
   return (
-    <div className="pt-10 md:pt-20 px-10 md:px-20">
+    <div className=" min-h-screen ">
       <SetUpEvent></SetUpEvent>
     </div>
   );

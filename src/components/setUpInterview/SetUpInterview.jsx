@@ -31,7 +31,7 @@ const SetUpInterview = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="card-body">
             {/* dividing the form elements */}
-            <div className="flex gap-5">
+            <div className="flex flex-col xsm:flex-row gap-0 xsm:gap-5">
               {/* left side elements */}
               <div className="flex-1">
                 <div className="form-control  ">
