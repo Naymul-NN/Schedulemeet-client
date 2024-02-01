@@ -12,7 +12,7 @@ const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
 
   return (
-    <div className="w-[100%] mx-auto flex justify-end relative bg-gray-100 ">
+    <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">
       <div
         className={`fixed top-0 ${
           isSidebarActive ? " left-[0] " : " left-[-100%] "
@@ -24,6 +24,7 @@ const DashboardLayout = ({ children }) => {
           <ul className="navbarsStyles px-4   ">
             <li>
               <Link
+                onClick={() => setIsSidebarActive(!isSidebarActive)}
                 href="/dashboard"
                 className="hover:bg-red-500">
                 {" "}
@@ -32,28 +33,36 @@ const DashboardLayout = ({ children }) => {
               </Link>
             </li>
             <li className="py-3 ">
-              <Link href="/dashboard/profile">
+              <Link
+                href="/dashboard/profile"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
                 {" "}
                 <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
                 Profile
               </Link>
             </li>
             <li>
-              <Link href="/dashboard/setupinterview">
+              <Link
+                href="/dashboard/setupinterview"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
                 {" "}
                 <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
                 Setup Interview
               </Link>
             </li>
             <li className="py-3">
-              <Link href="/dashboard/setupevents">
+              <Link
+                href="/dashboard/setupevents"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
                 {" "}
                 <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
                 Setup Events
               </Link>
             </li>
             <li className="pb-3">
-              <Link href="/dashboard/history">
+              <Link
+                href="/dashboard/history"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
                 {" "}
                 <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
                 History
@@ -61,7 +70,9 @@ const DashboardLayout = ({ children }) => {
             </li>
             <hr className="mr-10" />
             <li className="pt-4">
-              <Link href="/">
+              <Link
+                href="/"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
                 {" "}
                 <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
                 Home
@@ -92,7 +103,8 @@ const DashboardLayout = ({ children }) => {
       {/* hamburger emnu ends  */}
       {/* hamburger emnu ends  */}
 
-      <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black bg-red-500 ">
+      {/* <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black  "> */}
+      <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    text-black  ">
         {children}
       </div>
     </div>
