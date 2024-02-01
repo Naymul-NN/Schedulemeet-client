@@ -9,64 +9,88 @@ import { IoHomeOutline } from "react-icons/io5";
 import { useState } from "react";
 
 const DashboardLayout = ({ children }) => {
-  const [sidebarActive, setSidebarActive] = useState(false);
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
 
   return (
-    <div className="w-[100%] mx-auto flex justify-end relative bg-blue-500 ">
-      {/* <div className="w-[20%]  bg-[#4a69bd] border-r-[1px] shadow-md text-white"> */}
-      <div className="  fixed top-0 left-0 h-screen px-5  bg-lime-300 border-r-[1px] shadow-md text-white ">
+    <div className="w-[100%] mx-auto flex justify-end relative bg-gray-100 ">
+      <div
+        className={`fixed top-0 left-[-100%] md:left-0 h-screen px-4 xmd:px-5  bg-[#4a69bd] border-r-[1px] shadow-md text-white`}>
         <header>
           <h1 className="py-3 text-center ">Dashboard Header</h1>
         </header>
         <nav>
-          <ul className="navbarsStyles px-4">
+          <ul className="navbarsStyles px-4   ">
             <li>
               <Link
                 href="/dashboard"
                 className="hover:bg-red-500">
                 {" "}
-                <FiActivity className="inline-flex mb-1 text-xl" /> Activity
+                <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Activity
               </Link>
             </li>
             <li className="py-3 ">
               <Link href="/dashboard/profile">
                 {" "}
-                <AiOutlineProfile className="inline-flex mb-1 text-xl " />{" "}
+                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
                 Profile
               </Link>
             </li>
             <li>
               <Link href="/dashboard/setupinterview">
                 {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-xl" /> Setup
-                Interview
+                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Setup Interview
               </Link>
             </li>
             <li className="py-3">
               <Link href="/dashboard/setupevents">
                 {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-xl" /> Setup
-                Events
+                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Setup Events
               </Link>
             </li>
             <li className="pb-3">
               <Link href="/dashboard/history">
                 {" "}
-                <GrHistory className="inline-flex mb-1 text-xl" /> History
+                <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                History
               </Link>
             </li>
             <hr className="mr-10" />
             <li className="pt-4">
               <Link href="/">
                 {" "}
-                <IoHomeOutline className="inline-flex mb-1 text-xl" /> Home
+                <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Home
               </Link>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div className="  w-[calc(100%-15rem)]    p-4 text-black bg-red-500 ">
+      {/* hamburger menu */}
+      {/* hamburger menu */}
+      <div
+        onClick={() => setIsSidebarActive(!isSidebarActive)}
+        className="fixed bottom-[20px] h-[50px] right-[20px] md:hidden flex flex-col justify-center gap-2 bg-gray-500 p-2 rounded cursor-pointer z-[20] ">
+        <div
+          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+            isSidebarActive ? "-rotate-45 translate-y-[13px]" : ""
+          }`}></div>
+        <div
+          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+            isSidebarActive ? "opacity-0" : ""
+          }`}></div>
+        <div
+          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+            isSidebarActive ? "rotate-45 translate-y-[-13px]" : ""
+          }`}></div>
+      </div>
+      {/* hamburger emnu ends  */}
+      {/* hamburger emnu ends  */}
+
+      <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black bg-red-500 ">
         {children}
       </div>
     </div>
