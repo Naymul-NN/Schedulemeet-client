@@ -5,10 +5,11 @@ import { useContext } from "react";
 // import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider } from "firebase/auth";
-import axios from "axios";
+// import axios from "axios";
 import { AuthContext } from "./Authprovider";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+// import useAxiospublic from "../hooks/useAxious";
 
 const SocialLogin = () => {
     const { googleLogin } = useContext(AuthContext);
@@ -21,18 +22,12 @@ const SocialLogin = () => {
             .then(result => {
                 console.log(result.user);
                 const userInfo = {
-                    email: result.user?.email,
                     name: result.user.displayName,
-                    photo: result.user.photoURL
+                    email: result.user?.email,
+                    img: result.user.photoURL
                 }
-                // fetch('http://localhost:5000/saveUser',{
-                //     method: "POST",
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //     },
-                //     body: JSON.stringify(userInfo),
-                // })
-                // .then(res => res.json())
+                console.log(userInfo);
+                // axiosPublic.post('/api/v1/webusers', userInfo)
                 // .then(res =>{
                 //     console.log(res.data);   
                 // })

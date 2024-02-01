@@ -1,9 +1,11 @@
-import React from 'react';
+
 
 const History = () => {
+
     return (
         <div>
-            <p className='text-black'>See your history here</p>
+            <p className='text-black'>See your and i  history here</p>
+         
         </div>
     );
 };
