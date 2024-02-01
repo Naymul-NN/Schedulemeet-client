@@ -7,7 +7,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { AuthContext } from './Authprovider';
 import SocialLogin from './SocialLogin';
-
+import logo from '../../assets/image.svg';
+import Image from "next/image"
 
 const Signin = () => {
 
@@ -39,9 +40,20 @@ const Signin = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero min-h-screen bg-blue-300">
+  <div className="hero-content flex-col lg:flex-row">
    
+  <div className="text-center lg:text-left  mr-24">
+  <Image
+              src={logo}
+              alt=""
+              className="  rounded-xl "
+              width={450}
+              height={550}
+            />
+          
+    </div>
+
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-green-100 text-black">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
