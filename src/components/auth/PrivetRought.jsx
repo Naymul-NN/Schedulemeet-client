@@ -1,12 +1,13 @@
 // import { useContext } from "react";
 // import { Navigate, useLocation } from "react-router-dom";
 // import { AuthContext } from "../auth/AuthProvider";
-
+import { useRouter } from 'next/navigation'
 import { useContext } from "react";
 import { AuthContext } from "./Authprovider";
+import Link from 'next/link';
 
 const Privet = ({children}) => {
-    
+    const home = useRouter()
         // const location = useLocation()
     const {user,loading}= useContext(AuthContext);
     if(loading){
@@ -17,7 +18,7 @@ const Privet = ({children}) => {
     return children;
 }
 
-//  return <Navigate state={location.pathname} to="/login"></Navigate>;
+ return home.push("/login")
 
 };
 
