@@ -1,51 +1,59 @@
-"use client";
+"use client"
 
 import { createContext, useEffect, useState } from "react";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut  } from "firebase/auth";
 import auth from "./firebase.config";
-export const AuthContext = createContext(null);
+export const AuthContext = createContext(null)
 
-const AuthProvider = ({ children }) => {
-  const [user, setuser] = useState(null);
-  const [loading, setLoading] = useState(true);
+const AuthProvider = ({children}) => {
 
-  const createUser = (email, password) => {
-    setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
-  };
+    const [user, setuser] = useState(null);
+   const [loading, setLoading] = useState(true);
 
-  const userLogin = (email, password) => {
-    setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
-  };
+   const createUser = (email,password)=>{
+    setLoading(true)
+    return createUserWithEmailAndPassword(auth, email, password)
+   }
 
-  const logOut = () => {
-    setLoading(true);
-    signOut(auth);
-  };
+   const userLogin=(email,password)=>{
+    setLoading(true)
+    return signInWithEmailAndPassword(auth,email,password)
+   }
 
-  const googleLogin = (provider) => {
-    return signInWithPopup(auth, provider);
-  };
+   const logOut = () =>{
+    setLoading(true)
+    signOut(auth)
+   }
 
-  const authinfo = {
-    user,
-    loading,
-    createUser,
-    userLogin,
-    logOut,
-    googleLogin,
-  };
+   const googleLogin =(provider)=>{
+    return signInWithPopup(auth,provider)
+    }
 
-  return (
-    <AuthContext.Provider value={authinfo}>{children}</AuthContext.Provider>
-  );
+    useEffect(()=>{
+        const unSubscribe =  onAuthStateChanged(auth, currentUser =>{
+            setuser(currentUser)
+            setLoading(false)
+          })
+          return  () =>{
+            unSubscribe()
+          }
+       },[])
+
+   const authinfo = {
+             user,
+             loading,
+             createUser,
+             userLogin,
+             logOut,
+             googleLogin,
+   }
+
+
+    return (
+        <AuthContext.Provider value={authinfo}>
+            {children}    
+        </AuthContext.Provider >
+    );
 };
 
 export default AuthProvider;
