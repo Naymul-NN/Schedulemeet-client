@@ -5,7 +5,6 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../auth/Authprovider';
 import toast from 'react-hot-toast';
 
-
 // ....navbar....
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext)
@@ -46,7 +45,7 @@ const Navbar = () => {
        <div className='xl:block lg:block md:block hidden'>
        <Link href="/" className="btn btn-ghost text-xl">ScheduleMeet</Link>
        </div>
-     </div>
+                   </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -55,7 +54,6 @@ const Navbar = () => {
                         <li><Link href="/customers">Customer</Link></li>
                         <li><Link href="blog">Blog</Link></li>
                         <li><Link href="/dashboard">Dashboard</Link></li>
-                      
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -66,10 +64,11 @@ const Navbar = () => {
                     {
                         user ?
                             // <><button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
-                        <h1 className="pr-2"><Link href="/dashboard"><button className='btn btn-sm btn-primary'>My Account</button></Link></h1> 
+                            <h1 className="pr-2"><Link href="/dashboard"><button className='btn btn-sm btn-primary'>My Account</button></Link></h1>
                             // </> 
                             :
-                            <Link href="/login"><button className="btn  btn-sm btn-primary">log In</button></Link>
+
+                            <Link href="/login"><button className="btn  btn-sm btn-primary">log in</button></Link>
 
                     }
                
