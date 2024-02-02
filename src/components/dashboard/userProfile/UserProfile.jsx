@@ -231,12 +231,9 @@ try {
             </div>
           </div>
 
-         <div className="flex justify-between">
+ <div>
     <button onClick={() =>  setShowUpdate(true)} className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
-   <Link href="/writeblog" className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Write a blog</Link>
-         </div>
-
-   
+    </div>
   
         </div>
         {/* profile right section ends  */}
@@ -245,7 +242,7 @@ try {
     
     
 {/* Updated Profile start */}
-<div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
+<div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] fixed transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form>
 <div className="p-4 space-y-5">
 

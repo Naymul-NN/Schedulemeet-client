@@ -3,8 +3,8 @@
     animation-name: user;
     animation-duration: 2s;
 
-
 }
+
 
 @keyframes user {
    0% {top: 0%;}
