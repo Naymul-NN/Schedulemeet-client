@@ -37,7 +37,7 @@ const userData = {
     pinterest: "https://www.instagram.com/jhonDoe434"
 
   },
-  userRating: [1, 2, 3],
+  userRating: {comment: "nice....", ratings: [1, 2, 3]},
 };
 
 const UserProfile = () => {
@@ -61,6 +61,56 @@ try {
 }
 
 
+const updatedInfo = (e) => {
+
+e.preventDefault();
+const form = e.target;
+
+const FullNames = form.name.value;
+const userNames = form.username.value;
+const userEmails = form.useremail.value;
+const userAbout = form.userAbout.value;
+
+
+const facebookLinks = form.facebookLink.value;
+const twitterLinks = form.twitterLink.value;
+const linkdinLinks = form.linkdinLink.value;
+const pinterestLinks = form.pinterestLink.value;
+
+const streets = form.street.value;
+const citys = form.city.value;
+const states = form.state.value;
+const zipCodes = form.zipCode.value;
+const countrys = form.country.value;
+
+const userUpdatedInformation = {
+  name: FullNames,
+  username: userNames,
+  useremail: userEmails,
+  userimage:  userData.userimage ? userData.userimage : "https://ibb.co/vwVSwMz",
+  useraddress: {
+    street: streets,
+    city: citys,
+    state: states,
+    zipcode: zipCodes,
+    country: countrys,
+  },
+  userabout: userAbout,
+  sociallinks: {
+    twitter: twitterLinks,
+    facebook: facebookLinks,
+    linkedin: linkdinLinks,
+    pinterest: pinterestLinks
+
+  }
+};
+
+
+
+console.log(name, userName, userEmail)
+
+
+}
 
 
 
@@ -93,7 +143,7 @@ try {
                 </div>
 
                 <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[20px]">
-                  {userData.userRating.map((d, index) => {
+                  {userData.userRating.ratings.map((d, index) => {
                     return (
                       <div key={index}>
                         <IoMdStarOutline></IoMdStarOutline>
@@ -231,9 +281,12 @@ try {
             </div>
           </div>
 
- <div>
+         <div className="flex justify-between">
     <button onClick={() =>  setShowUpdate(true)} className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
-    </div>
+   <Link href="/writeblog" className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Write a blog</Link>
+         </div>
+
+   
   
         </div>
         {/* profile right section ends  */}
@@ -241,9 +294,9 @@ try {
     </div>
     
     
-{/* Updated Profile start */}
+{/* Updated Profile start...... */}
 <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] fixed transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
-<form>
+<form onSubmit={updatedInfo}>
 <div className="p-4 space-y-5">
 
 
@@ -278,7 +331,7 @@ try {
 
 <input defaultValue={userData.name ? userData.name : "write your name"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
 
-<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="email" name="email" placeholder="Enter your email..." />
+<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="email" name="useremail" placeholder="Enter your email..." />
 </div>
   </div>
 
