@@ -15,10 +15,14 @@ const data = await res.json();
 
 
     return (
-        <div className="w-full my-10 bg-[#fff] h-[600px]">
+        <div className="w-full my-10 bg-[#0d0c22] h-[600px]">
 
-            <h2 className="text-center text-black font-bold pt-4 text-[25px] border-b-2 border-orange-500 w-max mx-auto">Testimonials</h2>
-            <p className="text-black text-center my-4">Our Client Feadback - We provide best service</p>
+   <div className="text-white">
+   <h2 className="text-center  font-bold pt-4 text-[25px] border-b-2 border-orange-500 w-max mx-auto">Testimonials</h2>
+    <p className=" text-center my-4">Our Client Feadback - We provide best service</p>
+ 
+ 
+   </div>
  <div className="my-20 flex justify-center"> 
     <Marquee pauseOnHover={true}>
 

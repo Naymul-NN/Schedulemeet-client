@@ -7,7 +7,7 @@ import { FiActivity } from "react-icons/fi";
 import { GrHistory, GrSchedulePlay } from "react-icons/gr";
 import { IoHomeOutline } from "react-icons/io5";
 import { useState } from "react";
-
+import "../../app/dashboard/dashboardStyle.css"
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
 
@@ -16,7 +16,7 @@ const DashboardLayout = ({ children }) => {
       <div
         className={` h-screen fixed top-0 ${
           isSidebarActive ? " left-[0] " : " left-[-100%] "
-        }  md:left-0  px-4 xmd:px-5  bg-[#4a69bd] border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
+        }  md:left-0  px-4 xmd:px-5 dashboardStyle  border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
         <header>
           <h1 className="py-3 text-center ">Dashboard Header</h1>
         </header>
