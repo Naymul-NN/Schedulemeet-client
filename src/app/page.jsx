@@ -25,7 +25,7 @@ const Home = () => {
      </Container>     
 
 <div>
-<div className="bg-[#fff]">
+<div className="bg-[#0D0C22]">
 <Container>
 <Testimonials></Testimonials>
 </Container>
