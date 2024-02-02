@@ -3,12 +3,13 @@
     animation-name: user;
     animation-duration: 2s;
 
+
 }
 
 @keyframes user {
    0% {top: 0%;}
-      50% {top: 5%;   transform: rotateZ(150deg);}
-      60% {top: 7%;   transform: scale(2, 3);}
+      50% {top: 5%; transform: rotateZ(20deg); }
+      60% {top: 7%;  transform: scale(2, 3);}
       70% {top: 20%; transform: rotateY(10deg);}
    100% {top: 10%;}
   }
