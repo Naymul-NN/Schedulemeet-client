@@ -61,7 +61,7 @@ try {
 }
 
 
-const updatedInfo = (e) => {
+const updatedInfo = (e) =>  {
 
 e.preventDefault();
 const form = e.target;
@@ -115,12 +115,16 @@ console.log(name, userName, userEmail)
 
 
 
+
   return (
     
-    <div className="h-full relative  userProfileContainer flex justify-center items-center p-2  ">
-      <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
+ <div className="relative h-[150vh]">
 
-    <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
+    <div className="relative top-0 userProfileContainer flex justify-center items-center p-2">
+
+      <div className="userProfileWrapper  flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
+
+    <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
         {/* profile left section starts  */}
         <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
@@ -293,7 +297,16 @@ console.log(name, userName, userEmail)
     
     
 {/* Updated Profile start...... */}
-<div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] fixed transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
+
+
+
+    {/* Updated Profile end */}
+
+        </div>
+
+
+
+        <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form onSubmit={updatedInfo}>
 <div className="p-4 space-y-5">
 
@@ -358,13 +371,12 @@ console.log(name, userName, userEmail)
  </div>
     </div>
 
-    {/* Updated Profile end */}
 
-        </div>
+
     
     </div>
   
-
+</div>
 
   );
 
