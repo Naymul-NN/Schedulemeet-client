@@ -1,14 +1,11 @@
-import React from 'react';
+import UserProfile from "@/components/dashboard/userProfile/UserProfile";
 
-const profile = () => {
-    return (
-        <div>
-            <p className='text-black'>
-                
-            this is your profile
-            </p>
-        </div>
-    );
+const Profile = () => {
+  return (
+    <div className=" min-h-screen  ">
+      <UserProfile></UserProfile>
+    </div>
+  );
 };
 
-export default profile;
+export default Profile;

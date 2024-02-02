@@ -14,7 +14,7 @@ import Link from 'next/link';
     return (<>
 
     {/* Customer story */}
-    <div className='w-[70%] mx-auto '>
+    <div className='w-[70%] mx-auto bg-[#0d0c22]'>
 
    
       <div className="h-[800px]">
@@ -26,7 +26,7 @@ import Link from 'next/link';
             
           <div className="xl:w-[55%] lg:w-[80%] w-[100%]">
             <h2 className="text-[#33A30F] text-[25px] font-bold">Customer story</h2>
-            <p className="xl:text-[40px] lg:text-[30px] md:text-[30px] text-[20px] font-bold my-4">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
+            <p className="xl:text-[40px] lg:text-[25px] md:text-[20px] text-[20px] font-bold my-4">How Miller Brother Staffing Leverages the Entire Sense Platform to Increase Speed, Efficiency, and Revenue</p>
 
             <button className="px-6 py-2 border-[1px] rounded-md hover:bg-[#715FE0] hover:border-transparent font-medium">Read their Story</button>
             </div>

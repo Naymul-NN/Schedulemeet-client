@@ -3,6 +3,7 @@ import React from 'react';
 import TitleDashboard from '../../shared/TitleDashboard/TitleDashboard.jsx';
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
+import axios from "axios";
 
 const SetUpEvent = () => {
 
@@ -15,7 +16,18 @@ const SetUpEvent = () => {
      
       const onSubmit = (data) => {
         console.log(data);
-        toast.success('Interview scheduled successfully!');
+        axios
+      .post("http://localhost:5000/api/v1/events/createEvent", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.success) {
+          toast.success("Meeting added");
+        }
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+        // toast.success('Interview scheduled successfully!');
       } 
 
     return (
@@ -67,7 +79,7 @@ const SetUpEvent = () => {
                             <label className="label">
                                 <span className="label-text">Meeting Link</span>
                             </label>
-                            <input {...register("meetingLink")} type="text" placeholder="Meeting Link" className="input input-bordered text-black" required />
+                            <input {...register("eventLink")} type="text" placeholder="Event Link" className="input input-bordered text-black" required />
                         </div>
 
                     </div>
