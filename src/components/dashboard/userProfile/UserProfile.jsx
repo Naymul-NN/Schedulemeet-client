@@ -14,6 +14,8 @@ import { AuthContext } from "@/components/auth/Authprovider";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
+import "../userAnimation.css"
+
 const userData = {
   name: "Jhon Doe",
   username: "jhonDoe434",
@@ -42,7 +44,7 @@ const UserProfile = () => {
   
 const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
-const [showUpdate, setShowUpdate] = useState(false);
+const [showUpdate, setShowUpdate] = useState(null);
 
 
 const logOuters = () => {
@@ -60,9 +62,6 @@ try {
 
 
 
-const shower = () => {
-  setShowUpdate(true)
-}
 
 
 
@@ -158,6 +157,9 @@ const shower = () => {
         </div>
         {/* profile left section ends  */}
 
+
+
+
         {/* profile right section starts  */}
         <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
           <div className="bg-[#4A69BD] rounded-tr-md  rounded-tl-md text-white">
@@ -230,7 +232,7 @@ const shower = () => {
           </div>
 
          <div>
-    <button onClick={shower} className="w-max my-2 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
+    <button onClick={() =>  setShowUpdate(true)} className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
          </div>
 
    
@@ -242,19 +244,19 @@ const shower = () => {
     
     
 {/* Updated Profile start */}
-<div className={`h-max ${showUpdate ? 'block' : "hidden"} w-[50%] left-[25%] absolute top-[100px] right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
+<div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form>
 <div className="p-4 space-y-5">
 
 
-<div className="flex gap-2">
+<div className="flex flex-wrap gap-2">
 <div>
 <input defaultValue={userData.username ? userData.username : "Write Your Full Name..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
 </div>
 
 
 <div>
-<textarea className="border-[1px] border-[#0000003d] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="40" rows="0"></textarea>
+<textarea className="border-[1px] border-[#0000003d] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="30" rows="0"></textarea>
 </div>
 
 </div>

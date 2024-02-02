@@ -1,0 +1,25 @@
+.userAnimation {
+
+    animation-name: user;
+    animation-duration: 2s;
+
+}
+
+@keyframes user {
+   0% {top: 0%;}
+   100% {top: 10%;}
+  }
+  
+
+  .userAnimation2 {
+
+    animation-name: users;
+    animation-duration: 2s;
+
+}
+
+@keyframes users {
+   100% {top: -200%; opacity: 0;}
+     50% {top: 5%; opacity: 0.8;}
+   0% {top: 10%; opacity: 0.9;}
+  }
