@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 
 import { FaFacebook } from "react-icons/fa";
@@ -37,12 +39,13 @@ const userData = {
 };
 
 const UserProfile = () => {
+  
 const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
-const [showUpdate, setShowUpdate] = useState(false)
-console.log(user)
-const logOuters = () => {
+const [showUpdate, setShowUpdate] = useState(false);
 
+
+const logOuters = () => {
 try {
  logOut();
     toast.success('Sign out successful');
@@ -51,7 +54,6 @@ try {
     console.error('Logout failed:', error);
     toast.error('Sign out failed. Please try again.');
   }
-
 
 
 }
@@ -68,7 +70,7 @@ const shower = () => {
     
     <div className="h-full relative  userProfileContainer flex justify-center items-center p-2  ">
       <div className="userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
-  return (
+
     <div className="   h-full  userProfileContainer flex justify-center items-center p-2  ">
       <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
         {/* profile left section starts  */}
@@ -148,6 +150,10 @@ const shower = () => {
               </Link>
             </div>
           </div>
+
+          <div>
+            <button onClick={logOuters} className="px-4 w-max mx-auto block py-2 font-semibold text-white bg-[#4A69BD] hover:bg-[#4d6fcb]  rounded-md">Log Out</button>
+          </div>
           {/* profile left bottom ends  */}
         </div>
         {/* profile left section ends  */}
@@ -160,10 +166,10 @@ const shower = () => {
           <div className="p-4">
             <div>
               <h2>
-                <span className="font-bold">Name:</span> {user.displayName}
+                <span className="font-bold">Name:</span> {user?.displayName ? user?.displayName : "Jhon..."}
               </h2>
               <h2>
-                <span className="font-bold">Email:</span> {user.email}
+                <span className="font-bold">Email:</span> {user?.email ? user?.email : "examle@gmail.com"}
               </h2>
             </div>
           </div>
@@ -249,7 +255,7 @@ const shower = () => {
 
 
 <div>
-<textarea className="border-[1px] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="60" rows="0"></textarea>
+<textarea className="border-[1px] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="40" rows="0"></textarea>
 </div>
 
 </div>
@@ -305,7 +311,11 @@ const shower = () => {
         </div>
     
     </div>
+  
+
+
   );
+
 };
 
 export default UserProfile;
