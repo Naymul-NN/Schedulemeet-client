@@ -22,7 +22,6 @@ const WriteBlog = () => {
                     </div>
                     <div className="pt-10 pb-7">
                         <label>
-
                             <textarea className="border w-full lg:w-[60%] h-44 text-white placeholder-green-500 bg-indigo-950" name="message" placeholder="Write here........" />
                         </label>
                     </div>
