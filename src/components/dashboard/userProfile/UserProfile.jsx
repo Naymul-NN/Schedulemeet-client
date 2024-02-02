@@ -241,21 +241,20 @@ const shower = () => {
     </div>
     
     
-    
-<div className={`h-max ${showUpdate ? 'block' : "hidden"} w-[50%] left-[25%] absolute top-[100px] right-[25%] bg-white z-50 py-10 shadow-md border-[1px] p-4 rounded-md`}>
-  <h2 className="text-center font-bold">Updated Profile</h2>
+{/* Updated Profile start */}
+<div className={`h-max ${showUpdate ? 'block' : "hidden"} w-[50%] left-[25%] absolute top-[100px] right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form>
 <div className="p-4 space-y-5">
 
 
 <div className="flex gap-2">
 <div>
-<input defaultValue={userData.username ? userData.username : "Write Your Full Name..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
+<input defaultValue={userData.username ? userData.username : "Write Your Full Name..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
 </div>
 
 
 <div>
-<textarea className="border-[1px] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="40" rows="0"></textarea>
+<textarea className="border-[1px] border-[#0000003d] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="40" rows="0"></textarea>
 </div>
 
 </div>
@@ -264,10 +263,10 @@ const shower = () => {
   <h2 className="font-bold my-4">Social Link</h2>
 
 <div className="flex flex-wrap gap-2">
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.facebook : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="facebookLink" placeholder="Write your facebook link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.twitter : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="twitterLink" placeholder="Write your twitter link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.linkedin : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="linkdinLink" placeholder="Write your linkdin link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.pinterest : "example.com"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="pinterestLink" placeholder="Write your pinterest link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.facebook : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="facebookLink" placeholder="Write your facebook link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.twitter : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="twitterLink" placeholder="Write your twitter link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.linkedin : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="linkdinLink" placeholder="Write your linkdin link..." />
+<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.pinterest : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="pinterestLink" placeholder="Write your pinterest link..." />
 </div>
 </div>
 
@@ -277,9 +276,9 @@ const shower = () => {
   <div className="flex flex-wrap gap-2">
 
 
-<input defaultValue={userData.name ? userData.name : "write your name"} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
+<input defaultValue={userData.name ? userData.name : "write your name"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
 
-<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-2 rounded-md px-4 py-2 outline-none" type="email" name="email" placeholder="Enter your email..." />
+<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="email" name="email" placeholder="Enter your email..." />
 </div>
   </div>
 
@@ -287,15 +286,15 @@ const shower = () => {
 
   <h2 className="font-bold my-4">User Address</h2>
 <div className="flex flex-wrap gap-2">
-<input defaultValue={userData.useraddress.street ? userData.useraddress.street : "write your street..."}  className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="street" placeholder="Write Your Street..." />
+<input defaultValue={userData.useraddress.street ? userData.useraddress.street : "write your street..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="street" placeholder="Write Your Street..." />
 
-<input defaultValue={userData.useraddress.city ? userData.useraddress.city : "write your city..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="city" placeholder="Write Your City..." />
+<input defaultValue={userData.useraddress.city ? userData.useraddress.city : "write your city..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="city" placeholder="Write Your City..." />
 
-<input defaultValue={userData.useraddress.state ? userData.useraddress.state : "write your state..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="state" placeholder="Write Your State..." />
+<input defaultValue={userData.useraddress.state ? userData.useraddress.state : "write your state..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="state" placeholder="Write Your State..." />
 
-<input defaultValue={userData.useraddress.zipcode ? userData.useraddress.zipcode : "write your zip code..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="zipCode" placeholder="Write Your Zip code..." />
+<input defaultValue={userData.useraddress.zipcode ? userData.useraddress.zipcode : "write your zip code..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="zipCode" placeholder="Write Your Zip code..." />
 
-<input defaultValue={userData.useraddress.country ? userData.useraddress.country : "write your country..."} className="border-2 rounded-md px-4 py-2 outline-none" type="text" name="country" placeholder="Write Your Country..." />
+<input defaultValue={userData.useraddress.country ? userData.useraddress.country : "write your country..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="country" placeholder="Write Your Country..." />
 </div>
   
 </div>
@@ -307,6 +306,8 @@ const shower = () => {
  <button onClick={() => setShowUpdate(false)} className="bg-red-500 px-2 py-1 text-white rounded-md">Cancel</button> 
  </div>
     </div>
+
+    {/* Updated Profile end */}
 
         </div>
     
