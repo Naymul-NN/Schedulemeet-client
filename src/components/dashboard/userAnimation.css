@@ -8,9 +8,9 @@
 
 @keyframes user {
    0% {top: 0%;}
-      20% {top: 5%; transform: rotateZ(50deg); }
-      60% {top: 7%;  transform: scale(2, 3);}
-      70% {top: 20%; transform: rotateY(10deg);}
+      50% {top: 8%; opacity: 0.5; 
+        transform:scale(2, 3);}
+      70% {top: 20%; transform: rotateY(10deg); opacity: 0.8;}
    100% {top: 10%;}
   }
   
