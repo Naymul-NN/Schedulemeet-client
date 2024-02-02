@@ -3,7 +3,7 @@ import React from 'react';
 const WriteBlog = () => {
     return (
         <div>
-            <h1 className='py-5 text-3xl'> You can share your throught about interview and time management </h1>
+            <h1 className='py-5 text-3xl'> You can share your thought about interview and time management </h1>
               <form action="https://formspree.io/f/mknldkbb" method="POST">
                     <div className="py-5 ">
                         <label>
