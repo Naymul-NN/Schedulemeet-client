@@ -9,7 +9,7 @@ const Activity = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        axios.get('https://meet.google.com/vmh-qmvt-msa/api/v1/meetings/getMeetings')
+        axios.get('https://schedule-meet-server.vercel.app/api/v1/meetings/getMeetings')
             .then((res) => {
                 console.log(res.data.meetings);
                 setInterviews(res?.data?.meetings);
@@ -18,7 +18,7 @@ const Activity = () => {
     }, [])
 
     useEffect(() => {
-        axios.get('https://meet.google.com/vmh-qmvt-msa/api/v1/events/getEvents')
+        axios.get('https://schedule-meet-server.vercel.app/api/v1/events/getEvents')
             .then((res) => {
                 console.log(res.data.meetings);
                 setEvents(res?.data?.events);
@@ -27,7 +27,7 @@ const Activity = () => {
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete(`https://meet.google.com/vmh-qmvt-msa/api/v1/meetings/deleteMeeting/${id}`)
+        axios.delete(`https://schedule-meet-server.vercel.app/api/v1/meetings/deleteMeeting/${id}`)
         .then(res => {
             console.log("deleted", id);
         })
