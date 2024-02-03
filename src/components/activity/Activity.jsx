@@ -9,7 +9,7 @@ const Activity = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/meetings/getMeetings')
+        axios.get('https://meet.google.com/vmh-qmvt-msa/api/v1/meetings/getMeetings')
             .then((res) => {
                 console.log(res.data.meetings);
                 setInterviews(res?.data?.meetings);
@@ -18,7 +18,7 @@ const Activity = () => {
     }, [])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/events/getEvents')
+        axios.get('https://meet.google.com/vmh-qmvt-msa/api/v1/events/getEvents')
             .then((res) => {
                 console.log(res.data.meetings);
                 setEvents(res?.data?.events);
@@ -27,7 +27,11 @@ const Activity = () => {
     }, [])
 
     const handleDelete = (id) => {
-        console.log("deleted", id);
+        axios.delete(`https://meet.google.com/vmh-qmvt-msa/api/v1/meetings/deleteMeeting/${id}`)
+        .then(res => {
+            console.log("deleted", id);
+        })
+        .catch((error) => console.log(error));
     }
 
     const handleUpdate = (id) => {
