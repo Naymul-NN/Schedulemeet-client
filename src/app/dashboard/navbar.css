@@ -1,0 +1,12 @@
+.navbarsStyles a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+}
+
+.navbarsStyles a:hover {
+
+    background-color: #18163F;
+    border-radius: 5px;
+}
+

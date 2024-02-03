@@ -13,7 +13,7 @@ const Home = () => {
   return (
    <Layout>
     <Container>
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-[#0d0c22]">
         <Banner></Banner>
         <Records></Records>
         <ScheduleFaster></ScheduleFaster>
@@ -25,7 +25,7 @@ const Home = () => {
      </Container>     
 
 <div>
-<div className="bg-[#fff]">
+<div className="bg-[#0D0C22]">
 <Container>
 <Testimonials></Testimonials>
 </Container>
