@@ -37,45 +37,18 @@ const Blogs = () => {
   return (
     <Layout>
       <div className="blogContainer bg-gray-50 text-gray-950  ">
-        <div className="blogWrapper   m-auto pt-6  ">
-          {/* title section starts  */}
-
-          {/* <Title title={"The Sense Blog"} /> */}
-
-          {/* <p className="   text-center font-medium text-sm sm:text-base md:text-lg pt-3 pb-5   ">
-            The latest updates, stories, ideas and guides from the Sense team.
-          </p> */}
-
-          {/* title section ends  */}
-
-          {/* top 3 articles section starts  */}
-          {/* <div className="topArticles  py-9 bg-blue-100   "> */}
-          {/* top article title starts  */}
-
-          {/* <div className="  topArticleTitle text-xl sm:text-2xl md:text-3xl font-bold sm:font-semibold  text-center pb-8 ">
-              <h1>Explore our top articles</h1>
-            </div> */}
-          {/* top article title ends  */}
-
-          {/* <div className="topArticleCardContainer w-[75%] sm:w-[90%] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8  ">
-              <TopArticleCard />
-              <TopArticleCard />
-              <TopArticleCard />
-            </div> */}
-          {/* </div> */}
-          {/* top 3 articles section ends  */}
-
+        <div className="blogWrapper   m-auto py-7  ">
           {/* main blog section starts  */}
 
-          <div className="allBlogs   py-3 w-[90%] m-auto  ">
+          <div className="allBlogs    w-[90%] m-auto  ">
             {/* title starts  */}
-            <h1 className="  text-4xl text-center font-semibold py-3   ">
+            <h1 className="  text-4xl text-center font-semibold pb-3     ">
               Our blogs
             </h1>
             {/* title ends  */}
 
             {/* blog cards  */}
-            <div className="blogCards mt-4  grid grid-cols-3 gap-x-4 gap-y-9  ">
+            <div className="blogCards mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-9 w-[96%] xsm:w-[86%] sm:w-[72%] md:w-full m-auto md:m-0 ">
               {blogs &&
                 blogs.map((blog) => (
                   <BlogCard
