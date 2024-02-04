@@ -119,8 +119,8 @@ const Signin = () => {
                 )}
               </button>
             </div>
-            <SocialLogin></SocialLogin>
           </form>
+          <SocialLogin></SocialLogin>
           <p className="my-4 text-center text-black">
             If you are new here!
             <Link

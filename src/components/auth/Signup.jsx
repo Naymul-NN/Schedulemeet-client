@@ -122,8 +122,8 @@ const Register = () => {
                 )}
               </button>
             </div>
-            <SocialLogin></SocialLogin>
           </form>
+          <SocialLogin></SocialLogin>
           <p className="text-black text-center my-4">
             if you have already an account !
             <Link
