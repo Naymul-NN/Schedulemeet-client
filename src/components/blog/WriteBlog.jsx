@@ -44,7 +44,7 @@ const WriteBlog = () => {
       "https://api.imgbb.com/1/upload?key=00fc9e4302335a502d2035bb196a9314",
       formData
     );
-
+    // console.log(imageResponse?.data?.data?.display_url);
     setTitleImg(imageResponse?.data?.data?.display_url);
   };
 
@@ -59,8 +59,6 @@ const WriteBlog = () => {
       return alert("input empty ");
     }
 
-    const favCount = 0;
-
     const today = new Date();
     const date = today.getDate();
     const month = today.getMonth() + 1;
@@ -72,7 +70,7 @@ const WriteBlog = () => {
       title,
       titleImg,
       description: value,
-      favCount,
+
       category,
       date: writingDate,
       writer: user?.displayName,
