@@ -33,12 +33,6 @@ const BlogCard = ({ blog }) => {
     <div className="blogCardContainer ">
       <div className="flex flex-col overflow-hidden rounded-lg border bg-gray-100 hover:bg-gray-200 group cursor-pointer shadow-md  ">
         <div className=" imageContainer  relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          {/* <img
-            src={titleImg}
-            alt="Photo by Lorenzo Herrera"
-            className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-          /> */}
-
           <Image
             width={500}
             height={500}

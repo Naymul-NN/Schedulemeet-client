@@ -30,7 +30,7 @@ const WriteBlog = () => {
   const [category, setCategory] = useState(null);
   const [fileName, setFileName] = useState("");
 
-  //   console.log(user);
+  // console.log(user);
 
   // ! function for changing title image
   const handleImage = async (e) => {
@@ -70,7 +70,6 @@ const WriteBlog = () => {
       title,
       titleImg,
       description: value,
-
       category,
       date: writingDate,
       writer: user?.displayName,
@@ -78,6 +77,10 @@ const WriteBlog = () => {
     };
 
     // console.log(blogData);
+
+    axiosPublic.post("/api/v1/blogs/addBlog", blogData).then((response) => {
+      console.log(response?.data);
+    });
   };
 
   return (
