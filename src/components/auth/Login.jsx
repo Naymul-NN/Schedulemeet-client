@@ -9,10 +9,11 @@ import { AuthContext } from './Authprovider';
 import SocialLogin from './SocialLogin';
 import logo from '../../assets/logo/loginPge.png';
 import Image from "next/image"
+import useAuth from '../hooks/useAuth';
 
 const Signin = () => {
 
-    const {googleLogin, userLogin} = useContext(AuthContext);
+    const {googleLogin, userLogin} = useAuth();
     const home = useRouter();
 
     // const navigat = () => {
