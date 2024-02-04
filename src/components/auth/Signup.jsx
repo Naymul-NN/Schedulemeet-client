@@ -92,6 +92,7 @@ const Register = () => {
                 name="password"
                 className="input input-bordered text-white"
                 {...register("password", { required: "password is required" })}
+                // TODO: password validation will added later
               />
               <span
                 onClick={() => setShowPassword(!showPassword)}
@@ -102,7 +103,7 @@ const Register = () => {
                 <p className="text-error">{errors.password.message}</p>
               )}
               <label className="label">
-                {/* TODO: implements forget password */}
+                {/* TODO: no need to forget password in register form */}
                 <Link
                   href="#"
                   className="label-text-alt link link-hover">
@@ -113,14 +114,12 @@ const Register = () => {
             <div className="form-control mt-6">
               <button
                 type="submit"
-              
                 className="btn btn-warning">
                 {loading ? (
                   <FaSpinner className="mx-auto animate-spin text-xl" />
                 ) : (
                   "Sign Up"
                 )}
-             
               </button>
             </div>
             <SocialLogin></SocialLogin>
