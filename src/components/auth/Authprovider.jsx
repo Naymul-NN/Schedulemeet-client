@@ -10,6 +10,7 @@ import {
   signOut,
 } from "firebase/auth";
 import auth from "./firebase.config";
+import useAxiospublic from "@/components/hooks/useAxious";
 export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
@@ -17,6 +18,8 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setuser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const axiosPublic = useAxiospublic();
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -41,11 +44,35 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setuser(currentUser);
       setLoading(false);
+
+      console.log(currentUser);
+      if (currentUser) {
+        const userInfo = {
+          email: currentUser?.email,
+        };
+        axiosPublic
+          .post("/api/v1/users/createToken", userInfo)
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((err) => {
+            console.error(err.message);
+          });
+      } else {
+        axiosPublic
+          .post("api/v1/users/logout")
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((err) => {
+            console.error(err.message);
+          });
+      }
     });
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [axiosPublic]);
 
   const authinfo = {
     user,
