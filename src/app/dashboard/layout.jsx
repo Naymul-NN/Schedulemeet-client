@@ -7,9 +7,20 @@ import { FiActivity } from "react-icons/fi";
 import { GrHistory, GrSchedulePlay } from "react-icons/gr";
 import { IoHomeOutline } from "react-icons/io5";
 import { useState } from "react";
-import "../../app/dashboard/dashboardStyle.css"
+import "../../app/dashboard/dashboardStyle.css";
+import useCheckAdmin from "@/components/hooks/useCheckAdmin";
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
+
+  const { isAdmin, adminCheckLoading } = useCheckAdmin();
+
+  if (adminCheckLoading) {
+    return <p>loading ....</p>; //TODO: replace with loading spinner
+  }
+
+  console.log(isAdmin);
+
+  // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
 
   return (
     <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">

@@ -1,24 +1,24 @@
+"use client";
+
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const useUsers = () => {
   const axiosSecure = useAxiosSecure();
-  const [userLoading, setUserLoading] = useState(false);
 
-  // TODO: will replace with tanstack
+  const {
+    data: users,
+    isLoading: userLoading,
+    refetch,
+  } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      const response = await axiosSecure.get("/api/v1/admin/getUsers");
+      return response.data.users;
+    },
+  });
 
-  useEffect(() => {
-    const getUsers = async () => {
-      setUserLoading(true);
-      const response = await axiosSecure.get("/api/v1/users/getUsers");
-      setUserLoading(false);
-      return response.data;
-    };
-
-    getUsers();
-  }, [axiosSecure]);
-
-  return { users, userLoading };
+  return { users, userLoading, refetch };
 };
 
 export default useUsers;
