@@ -2,6 +2,7 @@
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import UsersTable from "./UsersTable/UsersTable";
+import AdminTable from "./AdminTable/AdminTable";
 
 const ManageUsers = () => {
   return (
@@ -15,7 +16,7 @@ const ManageUsers = () => {
         <UsersTable />
       </TabPanel>
       <TabPanel>
-        <h2>Admin table will show here</h2>
+        <AdminTable />
       </TabPanel>
     </Tabs>
   );

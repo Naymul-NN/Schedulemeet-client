@@ -1,22 +1,22 @@
 "use client";
 
 import useUsers from "@/components/hooks/useUsers";
-import UsersRow from "./UsersRow/UsersRow";
+import AdminRow from "./AdminRow/AdminRow";
 
-const UsersTable = () => {
+const AdminTable = () => {
   const { users, userLoading } = useUsers();
 
   if (userLoading) {
     return <p>loading ...</p>; //TODO: loading spinner will be added
   }
 
-  const notAdmin = users.filter((user) => user?.role !== "admin");
+  const admins = users.filter((user) => user?.role === "admin");
 
   return (
     <div>
       <div className="overflow-x-auto">
         <h3 className="text-center text-3xl font-bold text-blue-700">
-          Manage Users
+          View  Admins
         </h3>
 
         <table className="table">
@@ -26,16 +26,15 @@ const UsersTable = () => {
               <th align="center"></th>
               <th align="center">Name</th>
               <th align="center">Email</th>
-              <th align="center">Role</th>
-              <th align="center">Action</th>
+             
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
-            {notAdmin?.map((user, index) => (
-              <UsersRow
-                key={user._id}
-                user={user}
+            {admins?.map((admin, index) => (
+              <AdminRow
+                key={admin._id}
+                admin={admin}
                 index={index}
               />
             ))}
@@ -46,4 +45,4 @@ const UsersTable = () => {
   );
 };
 
-export default UsersTable;
+export default AdminTable;

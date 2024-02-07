@@ -19,7 +19,7 @@ const useCheckAdmin = () => {
         return response.data.admin;
       }
 
-      return null;
+      return { isAdmin: false };
     },
   });
 
