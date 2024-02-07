@@ -9,11 +9,12 @@ import { IoHomeOutline } from "react-icons/io5";
 import { useState } from "react";
 import "../../app/dashboard/dashboardStyle.css";
 import useCheckAdmin from "@/components/hooks/useCheckAdmin";
+import Privet from "@/components/auth/PrivetRought";
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
 
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
-
+    // console.log(isAdmin);
   if (adminCheckLoading) {
     return <p>loading ....</p>; //TODO: replace with loading spinner
   }
@@ -23,7 +24,8 @@ const DashboardLayout = ({ children }) => {
   // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
 
   return (
-    <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">
+    <Privet>
+      <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">
       <div
         className={` h-screen fixed top-0 ${
           isSidebarActive ? " left-[0] " : " left-[-100%] "
@@ -31,8 +33,10 @@ const DashboardLayout = ({ children }) => {
         <header>
           <h1 className="py-3 text-center ">Dashboard Header</h1>
         </header>
+
         <nav>
-          <ul className="navbarsStyles px-4   ">
+            { !isAdmin?  ( <>
+           <ul className="navbarsStyles px-4   ">
             <li>
               <Link
                 onClick={() => setIsSidebarActive(!isSidebarActive)}
@@ -89,8 +93,72 @@ const DashboardLayout = ({ children }) => {
                 Home
               </Link>
             </li>
-          </ul>
+           </ul>
+           </>) : (
+            <>
+            <ul className="navbarsStyles px-4   ">
+            <li>
+              <Link
+                onClick={() => setIsSidebarActive(!isSidebarActive)}
+                href="/dashboard"
+                className="hover:bg-red-500">
+                {" "}
+                <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Activity
+              </Link>
+            </li>
+            <li className="py-3 ">
+              <Link
+                href="/dashboard/manageUser"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
+                Manage Users
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/manageRepots"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Manage Reports
+              </Link>
+            </li>
+            <li className="py-3">
+              <Link
+                href="/dashboard/manageBanUser"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Manage Banned User
+              </Link>
+            </li>
+            <li className="pb-3">
+              <Link
+                href="/dashboard/viewAnalycis"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                View Analytics
+              </Link>
+            </li>
+            <hr className="mr-10" />
+            <li className="pt-4">
+              <Link
+                href="/"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                Home
+              </Link>
+            </li>
+           </ul>
+            </>
+           )
+            } 
         </nav>
+
       </div>
 
       {/* hamburger menu */}
@@ -119,6 +187,7 @@ const DashboardLayout = ({ children }) => {
         {children}
       </div>
     </div>
+    </Privet>
   );
 };
 

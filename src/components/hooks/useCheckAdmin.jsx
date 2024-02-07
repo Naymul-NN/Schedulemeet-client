@@ -1,3 +1,4 @@
+"use client"
 import useAuth from "@/components/hooks/useAuth";
 import useAxiospublic from "@/components/hooks/useAxious";
 import { useQuery } from "@tanstack/react-query";
