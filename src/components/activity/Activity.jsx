@@ -1,37 +1,24 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
-import useMeetings from "@/components/hooks/useMeetings";
+
+import EventsTable from "./EventsTable/EventsTable";
 import MeetingTable from "./MeetingTable/MeetingTable";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Activity = () => {
-  const [interviews, setInterviews] = useState([]);
-  const [events, setEvents] = useState([]);
-
-  const handleDelete = (id) => {
-    axios
-      .delete(
-        `https://schedule-meet-server.vercel.app/api/v1/meetings/deleteMeeting/${id}`
-      )
-      .then((res) => {
-        console.log("deleted", id);
-      })
-      .catch((error) => console.log(error));
-  };
-
-  const handleUpdate = (id) => {
-    console.log("updated", id);
-  };
-
-  const handleInvite = (id) => {
-    console.log("invited", id);
-  };
-
   return (
-    <>
-      <MeetingTable />
-    </>
+    <Tabs className="w-11/12 mx-auto">
+      <TabList align={"center"}>
+        <Tab>Meetings</Tab>
+        <Tab>Events</Tab>
+      </TabList>
+
+      <TabPanel>
+        <MeetingTable />
+      </TabPanel>
+      <TabPanel>
+        <EventsTable />
+      </TabPanel>
+    </Tabs>
   );
 };
 

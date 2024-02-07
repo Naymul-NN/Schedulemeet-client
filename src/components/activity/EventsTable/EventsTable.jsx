@@ -1,20 +1,20 @@
-import useMeetings from "@/components/hooks/useMeetings";
+import useEvents from "@/components/hooks/useEvents";
 import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
-import MeetingRow from "./MeetingRow/MeetingRow";
+import EventRow from "./EventRow/EventRow";
 
-const MeetingTable = () => {
-  const { meetingLoading, meetings } = useMeetings();
+const EventsTable = () => {
+  const { eventsLoading, events } = useEvents();
 
-  if (meetingLoading) {
+  if (eventsLoading) {
     return <p className="">loading</p>;
   }
 
   return (
     <div>
-      {/*-------------Total scheduled interview data-------------*/}
-      <TitleDashboard title={"Scheduled Meetings"}></TitleDashboard>
+      {/*-------------Total scheduled Events data-------------*/}
+      <TitleDashboard title={"Scheduled Events"}></TitleDashboard>
       <div>
-        {meetings?.length ? (
+        {events?.length ? (
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
@@ -28,11 +28,11 @@ const MeetingTable = () => {
                 </tr>
               </thead>
               <tbody>
-                {meetings.map((meeting, index) => (
-                  <MeetingRow
-                    key={meeting._id}
+                {events.map((event, index) => (
+                  <EventRow
+                    key={event._id}
                     index={index}
-                    meeting={meeting}
+                    event={event}
                   />
                 ))}
               </tbody>
@@ -48,4 +48,4 @@ const MeetingTable = () => {
   );
 };
 
-export default MeetingTable;
+export default EventsTable;

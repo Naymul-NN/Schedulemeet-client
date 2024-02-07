@@ -1,11 +1,15 @@
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
+import useMeetings from "@/components/hooks/useMeetings";
 import toast from "react-hot-toast";
 
 const MeetingRow = ({ meeting, index }) => {
   const { _id, meetingTitle, hostEmail, date } = meeting;
+  const { refetch } = useMeetings();
 
   const axiosSecure = useAxiosSecure();
 
+
+//   there will be a modal to confirm the delete
   const handleDelete = async () => {
     const res = await axiosSecure.delete(
       `/api/v1/meetings/deleteMeeting/${_id}`
@@ -13,6 +17,7 @@ const MeetingRow = ({ meeting, index }) => {
 
     if (res.data.success) {
       toast.success("Deleted Successfully");
+      refetch()
     }
   };
 
