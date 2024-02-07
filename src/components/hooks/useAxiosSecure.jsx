@@ -1,14 +1,18 @@
-"use client";
 import axios from "axios";
 
-const axiosPublic = axios.create({
+const axiosSecure = axios.create({
   baseURL: "http://localhost:5000",
   // TODO: deploy link will be added
 
   withCredentials: true,
 });
-const useAxiospublic = () => {
-  return axiosPublic;
+
+const useAxiosSecure = () => {
+
+
+
+    
+  return axiosSecure;
 };
 
-export default useAxiospublic;
+export default useAxiosSecure;

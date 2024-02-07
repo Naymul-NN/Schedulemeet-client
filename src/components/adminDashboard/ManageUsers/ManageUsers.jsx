@@ -1,25 +1,25 @@
 "use client";
 
-import EventsTable from "./EventsTable/EventsTable";
-import MeetingTable from "./MeetingTable/MeetingTable";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import UsersTable from "./UsersTable/UsersTable";
+import AdminTable from "./AdminTable/AdminTable";
 
-const Activity = () => {
+const ManageUsers = () => {
   return (
     <Tabs className="w-11/12 mx-auto">
       <TabList align={"center"}>
-        <Tab>Meetings</Tab>
-        <Tab>Events</Tab>
+        <Tab>Users</Tab>
+        <Tab>Admins</Tab>
       </TabList>
 
       <TabPanel>
-        <MeetingTable />
+        <UsersTable />
       </TabPanel>
       <TabPanel>
-        <EventsTable />
+        <AdminTable />
       </TabPanel>
     </Tabs>
   );
 };
 
-export default Activity;
+export default ManageUsers;
