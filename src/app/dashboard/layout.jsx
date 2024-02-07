@@ -17,8 +17,7 @@ import toast from "react-hot-toast";
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
-  const home = useRouter();
-   
+    // console.log(isAdmin);
   if (adminCheckLoading) {
     return <p>loading ....</p>; //TODO: replace with loading spinner
   }
@@ -31,7 +30,7 @@ const DashboardLayout = ({ children }) => {
   const handleLogout = async () => {
     try {
       await logOut();
-      home.push("/")
+      // home.push("/")
       toast.success("Sign out successful");
     } catch (error) {
       console.error("Logout failed:", error);
@@ -42,13 +41,13 @@ const DashboardLayout = ({ children }) => {
   return (
     <Privet>
       <div className="w-[100%] mx-auto flex justify-end relative bg-gray-50 ">
-      <div
-        className={` h-screen fixed top-0 ${
-          isSidebarActive ? " left-[0] " : " left-[-100%] "
-        }  md:left-0  px-4 xmd:px-5 dashboardStyle  border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
-        <header>
-          <h1 className="py-3 text-center ">Dashboard Header</h1>
-        </header>
+        <div
+          className={` h-screen fixed top-0 ${
+            isSidebarActive ? " left-[0] " : " left-[-100%] "
+          }  md:left-0  px-4 xmd:px-5 dashboardStyle  border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
+          <header>
+            <h1 className="py-3 text-center ">Dashboard Header</h1>
+          </header>
 
         <nav>
             { !isAdmin?  ( <>
@@ -113,7 +112,7 @@ const DashboardLayout = ({ children }) => {
            </>) : (
             <>
             <ul className="navbarsStyles px-4   ">
-            <li>
+            <li> 
               <Link
                 onClick={() => setIsSidebarActive(!isSidebarActive)}
                 href="/dashboard"
@@ -169,8 +168,14 @@ const DashboardLayout = ({ children }) => {
                 Home
               </Link>
             </li>
-            <li className="pt-4">
-              <button onClick={handleLogout}>Logout</button>
+            <li className="py-3 ">
+              <Link
+                href="/dashboard/profile"
+                onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                {" "}
+                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
+                Profile
+              </Link>
             </li>
            </ul>
             </>
@@ -180,32 +185,32 @@ const DashboardLayout = ({ children }) => {
 
       </div>
 
-      {/* hamburger menu */}
-      {/* hamburger menu */}
-      <div
-        onClick={() => setIsSidebarActive(!isSidebarActive)}
-        className="fixed bottom-[20px] h-[50px] right-[20px] md:hidden flex flex-col justify-center gap-2 bg-gray-500 p-2 rounded cursor-pointer z-[20] ">
+        {/* hamburger menu */}
+        {/* hamburger menu */}
         <div
-          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
-            isSidebarActive ? "-rotate-45 translate-y-[13px]" : ""
-          }`}></div>
-        <div
-          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
-            isSidebarActive ? "opacity-0" : ""
-          }`}></div>
-        <div
-          className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
-            isSidebarActive ? "rotate-45 translate-y-[-13px]" : ""
-          }`}></div>
-      </div>
-      {/* hamburger emnu ends  */}
-      {/* hamburger emnu ends  */}
+          onClick={() => setIsSidebarActive(!isSidebarActive)}
+          className="fixed bottom-[20px] h-[50px] right-[20px] md:hidden flex flex-col justify-center gap-2 bg-gray-500 p-2 rounded cursor-pointer z-[20] ">
+          <div
+            className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+              isSidebarActive ? "-rotate-45 translate-y-[13px]" : ""
+            }`}></div>
+          <div
+            className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+              isSidebarActive ? "opacity-0" : ""
+            }`}></div>
+          <div
+            className={`line duration-300 h-[5px] w-[40px] bg-white rounded ${
+              isSidebarActive ? "rotate-45 translate-y-[-13px]" : ""
+            }`}></div>
+        </div>
+        {/* hamburger emnu ends  */}
+        {/* hamburger emnu ends  */}
 
-      {/* <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black  "> */}
-      <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    text-black  ">
-        {children}
+        {/* <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black  "> */}
+        <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    text-black  ">
+          {children}
+        </div>
       </div>
-    </div>
     </Privet>
   );
 };

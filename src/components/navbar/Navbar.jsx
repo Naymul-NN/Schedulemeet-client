@@ -18,9 +18,7 @@ const Navbar = () => {
     }
   };
 
-
-
-// TODO:  fix it later
+  // TODO:  fix it later
 
   const navLinks = [
     {
@@ -106,11 +104,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/dashboard">Dashboard</Link>
-            </li>
-
-            <li>
-              <Link href="/adminDashboard">Admin Dashboard</Link>{" "}
-              {/* TODO: this will remove later */}
             </li>
           </ul>
         </div>
