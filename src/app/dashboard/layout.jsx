@@ -22,7 +22,7 @@ const DashboardLayout = ({ children }) => {
     return <p>loading ....</p>; //TODO: replace with loading spinner
   }
 
-  console.log(isAdmin);
+ 
 
   // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
   // eslint-disable-next-line react-hooks/rules-of-hooks

@@ -1,10 +1,20 @@
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
+import toast from "react-hot-toast";
 
 const MeetingRow = ({ meeting, index }) => {
-  const { meetingTitle, hostEmail, date } = meeting;
+  const { _id, meetingTitle, hostEmail, date } = meeting;
 
+  const axiosSecure = useAxiosSecure();
 
-  const axiosSecure=useAxiosSecure()
+  const handleDelete = async () => {
+    const res = await axiosSecure.delete(
+      `/api/v1/meetings/deleteMeeting/${_id}`
+    );
+
+    if (res.data.success) {
+      toast.success("Deleted Successfully");
+    }
+  };
 
   return (
     <tr key={index}>
@@ -15,7 +25,11 @@ const MeetingRow = ({ meeting, index }) => {
       <td
         align="center"
         className="space-x-3">
-        <button className="btn btn-outline btn-error">Delete</button>
+        <button
+          onClick={handleDelete}
+          className="btn btn-outline btn-error">
+          Delete
+        </button>
         <button className="btn btn-outline btn-success">Invite</button>
         <button className="btn btn-outline btn-warning">Update</button>
       </td>
