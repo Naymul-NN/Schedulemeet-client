@@ -122,7 +122,7 @@ const Navbar = () => {
           {user ? (
             // <><button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
             <h1 className="pr-2">
-              <Link href="/dashboard/profile">
+              <Link href="/dashboard">
                 <button className="btn  btn-sm bg-transparent hover:text-black  text-white">
                   My Account
                 </button>
