@@ -10,11 +10,15 @@ import { useState } from "react";
 import "../../app/dashboard/dashboardStyle.css";
 import useCheckAdmin from "@/components/hooks/useCheckAdmin";
 import Privet from "@/components/auth/PrivetRought";
+import useAuth from "@/components/hooks/useAuth";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
-
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
-    // console.log(isAdmin);
+  const home = useRouter();
+   
   if (adminCheckLoading) {
     return <p>loading ....</p>; //TODO: replace with loading spinner
   }
@@ -22,6 +26,18 @@ const DashboardLayout = ({ children }) => {
   console.log(isAdmin);
 
   // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const {logOut} = useAuth();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      home.push("/")
+      toast.success("Sign out successful");
+    } catch (error) {
+      console.error("Logout failed:", error);
+      toast.error("Sign out failed. Please try again.");
+    }
+  };
 
   return (
     <Privet>
@@ -152,6 +168,9 @@ const DashboardLayout = ({ children }) => {
                 <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
                 Home
               </Link>
+            </li>
+            <li className="pt-4">
+              <button onClick={handleLogout}>Logout</button>
             </li>
            </ul>
             </>
