@@ -3,6 +3,7 @@ import "./globals.css";
 import AuthProvider from "@/components/auth/Authprovider";
 import { Toaster } from "react-hot-toast";
 import TanstackProviders from "@/providers/TanstackProviders";
+import 'react-tabs/style/react-tabs.css';
 
 const inter = Inter({ subsets: ["latin"] });
 

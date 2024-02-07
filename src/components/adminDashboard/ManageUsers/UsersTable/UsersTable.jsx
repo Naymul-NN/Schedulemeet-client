@@ -1,7 +1,7 @@
 "use client";
 
 import useUsers from "@/components/hooks/useUsers";
-import UsersRow from "@/components/adminDashboard/UsersTable/UsersRow/UsersRow";
+import UsersRow from "./UsersRow/UsersRow";
 
 const UsersTable = () => {
   const { users, userLoading } = useUsers();
