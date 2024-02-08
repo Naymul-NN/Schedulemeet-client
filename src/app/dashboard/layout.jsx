@@ -10,15 +10,12 @@ import { useState } from "react";
 import "../../app/dashboard/dashboardStyle.css";
 import useCheckAdmin from "@/components/hooks/useCheckAdmin";
 import Privet from "@/components/auth/PrivetRought";
-import useAuth from "@/components/hooks/useAuth";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
+
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
-  const { logOut } = useAuth();
-
+ 
   // console.log(isAdmin);
 
   if (adminCheckLoading) {
@@ -27,16 +24,7 @@ const DashboardLayout = ({ children }) => {
 
   // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
 
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      // home.push("/")
-      toast.success("Sign out successful");
-    } catch (error) {
-      console.error("Logout failed:", error);
-      toast.error("Sign out failed. Please try again.");
-    }
-  };
+  
 
   return (
     <Privet>
