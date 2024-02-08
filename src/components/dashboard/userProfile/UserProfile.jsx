@@ -50,8 +50,9 @@ const [showUpdate, setShowUpdate] = useState(null);
 const logOuters = () => {
 try {
  logOut();
+ homeRouters.push("/")
     toast.success('Sign out successful');
-      homeRouters.push("/")
+      
   } catch (error) {
     console.error('Logout failed:', error);
     toast.error('Sign out failed. Please try again.');

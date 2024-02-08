@@ -78,19 +78,19 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal text-[15px] px-1">
             <li>
-              <Link  className={`${pathname === "/" ? 'bg-white text-black font-bold rounded-xl' : ''}`} href="/">Home</Link>
+              <Link  className={`${pathname === "/" ? 'bg-yellow-400 text-black font-bold rounded-xl' : ''}`} href="/">Home</Link>
             </li>
             <li>
-              <Link className={`${pathname === "/about" ? 'bg-white text-black font-bold   rounded-xl' : ''}`}  href="/about">About</Link>
+              <Link className={`${pathname === "/about" ? 'bg-yellow-400 text-black font-bold   rounded-xl' : ''}`}  href="/about">About</Link>
             </li>
             <li>
-              <Link className={`${pathname === "/customers" ? 'bg-white text-black font-bold  rounded-xl' : ''}`} href="/customers">Customer</Link>
+              <Link className={`${pathname === "/customers" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="/customers">Customer</Link>
             </li>
             <li>
-              <Link className={`${pathname === "/blog" ? 'bg-white text-black font-bold  rounded-xl' : ''}`} href="blog">Blog</Link>
+              <Link className={`${pathname === "/blog" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="blog">Blog</Link>
             </li>
             <li>
-              <Link className={`${pathname === "/dashboard" ? 'bg-white text-black font-bold  rounded-xl' : ''}`} href="/dashboard">Dashboard</Link>
+              <Link className={`${pathname === "/dashboard" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </div>
