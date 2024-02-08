@@ -15,7 +15,7 @@ export const metadata = {
 const About = () => {
   return (
     <Layout>
-      <div className=" aboutPageContainer bg-white ">
+      <div className=" aboutPageContainer bg-[#0d0c22] ">
         <div className="aboutPageWrapper   ">
           {/* about banner starts  */}
           <AboutBanner />

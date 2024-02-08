@@ -12,7 +12,7 @@ const AboutBanner = () => {
           </h1>
 
           {/*  small description  */}
-          <p className=" font-semibold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight  text-[#111133] mb-6 md:mb-7 lg:mb-9 ">
+          <p className=" font-semibold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight  text-white mb-6 md:mb-7 lg:mb-9 ">
             We’re changing how companies hire amazing talent
           </p>
 
@@ -20,7 +20,7 @@ const AboutBanner = () => {
           <div className="buttonSection  flex gap-7 ">
             {/* join button  */}
 
-            <button className="joinBtn bg-[#111133]  py-1.5 px-3 sm:py-3 sm:px-5 font-semibold text-gray-50 rounded hover:bg-gray-50 hover:text-[#111133] border border-transparent hover:border-[#111133] transition-all duration-200   ">
+            <button className="joinBtn btn btn-warning  py-1.5 px-3 sm:py-3 sm:px-5 font-semibold text-black rounded hover:bg-gray-50 hover:text-[#111133] border border-transparent hover:border-[#111133] transition-all duration-200   ">
               {" "}
               Join the team{" "}
             </button>
@@ -29,7 +29,7 @@ const AboutBanner = () => {
 
             {/* learn more button  */}
 
-            <button className="joinBtn  bg-gray-50 py-1.5 px-3 sm:py-3 sm:px-5 font-semibold  text-[#111133] rounded hover:bg-[#111133] hover:text-gray-50 border  border-[#111133] hover:border-transparent transition-all duration-200   ">
+            <button className="joinBtn  bg-gray-50 py-1.5 px-3 sm:py-3 sm:px-5 font-semibold  text-[#111133] rounded hover:bg-yellow-400 hover:text-black border  border-[#111133] hover:border-transparent transition-all duration-200   ">
               Learn more
             </button>
             {/* learn more button  */}

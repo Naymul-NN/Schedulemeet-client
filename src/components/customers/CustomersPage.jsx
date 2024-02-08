@@ -58,7 +58,7 @@ import Link from 'next/link';
        </div>
 
       {/* See how Sense helps recruiting teams achieve their goals */}
-      <div className="bg-[#fff] text-black h-auto py-10">
+      <div className="bg-[#233A77] text-black h-auto py-10">
 <div className="xl:w-[70%] lg:w-[70%] w-[95%] mx-auto">
 
 
@@ -280,7 +280,7 @@ import Link from 'next/link';
      </div>
 
      <div className='my-4'>
-     <Link className='border-[1px] rounded-md border-white hover:text-white hover:bg-[#715FE0] hover:border-transparent block w-max px-6 p-3' href="/">Get a demo</Link>
+     <Link className='border-[1px] rounded-md btn btn-warning border-white hover:text-white hover:bg-[#715FE0] hover:border-transparent block w-max px-6 p-3' href="/">Get a demo</Link>
      </div>
       </div>
     
@@ -307,7 +307,7 @@ import Link from 'next/link';
       
 {/* More than 1,000 businesses use Sense to scale their hiring start */}
 
-<div className='bg-white text-black'>
+<div className='bg-[#233A77] text-black'>
 <div className="xl:w-[70%] lg:w-[70%] w-[100%] mx-auto h-[600px]">
 
 <div className='flex xl:flex-row lg:flex-row flex-col gap-10 items-center h-full justify-center'>
