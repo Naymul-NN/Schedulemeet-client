@@ -2,13 +2,38 @@
 
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import toast from "react-hot-toast";
-
 import useReports from "@/components/hooks/useReports";
+import useAuth from "@/components/hooks/useAuth";
 
 const ReportsRow = ({ report, index }) => {
-  const { _id, reportedBy, reportedTo, reason, reportDate } = report;
+  const { userId, _id, reportedBy, reportedTo, reason, reportDate } = report;
   const axiosSecure = useAxiosSecure();
   const { refetch } = useReports();
+  const { user: admin } = useAuth();
+
+  const handleAcceptReport = async () => {
+    try {
+      const banInfo = {
+        userId,
+        reportedTo,
+        bannedBy: admin.email,
+        reason,
+        bannedFrom: new Date().toLocaleDateString("en-UK"),
+      };
+
+      const res = await axiosSecure.post(
+        `/api/v1/reports/accept/${_id}`,
+        banInfo
+      );
+
+      if (res.data.success) {
+        toast.success("Report Accepted");
+        refetch();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleRejectReport = async () => {
     try {
@@ -35,7 +60,11 @@ const ReportsRow = ({ report, index }) => {
       <td
         className="space-x-3 "
         align="center">
-        <button className="btn btn-outline btn-success ">Accept</button>
+        <button
+          onClick={handleAcceptReport}
+          className="btn btn-outline btn-success ">
+          Accept
+        </button>
 
         <button
           onClick={handleRejectReport}
