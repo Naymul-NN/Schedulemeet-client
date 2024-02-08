@@ -1,11 +1,12 @@
-import React from 'react';
+import ReportsTable from "@/components/adminDashboard/ReportsTable/ReportsTable";
+
 
 const Reports = () => {
-    return (
-        <div className='pl-10'>
-            <h1>manage the reports</h1>
-        </div>
-    );
+  return (
+    <div className="pl-10">
+      <ReportsTable />
+    </div>
+  );
 };
 
 export default Reports;

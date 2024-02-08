@@ -1,3 +1,4 @@
+import useAuth from "@/components/hooks/useAuth";
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import useUsers from "@/components/hooks/useUsers";
 import toast from "react-hot-toast";
@@ -6,6 +7,8 @@ const UsersRow = ({ user, index }) => {
   const { _id, name, email, role } = user;
   const { refetch } = useUsers();
   const axiosSecure = useAxiosSecure();
+
+  const { user: admin } = useAuth();
 
   const handleMakeAdmin = async () => {
     try {
@@ -27,6 +30,31 @@ const UsersRow = ({ user, index }) => {
     }
   };
 
+  const handleBanUser = async (req, res) => {
+    try {
+      const banInfo = {
+        bannedBy: admin.email,
+        userEmail: user.email,
+        userId: user._id,
+        reason: "Spam",
+        bannedFrom: new Date().toLocaleDateString("en-UK"),
+      };
+
+      console.log(banInfo);
+
+      const res = await axiosSecure.post(`/api/v1/ban/banUser`, banInfo);
+
+      if (res.data.success) {
+        toast.success("The user is banned successfully");
+        refetch();
+      }
+
+      console.log(res);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <tr key={index}>
       <th align="center">{index + 1}</th>
@@ -43,7 +71,11 @@ const UsersRow = ({ user, index }) => {
           Make Admin
         </button>
 
-        <button className="btn  btn-error">Ban User</button>
+        <button
+          onClick={handleBanUser}
+          className="btn  btn-error">
+          Ban User
+        </button>
       </td>
     </tr>
   );
