@@ -10,6 +10,7 @@ import { useState } from "react";
 import "../../app/dashboard/dashboardStyle.css";
 import useCheckAdmin from "@/components/hooks/useCheckAdmin";
 import Privet from "@/components/auth/PrivetRought";
+import Image from "next/image";
 
 
 const DashboardLayout = ({ children }) => {
@@ -33,8 +34,16 @@ const DashboardLayout = ({ children }) => {
           className={` h-screen fixed top-0 ${
             isSidebarActive ? " left-[0] " : " left-[-100%] "
           }  md:left-0  px-4 xmd:px-5 dashboardStyle  border-r-[1px] shadow-md text-white duration-200 z-[20] `}>
-          <header>
-            <h1 className="py-3 text-center ">Dashboard Header</h1>
+          <header className="flex justify-center items-center gap-3 pt-5 pb-3">
+            
+          <Image
+              className="rounded-full"
+              src="https://i.ibb.co/5LFVvdk/logo-white.webp"
+              alt="Picture of the author"
+              width={40}
+              height={30}
+            />
+            <h1 className="py-3 text-center text-2xl text-green-200">ScheduleMeet</h1>
           </header>
 
           <nav>
