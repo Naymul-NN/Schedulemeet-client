@@ -19,6 +19,11 @@ const Instractions = () => {
             <h1 className='text-3xl border-2 mx-[600px] border-red-700 text-center mb-10'>Step-3</h1>
              <p className='mx-20 text-justify'>If you are facaeing any type of problem to create interview link or another problem that you are facing then just go to the <span className='font-bold text-green-500'><Link href="/about">About</Link></span> about page and scroll down and then you will see a form. You have to fill the form to infrom us what type of problem you are facing . We give solution within 24 hours that is your commitment .</p>
             </div>
+
+            <div className='flex justify-center items-center pt-10 mb-10'> 
+               <Link href="/"> <button className='btn  btn-warning'>GO BACK TO HOME</button> </Link> 
+                
+           </div>
         </div>
     );
 };
