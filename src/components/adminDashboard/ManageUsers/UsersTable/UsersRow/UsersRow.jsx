@@ -36,20 +36,20 @@ const UsersRow = ({ user, index }) => {
         bannedBy: admin.email,
         userEmail: user.email,
         userId: user._id,
-        reason: "Spam", 
-        bannedFrom:new Date().toLocaleDateString("en-UK"),
+        reason: "Spam",
+        bannedFrom: new Date().toLocaleDateString("en-UK"),
       };
 
       console.log(banInfo);
 
-      const res = await axiosSecure.post(`/api/v1/ban/banUser`,banInfo);
+      const res = await axiosSecure.post(`/api/v1/ban/banUser`, banInfo);
 
-      if(res.data.success){
-        toast.success("The user is banned successfully")
-        refetch()
+      if (res.data.success) {
+        toast.success("The user is banned successfully");
+        refetch();
       }
 
-      console.log(res)
+      console.log(res);
     } catch (error) {
       console.error(error);
     }
@@ -71,7 +71,11 @@ const UsersRow = ({ user, index }) => {
           Make Admin
         </button>
 
-        <button onClick={handleBanUser} className="btn  btn-error">Ban User</button>
+        <button
+          onClick={handleBanUser}
+          className="btn  btn-error">
+          Ban User
+        </button>
       </td>
     </tr>
   );

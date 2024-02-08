@@ -17,16 +17,16 @@ import toast from "react-hot-toast";
 const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
-    // console.log(isAdmin);
+  const { logOut } = useAuth();
+
+  // console.log(isAdmin);
+
   if (adminCheckLoading) {
     return <p>loading ....</p>; //TODO: replace with loading spinner
   }
 
- 
-
   // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const {logOut} = useAuth();
+
   const handleLogout = async () => {
     try {
       await logOut();
@@ -49,141 +49,141 @@ const DashboardLayout = ({ children }) => {
             <h1 className="py-3 text-center ">Dashboard Header</h1>
           </header>
 
-        <nav>
-            { !isAdmin?  ( <>
-           <ul className="navbarsStyles px-4   ">
-            <li>
-              <Link
-                onClick={() => setIsSidebarActive(!isSidebarActive)}
-                href="/dashboard"
-                className="hover:bg-red-500">
-                {" "}
-                <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Activity
-              </Link>
-            </li>
-            <li className="py-3 ">
-              <Link
-                href="/dashboard/profile"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
-                Profile
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/dashboard/setupinterview"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Setup Interview
-              </Link>
-            </li>
-            <li className="py-3">
-              <Link
-                href="/dashboard/setupevents"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Setup Events
-              </Link>
-            </li>
-            <li className="pb-3">
-              <Link
-                href="/dashboard/history"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                History
-              </Link>
-            </li>
-            <hr className="mr-10" />
-            <li className="pt-4">
-              <Link
-                href="/"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Home
-              </Link>
-            </li>
-           </ul>
-           </>) : (
-            <>
-            <ul className="navbarsStyles px-4   ">
-            <li> 
-              <Link
-                onClick={() => setIsSidebarActive(!isSidebarActive)}
-                href="/dashboard"
-                className="hover:bg-red-500">
-                {" "}
-                <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Activity
-              </Link>
-            </li>
-            <li className="py-3 ">
-              <Link
-                href="/dashboard/manageUser"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
-                Manage Users
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/dashboard/manageRepots"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Manage Reports
-              </Link>
-            </li>
-            <li className="py-3">
-              <Link
-                href="/dashboard/manageBanUser"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Manage Banned User
-              </Link>
-            </li>
-            <li className="pb-3">
-              <Link
-                href="/dashboard/viewAnalycis"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                View Analytics
-              </Link>
-            </li>
-            <hr className="mr-10" />
-            <li className="pt-4">
-              <Link
-                href="/"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
-                Home
-              </Link>
-            </li>
-            <li className="py-3 ">
-              <Link
-                href="/dashboard/profile"
-                onClick={() => setIsSidebarActive(!isSidebarActive)}>
-                {" "}
-                <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
-                Profile
-              </Link>
-            </li>
-           </ul>
-            </>
-           )
-            } 
-        </nav>
-
-      </div>
+          <nav>
+            {!isAdmin ? (
+              <>
+                <ul className="navbarsStyles px-4   ">
+                  <li>
+                    <Link
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}
+                      href="/dashboard"
+                      className="hover:bg-red-500">
+                      {" "}
+                      <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Activity
+                    </Link>
+                  </li>
+                  <li className="py-3 ">
+                    <Link
+                      href="/dashboard/profile"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
+                      Profile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/dashboard/setupinterview"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Setup Interview
+                    </Link>
+                  </li>
+                  <li className="py-3">
+                    <Link
+                      href="/dashboard/setupevents"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Setup Events
+                    </Link>
+                  </li>
+                  <li className="pb-3">
+                    <Link
+                      href="/dashboard/history"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      History
+                    </Link>
+                  </li>
+                  <hr className="mr-10" />
+                  <li className="pt-4">
+                    <Link
+                      href="/"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Home
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            ) : (
+              <>
+                <ul className="navbarsStyles px-4   ">
+                  <li>
+                    <Link
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}
+                      href="/dashboard"
+                      className="hover:bg-red-500">
+                      {" "}
+                      <FiActivity className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Activity
+                    </Link>
+                  </li>
+                  <li className="py-3 ">
+                    <Link
+                      href="/dashboard/manageUser"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
+                      Manage Users
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/dashboard/manageRepots"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Manage Reports
+                    </Link>
+                  </li>
+                  <li className="py-3">
+                    <Link
+                      href="/dashboard/manageBanUser"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrSchedulePlay className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Manage Banned User
+                    </Link>
+                  </li>
+                  <li className="pb-3">
+                    <Link
+                      href="/dashboard/viewAnalycis"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <GrHistory className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      View Analytics
+                    </Link>
+                  </li>
+                  <hr className="mr-10" />
+                  <li className="pt-4">
+                    <Link
+                      href="/"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <IoHomeOutline className="inline-flex mb-1 text-lg xmd:text-xl" />{" "}
+                      Home
+                    </Link>
+                  </li>
+                  <li className="py-3 ">
+                    <Link
+                      href="/dashboard/profile"
+                      onClick={() => setIsSidebarActive(!isSidebarActive)}>
+                      {" "}
+                      <AiOutlineProfile className="inline-flex mb-1 text-lg xmd:text-xl " />{" "}
+                      Profile
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            )}
+          </nav>
+        </div>
 
         {/* hamburger menu */}
         {/* hamburger menu */}
