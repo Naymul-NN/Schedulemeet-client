@@ -17,7 +17,7 @@ const Banner = () => {
                     Join ScheduleMeet today and unlock a new era of stress-free interview scheduling.
                     </Marquee>
                     <p className="text-lg font-medium text-gray-500">Welcome to ScheduleMeet, where seamless interview scheduling meets efficiency. Elevate your hiring experience with our user-friendly platform designed to simplify the coordination of interviews. Revolutionize your recruitment journey and focus on what matters most – unlock a new era of stress-free interview scheduling!</p>
-                    <button className="btn w-[150px] my-5 text-white bg-green-600 text-lg font-semibold">Get Started</button>
+                    <button className="btn w-[150px] my-5 hover:bg-slate-400 bg-white text-black text-lg font-bold">Get Started</button>
                     
                 </div>
             </div>
