@@ -204,7 +204,7 @@ const DashboardLayout = ({ children }) => {
         {/* hamburger emnu ends  */}
 
         {/* <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    p-3 xmd:p-4  text-black  "> */}
-        <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]    text-black  ">
+        <div className="  w-full md:w-[calc(100%-14rem)] xmd:w-[calc(100%-15rem)]   text-black  ">
           {children}
         </div>
       </div>

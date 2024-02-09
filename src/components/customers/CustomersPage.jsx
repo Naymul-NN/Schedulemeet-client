@@ -63,7 +63,7 @@ import Link from 'next/link';
 
 
       <div>
-         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
+         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center text-white xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
       </div>
 
 
@@ -313,7 +313,7 @@ import Link from 'next/link';
 <div className='flex xl:flex-row lg:flex-row flex-col gap-10 items-center h-full justify-center'>
 
 <div className='xl:w-[40%] lg:w-[40%] md:w-[40%] w-[100%] xl:text-left lg:text-left md:text-left text-center'>
-  <h2 className='xl:text-[45px] lg:text-[40px] md:text-[30px] text-[20px]'>
+  <h2 className='xl:text-[45px] lg:text-[40px] text-white md:text-[30px] text-[20px]'>
   More than 1,000 businesses use Sense to scale their hiring
   </h2>
 </div>
