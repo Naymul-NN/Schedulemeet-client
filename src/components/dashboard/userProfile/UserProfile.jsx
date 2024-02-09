@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa6";
@@ -9,49 +8,45 @@ import { FaPinterest } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import Link from "next/link";
 import { IoMdStarOutline } from "react-icons/io";
-import { useContext, useState } from "react";
-import { AuthContext } from "@/components/auth/Authprovider";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "@/components/auth/Authprovider.jsx";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 import "../userAnimation.css"
 
-const userData = {
-  name: "Jhon Doe",
-  username: "jhonDoe434",
-  useremail: "jhondoe33@gmail.com",
-  userimage: "https://i.ibb.co/dLHg6dD/download.jpg",
-  useraddress: {
-    street: "123 Main St",
-    city: "Cityville",
-    state: "State",
-    zipcode: "12345",
-    country: "USA",
-  },
-  userabout:
-    "A brief description about the user goes here. A brief description about the user goes here. A brief description about the user goes here. Thank you",
-  sociallinks: {
-    twitter: "https://twitter.com/jhonDoe434",
-    facebook: "https://www.facebook.com/jhonDoe434",
-    linkedin: "https://www.instagram.com/jhonDoe434",
-    pinterest: "https://www.instagram.com/jhonDoe434"
 
-  },
-  userRating: {comment: "nice....", ratings: [1, 2, 3]},
-};
+
+
+
+
+
 
 const UserProfile = () => {
   
 const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
 const [showUpdate, setShowUpdate] = useState(null);
+const [userData, setData] = useState(null)
+console.log(userData)
+useEffect(() => {
+
+fetch('http://localhost:5000/updateuser/alluser')
+.then(res => res.json())
+.then(data => {
+  setData(data)
+})
+
+}, [])
+
 
 
 const logOuters = () => {
 try {
  logOut();
+ homeRouters.push("/")
     toast.success('Sign out successful');
-      homeRouters.push("/")
+      
   } catch (error) {
     console.error('Logout failed:', error);
     toast.error('Sign out failed. Please try again.');
@@ -59,6 +54,9 @@ try {
 
 
 }
+
+
+
 
 
 const updatedInfo = (e) =>  {
@@ -102,12 +100,23 @@ const userUpdatedInformation = {
     linkedin: linkdinLinks,
     pinterest: pinterestLinks
 
-  }
-};
+  },
+ userRating: {comment: "nice....", ratings: [1, 2, 3]},
+}
+
+
+fetch('http://localhost:5000/updateuser/updatecreate', {
+  method: "PUT",
+  headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': true},
+  body: JSON.stringify(userUpdatedInformation)
+})
+.then(res => res.json())
+.then(d => {
+  console.log(d)
+})
 
 
 
-console.log(name, userName, userEmail)
 
 
 }
@@ -116,38 +125,37 @@ console.log(name, userName, userEmail)
 
 
 
+
   return (
     
- <div className="relative h-[150vh]">
+ <div className="relative">
 
-    <div className="relative top-0 userProfileContainer flex justify-center items-center p-2">
+    <div className="relative top-0 p-3">
 
-      <div className="userProfileWrapper  flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 md:gap-x-2  lg:gap-x-4 ">
 
-    <div className="h-full  userProfileContainer flex justify-center items-center p-2  ">
-      <div className=" userProfileWrapper flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 gap-x-1 xmd:gap-x-2  lg:gap-x-4   ">
+<div className="flex gap-4 w-full xl:flex-row lg:flex-row md:flex-col flex-col">
+
         {/* profile left section starts  */}
-        <div className=" profileLeftSection w-[90%] xsm:w-[80%] sm:w-[50%] m-auto sm:m-0   ">
+        <div className="xl:w-[60%] lg:w-[60%] md:w-[60%] w-[100%]">
           {/* profile left top starts  */}
-          <div className=" profileLefftTopSection border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100  ">
+          <div className="border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100">
             <div>
               <Image
-                className="rounded-full w-[4.5rem] h-[4.5rem] xmd:w-[5.5rem] xmd:h-[5.5rem] lg:w-[7rem] lg:h-[7rem] block mx-auto  object-cover border-2 border-black  "
-                src={userData.userimage}
+                className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black  "
+                src={userData?.userimage}
                 width={500}
                 height={500}
-                alt="Profile Image"
-              />
+                alt="Profile Image" />
 
-              <div className="  z-[1]  flex relative justify-center items-center gap-2 my-3 border border-gray-400 rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
+              <div className="flex relative justify-center items-center gap-2 my-3 border border-gray-400 rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
                 <div className="  bg-orange-500 absolute left-0 bottom-0 rounded-l-md top-0 text-white h-full px-2">
                   <div className="flex justify-center items-center w-full h-full">
-                    <h2>Start {userData.userRating.length}</h2>
+                    <h2>Start {userData?.userRating?.ratings?.length}</h2>
                   </div>
                 </div>
 
                 <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[20px]">
-                  {userData.userRating.ratings.map((d, index) => {
+                  {userData?.userRating?.ratings?.map((d, index) => {
                     return (
                       <div key={index}>
                         <IoMdStarOutline></IoMdStarOutline>
@@ -157,23 +165,23 @@ console.log(name, userName, userEmail)
                 </div>
               </div>
               <div>
-                <h2 className="text-center">{userData.username}</h2>
+                <h2 className="text-center">{userData?.username}</h2>
               </div>
             </div>
           </div>
           {/* profile left top ends  */}
 
           {/* profile left middle starts  */}
-          <div className=" bg-gray-100  profileMiddleSection border-[1px] rounded-md p-3 lg:p-4 h-max shadow-md mb-6  ">
+          <div className=" bg-gray-100  profileMiddleSection border-[1px] rounded-md p-3 h-max shadow-md mb-6">
             <div className="flex gap-1 items-center">
               <FcAbout className="text-[18px]"></FcAbout>{" "}
-              <h2 className="text-left font-bold text-[1rem] flex gap-1 items-center text-lg sm:text-base lg:text-lg ">
+              <h2 className="text-left font-bold text-[1rem] flex gap-1 items-center">
                 About
               </h2>
             </div>
 
             <p className="p-2 text-base sm:text-sm lg:text-base ">
-              {userData.userabout}
+              {userData?.userabout}
             </p>
           </div>
           {/* profile left middle ends  */}
@@ -215,17 +223,18 @@ console.log(name, userName, userEmail)
 
 
         {/* profile right section starts  */}
-        <div className=" w-[94%] xsm:w-[85%] sm:w-[100%] m-auto profileRightSection  border-[1px] rounded-md h-max  shadow-md bg-gray-100 ">
+   <div className="w-full profileRightSection border-[1px] rounded-md h-max shadow-md bg-gray-100 ">
           <div className="bg-[#4A69BD] rounded-tr-md  rounded-tl-md text-white">
             <h2 className="text-[20px] p-2 text-center">Personal Details</h2>
           </div>
           <div className="p-4">
             <div>
               <h2>
-                <span className="font-bold">Name:</span> {user?.displayName ? user?.displayName : "Jhon..."}
+                <span className="font-bold">Name:</span> {user?.displayName ? user?.displayName : userData?.username
+}
               </h2>
               <h2>
-                <span className="font-bold">Email:</span> {user?.email ? user?.email : "examle@gmail.com"}
+                <span className="font-bold">Email:</span> {user?.email ? user?.email : userData?.useremail}
               </h2>
             </div>
           </div>
@@ -243,7 +252,7 @@ console.log(name, userName, userEmail)
                   #Street
                 </h2>
                 <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
-                  {userData.useraddress.street}
+                  {userData?.useraddress?.street ? userData?.useraddress?.street : "23 mou2"}
                 </h2>
               </div>
 
@@ -252,7 +261,7 @@ console.log(name, userName, userEmail)
                   City
                 </h2>
                 <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
-                  {userData.useraddress.city}
+                  {userData?.useraddress?.city ? userData?.useraddress?.city : "dhaka"}
                 </h2>
               </div>
 
@@ -261,7 +270,7 @@ console.log(name, userName, userEmail)
                   State
                 </h2>
                 <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
-                  {userData.useraddress.state}
+                  {userData?.useraddress?.state ? userData?.useraddress?.state : "gazipur"}
                 </h2>
               </div>
 
@@ -270,7 +279,7 @@ console.log(name, userName, userEmail)
                   Zip Code
                 </h2>
                 <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
-                  {userData.useraddress.zipcode}
+                  {userData?.useraddress?.zipcode ? userData?.useraddress?.zipcode : "2302"}
                 </h2>
               </div>
 
@@ -279,7 +288,7 @@ console.log(name, userName, userEmail)
                   Country
                 </h2>
                 <h2 className="border-t-[1px] border-b-[1px] border-r-[1px] w-max px-2 py-1 rounded-r-md border-gray-300">
-                  {userData.useraddress.country}
+                  {userData?.useraddress?.country ? userData?.useraddress?.country : "Bangladesh"}
                 </h2>
               </div>
             </div>
@@ -292,8 +301,9 @@ console.log(name, userName, userEmail)
   
         </div>
         {/* profile right section ends  */}
+
       </div>
-    </div>
+
     
     
 {/* Updated Profile start...... */}
@@ -302,7 +312,7 @@ console.log(name, userName, userEmail)
 
     {/* Updated Profile end */}
 
-        </div>
+
 
 
 
@@ -313,24 +323,25 @@ console.log(name, userName, userEmail)
 
 <div className="flex flex-wrap gap-2">
 <div>
-<input defaultValue={userData.username ? userData.username : "Write Your Full Name..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
+<input defaultValue={userData?.username ? userData?.username : "Write Your Full Name..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="username" placeholder="Enter your username..." />
 </div>
 
 
 <div>
-<textarea className="border-[1px] border-[#0000003d] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData.userabout ? userData.userabout : "write here" } cols="30" rows="0"></textarea>
+<textarea className="border-[1px] border-[#0000003d] rounded-md p-4 outline-none" name="userAbout" defaultValue={userData?.userabout ? userData?.userabout : "write here"} cols="30" rows="0"></textarea>
 </div>
 
 </div>
+
+
 
 <div>
   <h2 className="font-bold my-4">Social Link</h2>
-
 <div className="flex flex-wrap gap-2">
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.facebook : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="facebookLink" placeholder="Write your facebook link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.twitter : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="twitterLink" placeholder="Write your twitter link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.linkedin : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="linkdinLink" placeholder="Write your linkdin link..." />
-<input defaultValue={userData.sociallinks.pinterest ? userData.sociallinks.pinterest : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="pinterestLink" placeholder="Write your pinterest link..." />
+<input defaultValue={userData?.sociallinks?.pinterest ? userData?.sociallinks?.facebook : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="facebookLink" placeholder="Write your facebook link..." />
+<input defaultValue={userData?.sociallinks?.pinterest ? userData?.sociallinks?.twitter : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="twitterLink" placeholder="Write your twitter link..." />
+<input defaultValue={userData?.sociallinks?.pinterest ? userData?.sociallinks?.linkedin : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="linkdinLink" placeholder="Write your linkdin link..." />
+<input defaultValue={userData?.sociallinks?.pinterest ? userData?.sociallinks?.pinterest : "example.com"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="pinterestLink" placeholder="Write your pinterest link..." />
 </div>
 </div>
 
@@ -340,9 +351,9 @@ console.log(name, userName, userEmail)
   <div className="flex flex-wrap gap-2">
 
 
-<input defaultValue={userData.name ? userData.name : "write your name"} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
+<input defaultValue={user?.displayName ? user?.displayName : userData?.useremail} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="name" placeholder="Write your Name..." />
 
-<input defaultValue={userData.useremail ? userData.useremail : "write your email..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="email" name="useremail" placeholder="Enter your email..." />
+<input defaultValue={user?.email ? user?.email : userData?.useremail}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="email" name="useremail" placeholder="Enter your email..." />
 </div>
   </div>
 
@@ -350,15 +361,15 @@ console.log(name, userName, userEmail)
 
   <h2 className="font-bold my-4">User Address</h2>
 <div className="flex flex-wrap gap-2">
-<input defaultValue={userData.useraddress.street ? userData.useraddress.street : "write your street..."}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="street" placeholder="Write Your Street..." />
+<input defaultValue={userData?.useraddress?.street}  className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="street" placeholder="Write Your Street..." />
 
-<input defaultValue={userData.useraddress.city ? userData.useraddress.city : "write your city..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="city" placeholder="Write Your City..." />
+<input defaultValue={userData?.useraddress?.city} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="city" placeholder="Write Your City..." />
 
-<input defaultValue={userData.useraddress.state ? userData.useraddress.state : "write your state..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="state" placeholder="Write Your State..." />
+<input defaultValue={userData?.useraddress?.state } className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="state" placeholder="Write Your State..." />
 
-<input defaultValue={userData.useraddress.zipcode ? userData.useraddress.zipcode : "write your zip code..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="zipCode" placeholder="Write Your Zip code..." />
+<input defaultValue={userData?.useraddress?.zipcode } className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="zipCode" placeholder="Write Your Zip code..." />
 
-<input defaultValue={userData.useraddress.country ? userData.useraddress.country : "write your country..."} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="country" placeholder="Write Your Country..." />
+<input defaultValue={userData?.useraddress?.country} className="border-[1px] border-[#0000003d] rounded-md px-4 py-2 outline-none" type="text" name="country" placeholder="Write Your Country..." />
 </div>
   
 </div>

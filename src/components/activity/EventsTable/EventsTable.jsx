@@ -1,6 +1,7 @@
 import useEvents from "@/components/hooks/useEvents";
 import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 import EventRow from "./EventRow/EventRow";
+import EventCard from '../EventCard';
 
 const EventsTable = () => {
   const { eventsLoading, events } = useEvents();
@@ -13,30 +14,16 @@ const EventsTable = () => {
     <div>
       {/*-------------Total scheduled Events data-------------*/}
       <TitleDashboard title={"Scheduled Events"}></TitleDashboard>
-      <div>
+      <div className="my-12">
         {events?.length ? (
-          <div className="overflow-x-auto">
-            <table className="table">
-              {/* head */}
-              <thead>
-                <tr>
-                  <th></th>
-                  <th align="center">Title</th>
-                  <th align="center">Host Email</th>
-                  <th align="center">Date</th>
-                  <th align="center">Action</th>
-                </tr>
-              </thead>
-              <tbody>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {events.map((event, index) => (
-                  <EventRow
-                    key={event._id}
+                  <EventCard
+                  key={event._id}
                     index={index}
                     event={event}
-                  />
+                  ></EventCard>
                 ))}
-              </tbody>
-            </table>
           </div>
         ) : (
           <h3 className="text-center my-10 tex-4xl text-blue-600 font-bold">

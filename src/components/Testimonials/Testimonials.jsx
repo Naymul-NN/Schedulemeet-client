@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import { IoMdStarOutline } from "react-icons/io";
 const Testimonials = async () => {
 
-const res = await fetch("https://schedulemeet-server-two.vercel.app//userTestimonial")
+const res = await fetch("https://schedulemeet-server-two.vercel.app/userTestimonial")
 
 const data = await res.json();
 
