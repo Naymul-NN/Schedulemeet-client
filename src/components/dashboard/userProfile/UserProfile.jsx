@@ -223,7 +223,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 
 
         {/* profile right section starts  */}
-   <div className="w-full profileRightSection border-[1px] rounded-md h-max shadow-md bg-gray-100 ">
+   <div className="w-full z-0 profileRightSection border-[1px] rounded-md h-max shadow-md bg-gray-100 ">
           <div className="bg-[#4A69BD] rounded-tr-md  rounded-tl-md text-white">
             <h2 className="text-[20px] p-2 text-center">Personal Details</h2>
           </div>
@@ -294,7 +294,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
             </div>
           </div>
 
-     <div className="flex">
+     <div className="flex z-0">
     <button onClick={() =>  setShowUpdate(true)} className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
     <Link href="/writeblog" className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Write a blog</Link>
     </div>
@@ -315,8 +315,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 
 
 
-
-        <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
+ <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form onSubmit={updatedInfo}>
 <div className="p-4 space-y-5">
 
