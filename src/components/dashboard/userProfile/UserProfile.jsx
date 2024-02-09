@@ -44,8 +44,9 @@ fetch('http://localhost:5000/updateuser/alluser')
 const logOuters = () => {
 try {
  logOut();
+ homeRouters.push("/")
     toast.success('Sign out successful');
-      homeRouters.push("/")
+      
   } catch (error) {
     console.error('Logout failed:', error);
     toast.error('Sign out failed. Please try again.');

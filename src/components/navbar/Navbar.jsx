@@ -3,31 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import useAuth from "../hooks/useAuth";
-
+import { usePathname } from 'next/navigation';
 // ....navbar....
 const Navbar = () => {
   const { user, logOut } = useAuth();
+   const pathname = usePathname();
+  
 
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      toast.success("Sign out successful");
-    } catch (error) {
-      console.error("Logout failed:", error);
-      toast.error("Sign out failed. Please try again.");
-    }
-  };
+  
 
-
-
-// TODO:  fix it later
-
-  const navLinks = [
-    {
-      title: "Home",
-      to: "/",
-    },
-  ];
+  
 
   return (
     <div>
@@ -93,24 +78,19 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal text-[15px] px-1">
             <li>
-              <Link href="/">Home</Link>
+              <Link  className={`${pathname === "/" ? 'bg-yellow-400 text-black font-bold rounded-xl' : ''}`} href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link className={`${pathname === "/about" ? 'bg-yellow-400 text-black font-bold   rounded-xl' : ''}`}  href="/about">About</Link>
             </li>
             <li>
-              <Link href="/customers">Customer</Link>
+              <Link className={`${pathname === "/customers" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="/customers">Customer</Link>
             </li>
             <li>
-              <Link href="blog">Blog</Link>
+              <Link className={`${pathname === "/blog" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="blog">Blog</Link>
             </li>
             <li>
-              <Link href="/dashboard">Dashboard</Link>
-            </li>
-
-            <li>
-              <Link href="/adminDashboard">Admin Dashboard</Link>{" "}
-              {/* TODO: this will remove later */}
+              <Link className={`${pathname === "/dashboard" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </div>

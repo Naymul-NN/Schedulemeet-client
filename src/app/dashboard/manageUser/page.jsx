@@ -1,11 +1,7 @@
-import React from 'react';
+import ManageUsers from "@/components/adminDashboard/ManageUsers/ManageUsers";
 
 const page = () => {
-    return (
-        <div>
-            here you manage users
-        </div>
-    );
+  return <ManageUsers />;
 };
 
 export default page;

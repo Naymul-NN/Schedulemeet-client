@@ -58,12 +58,12 @@ import Link from 'next/link';
        </div>
 
       {/* See how Sense helps recruiting teams achieve their goals */}
-      <div className="bg-[#fff] text-black h-auto py-10">
+      <div className="bg-[#233A77] text-black h-auto py-10">
 <div className="xl:w-[70%] lg:w-[70%] w-[95%] mx-auto">
 
 
       <div>
-         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
+         <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center text-white xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
       </div>
 
 
@@ -90,7 +90,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -119,7 +119,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -148,68 +148,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
-   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
-    Read More
-      </Link>
-  </div>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
-<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
- <div className='px-4 py-6 bg-[#F7F7F7]'>
-  <h2 className='my-2'>#staffing</h2>
-   <h2 className='font-semibold'>SEEK CAREERS</h2>
-  </div>
-
-
-
-<div className='bg-[#fff]'>
-  <div className='flex justify-center'>
-   <div>
-   <h2 className="text-[60px] font-bold">150K</h2>
-    <p>candidates engaged</p>
-   </div>
-  </div>
-
-  <div className='flex justify-center my-6'>
-   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
-    Read More
-      </Link>
-  </div>
-</div>
-
-</div>
-
-</div>
-
-
-
-
-<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
-<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
- <div className='px-4 py-6 bg-[#F7F7F7]'>
-  <h2 className='my-2'>#staffing</h2>
-   <h2 className='font-semibold'>SEEK CAREERS</h2>
-  </div>
-
-
-
-<div className='bg-[#fff]'>
-  <div className='flex justify-center'>
-   <div>
-   <h2 className="text-[60px] font-bold">150K</h2>
-    <p>candidates engaged</p>
-   </div>
-  </div>
-
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -239,7 +178,68 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
+   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
+    Read More
+      </Link>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
+<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
+ <div className='px-4 py-6 bg-[#F7F7F7]'>
+  <h2 className='my-2'>#staffing</h2>
+   <h2 className='font-semibold'>SEEK CAREERS</h2>
+  </div>
+
+
+
+<div className='bg-[#fff]'>
+  <div className='flex justify-center'>
+   <div>
+   <h2 className="text-[60px] font-bold">150K</h2>
+    <p>candidates engaged</p>
+   </div>
+  </div>
+
+  <div className='flex justify-center my-6 pb-3'>
+   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
+    Read More
+      </Link>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
+<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
+ <div className='px-4 py-6 bg-[#F7F7F7]'>
+  <h2 className='my-2'>#staffing</h2>
+   <h2 className='font-semibold'>SEEK CAREERS</h2>
+  </div>
+
+
+
+<div className='bg-[#fff]'>
+  <div className='flex justify-center'>
+   <div>
+   <h2 className="text-[60px] font-bold">150K</h2>
+    <p>candidates engaged</p>
+   </div>
+  </div>
+
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -280,7 +280,7 @@ import Link from 'next/link';
      </div>
 
      <div className='my-4'>
-     <Link className='border-[1px] rounded-md border-white hover:text-white hover:bg-[#715FE0] hover:border-transparent block w-max px-6 p-3' href="/">Get a demo</Link>
+     <Link className='border-[1px] rounded-md btn btn-warning border-white hover:text-white hover:bg-[#715FE0] hover:border-transparent block w-max px-6 p-3' href="/">Get a demo</Link>
      </div>
       </div>
     
@@ -307,13 +307,13 @@ import Link from 'next/link';
       
 {/* More than 1,000 businesses use Sense to scale their hiring start */}
 
-<div className='bg-white text-black'>
+<div className='bg-[#233A77] text-black'>
 <div className="xl:w-[70%] lg:w-[70%] w-[100%] mx-auto h-[600px]">
 
 <div className='flex xl:flex-row lg:flex-row flex-col gap-10 items-center h-full justify-center'>
 
 <div className='xl:w-[40%] lg:w-[40%] md:w-[40%] w-[100%] xl:text-left lg:text-left md:text-left text-center'>
-  <h2 className='xl:text-[45px] lg:text-[40px] md:text-[30px] text-[20px]'>
+  <h2 className='xl:text-[45px] lg:text-[40px] text-white md:text-[30px] text-[20px]'>
   More than 1,000 businesses use Sense to scale their hiring
   </h2>
 </div>
