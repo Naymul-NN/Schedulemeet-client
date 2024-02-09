@@ -19,9 +19,9 @@ const DashboardLayout = ({ children }) => {
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
   const home = useRouter();
    
-  if (adminCheckLoading) {
-    return <p>loading ....</p>; //TODO: replace with loading spinner
-  }
+  // if (adminCheckLoading) {
+  //   return <p>loading ....</p>; //TODO: replace with loading spinner
+  // }
 
   console.log(isAdmin);
 
@@ -51,7 +51,7 @@ const DashboardLayout = ({ children }) => {
         </header>
 
         <nav>
-            { !isAdmin?  ( <>
+            { !isAdmin ?  ( <>
            <ul className="navbarsStyles px-4   ">
             <li>
               <Link
