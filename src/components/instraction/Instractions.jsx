@@ -5,6 +5,7 @@ const Instractions = () => {
     
     return (
         <div className='pt-20 pb-10'>
+            
             <h1 className='text-4xl text-center font-bold  pb-5'>Just follow the steps and make <br /> <span className=' text-green-600'> you time easy</span> </h1>
 
             <div className='pt-10'>
