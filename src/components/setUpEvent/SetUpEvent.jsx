@@ -31,7 +31,7 @@ const SetUpEvent = () => {
       } 
 
     return (
-        <div>
+        <div className='mt-12 w-[80%] mx-auto'>
             <TitleDashboard title={"Set Your Event"}></TitleDashboard>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
