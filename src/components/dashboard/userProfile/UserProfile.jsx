@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FcAbout } from "react-icons/fc";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import "../userAnimation.css";
@@ -12,7 +12,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import UpdateForm from "./UpdateForm/UpdateForm";
 import LoadingPage from "@/components/loadingPage/LoadingPage";
 import useAuth from "@/components/hooks/useAuth";
-import Link from "next/link"
+import Link from "next/link";
 
 const UserProfile = () => {
   const homeRouters = useRouter();
