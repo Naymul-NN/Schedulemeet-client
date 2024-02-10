@@ -1,6 +1,7 @@
 import React from 'react';
 import useMeetings from '../hooks/useMeetings';
 import useAxiosSecure from '../hooks/useAxiosSecure';
+import toast from 'react-hot-toast';
 
 const MeetingCard = ({ event, index }) => {
 
@@ -22,7 +23,7 @@ const MeetingCard = ({ event, index }) => {
 
     return (
         <div>
-            <div className="bg-primary text-primary-content rounded-lg">
+            <div className="bg-[#0d0c22] text-primary-content rounded-lg">
                 <div className="card-body">
                     <h2 className="card-title">{eventTitle}</h2>
                     <p>{date}</p>
