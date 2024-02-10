@@ -1,6 +1,7 @@
 import useMeetings from "@/components/hooks/useMeetings";
 import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 import MeetingRow from "./MeetingRow/MeetingRow";
+import MeetingCard from "../MeetingCard";
 
 const MeetingTable = () => {
   const { meetingLoading, meetings } = useMeetings();
@@ -13,30 +14,15 @@ const MeetingTable = () => {
     <div>
       {/*-------------Total scheduled interview data-------------*/}
       <TitleDashboard title={"Scheduled Meetings"}></TitleDashboard>
-      <div>
+      <div className="my-12">
         {meetings?.length ? (
-          <div className="overflow-x-auto">
-            <table className="table">
-              {/* head */}
-              <thead>
-                <tr>
-                  <th></th>
-                  <th align="center">Title</th>
-                  <th align="center">Host Email</th>
-                  <th align="center">Date</th>
-                  <th align="center">Action</th>
-                </tr>
-              </thead>
-              <tbody>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {meetings.map((meeting, index) => (
-                  <MeetingRow
-                    key={meeting._id}
+                  <MeetingCard 
+                  key={meeting._id}
                     index={index}
-                    meeting={meeting}
-                  />
+                    meeting={meeting}></MeetingCard>
                 ))}
-              </tbody>
-            </table>
           </div>
         ) : (
           <h3 className="text-center my-10 tex-4xl text-blue-600 font-bold">
