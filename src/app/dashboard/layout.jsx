@@ -42,11 +42,7 @@ const DashboardLayout = ({ children }) => {
   return (
     <Privet>
       <div className="w-[100%] mx-auto gap-0 flex relative bg-gray-50 ">
-
-
-
-
-<div className={` ${isSidebarActive && "w-auto"} xl:static lg:static ${isSidebarActive ? "fixed transition-all left-0 w-[15%] h-full"  : "fixed left-[-200%] transition-all w-[15%]"} z-50`}>
+<div className={` ${isSidebarActive && "w-auto"} xl:static lg:static ${isSidebarActive ? "fixed transition-all left-0 w-[15%] h-full"  : "fixed left-[-200%] transition-all w-[25%]"} z-50`}>
 
 
       <div className={`h-[100vh] w-full z-50  md:left-0  px-4 dashboardStyle  border-r-[1px] shadow-md text-white duration-200`}>
