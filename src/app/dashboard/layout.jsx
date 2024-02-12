@@ -18,16 +18,16 @@ const DashboardLayout = ({ children }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const { isAdmin, adminCheckLoading } = useCheckAdmin();
   const home = useRouter();
-   
-  // if (adminCheckLoading) {
-  //   return <p>loading ....</p>; //TODO: replace with loading spinner
-  // }
-
-  console.log(isAdmin);
-
-  // if isAdmin is true the user will see admin dashboard, else they will see user dashboard
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const {logOut} = useAuth();
+   
+  if (adminCheckLoading) {
+    return <p>loading ....</p>; //TODO: replace with loading spinner
+  }
+
+ 
+
+  
+
   const handleLogout = async () => {
     try {
       await logOut();
