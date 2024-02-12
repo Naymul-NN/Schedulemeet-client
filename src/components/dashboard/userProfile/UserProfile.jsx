@@ -141,8 +141,8 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
           <div className="border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100">
             <div>
               <Image
-                className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black  "
-                src={userData?.userimage ? "https://ibb.co/vwVSwMz" : user?.displayName}
+                className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black"
+                src={userData?.userimage ? userData?.userimage : "https://i.ibb.co/3Sr3XPz/png-transparent-male-avatar-boy-face-man-user-flat-classy-users-icon.png"}
                 width={500}
                 height={500}
                 alt="Profile Image" />
@@ -150,12 +150,12 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
               <div className="flex relative justify-center items-center gap-2 my-3 border border-gray-400 rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
                 <div className="  bg-orange-500 absolute left-0 bottom-0 rounded-l-md top-0 text-white h-full px-2">
                   <div className="flex justify-center items-center w-full h-full">
-                    <h2>Start {userData?.userRating?.ratings?.length}</h2>
+                    <h2>Start</h2>
                   </div>
                 </div>
-
-                <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[20px]">
-                  {userData?.userRating?.ratings?.map((d, index) => {
+          
+                <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[18px]">
+                  {userData?.userRating ? userData?.userRating?.ratings : [1, 2, 3, 4].map((d, index) => {
                     return (
                       <div key={index}>
                         <IoMdStarOutline></IoMdStarOutline>
@@ -165,7 +165,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
                 </div>
               </div>
               <div>
-                <h2 className="text-center">{userData?.username}</h2>
+                <h2 className="text-center">{userData?.username ? userData?.username: "jhon4334324"}</h2>
               </div>
             </div>
           </div>
