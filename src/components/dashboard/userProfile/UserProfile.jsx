@@ -142,7 +142,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
             <div>
               <Image
                 className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black  "
-                src={userData?.userimage}
+                src={userData?.userimage ? "https://ibb.co/vwVSwMz" : user?.displayName}
                 width={500}
                 height={500}
                 alt="Profile Image" />
