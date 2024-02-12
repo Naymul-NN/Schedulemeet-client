@@ -136,7 +136,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 <div className="flex gap-4 w-full xl:flex-row lg:flex-row md:flex-col flex-col">
 
         {/* profile left section starts  */}
-        <div className="xl:w-[60%] lg:w-[60%] md:w-[60%] w-[100%]">
+        <div className="xl:w-[60%] lg:w-[60%] w-[100%]">
           {/* profile left top starts  */}
           <div className="border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100">
             <div>
