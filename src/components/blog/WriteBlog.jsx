@@ -1,5 +1,5 @@
 
-import logo from "../../assets/logo/page.png";
+import logo from "../../assets/logo/write.png";
 import Image from "next/image";
 
 const WriteBlog = () => {
@@ -11,8 +11,8 @@ const WriteBlog = () => {
             src={logo}
             alt=""
             className="  rounded-xl "
-            width={600}
-            height={550}
+            width={1000}
+            height={700}
           />
                 </div>
                 <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-pink-100">
