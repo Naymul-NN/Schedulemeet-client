@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const WriteBlog = () => {
     return (
-        <div className="hero  bg-blue-200">
+        <div className="hero min-h-screen  bg-blue-200">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                 <Image
@@ -15,7 +15,7 @@ const WriteBlog = () => {
             height={700}
           />
                 </div>
-                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-pink-100">
+                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100">
                     <form className="card-body">
                      <div>
                      <div className="form-control">
