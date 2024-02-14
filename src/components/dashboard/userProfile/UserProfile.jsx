@@ -46,6 +46,7 @@ try {
  logOut();
  homeRouters.push("/")
     toast.success('Sign out successful');
+    
       
   } catch (error) {
     console.error('Logout failed:', error);
