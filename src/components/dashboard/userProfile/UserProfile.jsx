@@ -12,15 +12,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "@/components/auth/Authprovider.jsx";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-
 import "../userAnimation.css"
-
-
-
-
-
-
-
 
 const UserProfile = () => {
   
@@ -28,7 +20,7 @@ const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
 const [showUpdate, setShowUpdate] = useState(null);
 const [userData, setData] = useState(null)
-console.log(userData)
+
 useEffect(() => {
 
 fetch('http://localhost:5000/updateuser/alluser')
