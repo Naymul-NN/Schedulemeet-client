@@ -1,6 +1,6 @@
 import Layout from "@/app/mainlayout";
-import SingleShowData from "@/components/blog/SingleShowData";
-import SingleData from "@/components/hooks/useGetSingleBlog";
+import SingleShowData from "../../../components/blog/SingleShowData.jsx";
+import SingleData from "../../../components/hooks/useGetSingleBlog.jsx";
 
 
 const SingleBlog = async ({params}) => {  

@@ -1,4 +1,4 @@
-import Blogs from '@/components/blog/getBlogD';
+import Blogs from '../../components/blog/GetBlogD.jsx';
 import Layout from '../mainlayout';
 
 

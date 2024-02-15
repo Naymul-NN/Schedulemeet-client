@@ -6,6 +6,7 @@ const SingleShowData = (data) => {
 
 const {seeData} = data;
 const [seeDatas] = seeData
+console.log(seeDatas)
 
     return (
         <div className="text-black bg-white">
