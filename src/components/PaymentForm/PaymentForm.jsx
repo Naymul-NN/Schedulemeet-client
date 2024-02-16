@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
 const PaymentForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { handleSubmit } = useForm();
 
   const stripe = useStripe();
   const elements = useElements();
