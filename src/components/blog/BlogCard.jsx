@@ -6,8 +6,6 @@ const BlogCard = ({ blog }) => {
 const {blogUserName, blogTitle,  blogMessage, blogUserEmail, blogUserImage, blogImage, blogCategorys, blogTime, _id} = blog;
 
 
-console.log(_id)
-
   return (
 <div>
 
