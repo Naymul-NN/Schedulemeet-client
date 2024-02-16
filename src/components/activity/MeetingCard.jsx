@@ -2,12 +2,14 @@ import React from 'react';
 import useMeetings from '../hooks/useMeetings';
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import toast from 'react-hot-toast';
+import Link from 'next/link';
 
 const MeetingCard = ({ meeting, index }) => {
 
-    const { _id, meetingTitle, hostEmail, date } = meeting;
+    const { _id, meetingTitle,  date } = meeting;
     const { refetch } = useMeetings();
     const axiosSecure = useAxiosSecure();
+    console.log(date)
 
     //   there will be a modal to confirm the delete
     const handleDelete = async () => {
@@ -35,7 +37,7 @@ const MeetingCard = ({ meeting, index }) => {
                             Delete
                         </button>
                         <button className="btn btn-outline btn-success">Invite</button>
-                        <button className="btn btn-outline btn-warning">Update</button>
+                        <Link href={`/meetingUpdate/${_id}`}><button className="btn btn-outline btn-warning">Update</button></Link>
                     </div>
                 </div>
             </div>

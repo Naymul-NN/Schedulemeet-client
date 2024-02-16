@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import Link from "next/link";
 import "../../app/dashboard/navbar.css";
 import { AiOutlineProfile } from "react-icons/ai";

@@ -12,15 +12,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "@/components/auth/Authprovider.jsx";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-
 import "../userAnimation.css"
-
-
-
-
-
-
-
 
 const UserProfile = () => {
   
@@ -28,7 +20,7 @@ const homeRouters = useRouter();
 const {logOut, user} = useContext(AuthContext)
 const [showUpdate, setShowUpdate] = useState(null);
 const [userData, setData] = useState(null)
-console.log(userData)
+
 useEffect(() => {
 
 fetch('http://localhost:5000/updateuser/alluser')
@@ -46,6 +38,7 @@ try {
  logOut();
  homeRouters.push("/")
     toast.success('Sign out successful');
+    
       
   } catch (error) {
     console.error('Logout failed:', error);
@@ -136,13 +129,13 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 <div className="flex gap-4 w-full xl:flex-row lg:flex-row md:flex-col flex-col">
 
         {/* profile left section starts  */}
-        <div className="xl:w-[60%] lg:w-[60%] md:w-[60%] w-[100%]">
+        <div className="xl:w-[60%] lg:w-[60%] w-[100%]">
           {/* profile left top starts  */}
           <div className="border-[1px] rounded-md p-4 h-max shadow-md  mb-6 -z-[1] bg-gray-100">
             <div>
               <Image
-                className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black  "
-                src={userData?.userimage}
+                className="rounded-full w-[100px] h-[100px] block mx-auto object-cover border-2 border-black"
+                src={userData?.userimage ? userData?.userimage : "https://i.ibb.co/3Sr3XPz/png-transparent-male-avatar-boy-face-man-user-flat-classy-users-icon.png"}
                 width={500}
                 height={500}
                 alt="Profile Image" />
@@ -150,12 +143,12 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
               <div className="flex relative justify-center items-center gap-2 my-3 border border-gray-400 rounded-md w-[130px] p-4 h-max mx-auto text-sm lg:text-base  ">
                 <div className="  bg-orange-500 absolute left-0 bottom-0 rounded-l-md top-0 text-white h-full px-2">
                   <div className="flex justify-center items-center w-full h-full">
-                    <h2>Start {userData?.userRating?.ratings?.length}</h2>
+                    <h2>Start</h2>
                   </div>
                 </div>
-
-                <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[20px]">
-                  {userData?.userRating?.ratings?.map((d, index) => {
+          
+                <div className="flex justify-center items-center h-full absolute right-0 top-0 text-orange-500 text-[18px]">
+                  {userData?.userRating ? userData?.userRating?.ratings : [1, 2, 3, 4].map((d, index) => {
                     return (
                       <div key={index}>
                         <IoMdStarOutline></IoMdStarOutline>
@@ -165,7 +158,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
                 </div>
               </div>
               <div>
-                <h2 className="text-center">{userData?.username}</h2>
+                <h2 className="text-center">{userData?.username ? userData?.username: "jhon4334324"}</h2>
               </div>
             </div>
           </div>
@@ -223,7 +216,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 
 
         {/* profile right section starts  */}
-   <div className="w-full profileRightSection border-[1px] rounded-md h-max shadow-md bg-gray-100 ">
+   <div className="w-full z-0 profileRightSection border-[1px] rounded-md h-max shadow-md bg-gray-100 ">
           <div className="bg-[#4A69BD] rounded-tr-md  rounded-tl-md text-white">
             <h2 className="text-[20px] p-2 text-center">Personal Details</h2>
           </div>
@@ -294,7 +287,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
             </div>
           </div>
 
-     <div className="flex">
+     <div className="flex z-0">
     <button onClick={() =>  setShowUpdate(true)} className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Edit Profile</button>
     <Link href="/writeblog" className="w-max my-2 z-40 rounded-md hover:bg-[#4e73da] cursor-pointer block mx-auto bg-[#4A69BD] px-4 py-2 text-white">Write a blog</Link>
     </div>
@@ -315,8 +308,7 @@ fetch('http://localhost:5000/updateuser/updatecreate', {
 
 
 
-
-        <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
+ <div className={`h-max w-[50%] ${showUpdate == null ? "hidden" : "block"} left-[25%] absolute transition-shadow  ${showUpdate ? "userAnimation top-[10%] opacity-100" : "top-[-200%] userAnimation2" } right-[25%] bg-[#fff] border-[1px] border-[#0000003d] z-50 py-10 shadow-lg p-4 rounded-md`}>  <h2 className="text-center font-bold">Update Your Profile</h2>
 <form onSubmit={updatedInfo}>
 <div className="p-4 space-y-5">
 

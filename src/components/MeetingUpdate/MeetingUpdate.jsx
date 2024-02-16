@@ -4,8 +4,9 @@ import React from 'react';
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
 import axios from "axios";
+import useMeeting from '../hooks/useMeeting.jsx';
 
-const SetUpInterview = () => {
+const MeetingUpdate = () => {
 
     const {
         register,
@@ -13,6 +14,14 @@ const SetUpInterview = () => {
         watch,
         formState: { errors },
     } = useForm()
+
+    const { meetingLoading, meeting } = useMeeting();
+
+//   if (meetingLoading) {
+//     return <p className="">loading</p>;
+//   }
+
+  const meetingData = meeting;
 
     const onSubmit = (data) => {
         console.log(data);
@@ -31,7 +40,7 @@ const SetUpInterview = () => {
     }
 
     return (
-        <div className='mt-12 w-[80%] mx-auto'>
+        <div className='pt-12 md:pt-20 w-[80%] mx-auto'>
             <TitleDashboard title={"Set Your Interview"}></TitleDashboard>
             <form onSubmit={handleSubmit(onSubmit)} className="card-body bg-[#0d0c22] mt-6 px-6 md:px-12 pb-8 md:pb-12 rounded-3xl">
 
@@ -44,7 +53,7 @@ const SetUpInterview = () => {
                             <label className="label">
                                 <span className="label-text text-green-500 text-sm md:text-lg font-medium">Meeting Title</span>
                             </label>
-                            <input {...register("meetingTitle")} type="text" placeholder="Meeting Title" className="input input-bordered text-black" required />
+                            <input  {...register("meetingTitle")} type="text" placeholder="Meeting Title" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -73,7 +82,7 @@ const SetUpInterview = () => {
                                 <span className="label-text text-green-500 text-sm md:text-lg font-medium">Duration</span>
                             </label>
                             {/* <input {...register("duration")} type="text" placeholder="duration" className="input input-bordered text-black" required /> */}
-                            <select {...register("duration")} className="select select-bordered w-full" required>
+                            <select {...register("duration")} className="select select-bordered w-full text-black" required>
                                 <option disabled selected>Duration</option>
                                 <option>15 minutes</option>
                                 <option>30 minutes</option>
@@ -98,4 +107,4 @@ const SetUpInterview = () => {
     );
 };
 
-export default SetUpInterview;
+export default MeetingUpdate;

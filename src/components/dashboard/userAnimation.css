@@ -8,8 +8,7 @@
 
 @keyframes user {
    0% {top: 0%;}
-      50% {top: 8%; opacity: 0.5; 
-        transform:scale(2, 3);}
+      50% {top: 8%; opacity: 0.5; }
       70% {top: 20%; transform: rotateY(10deg); opacity: 0.8;}
    100% {top: 10%;}
   }
@@ -24,7 +23,8 @@
 
 @keyframes users {
    100% {top: -200%; opacity: 0;}
-     50% {top: 5%; opacity: 0.8;   transform: rotateY(150deg);}
+     50% {top: 5%; opacity: 0.8;   
+      transform: rotateY(150deg);}
    0% {top: 10%; opacity: 0.9;}
   }
 

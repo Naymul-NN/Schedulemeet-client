@@ -7,12 +7,12 @@ import { usePathname } from 'next/navigation';
 // ....navbar....
 const Navbar = () => {
   const { user, logOut } = useAuth();
-   const pathname = usePathname();
-  
+  const pathname = usePathname();
 
-  
 
-  
+
+
+
 
   return (
     <div>
@@ -78,10 +78,10 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal text-[15px] px-1">
             <li>
-              <Link  className={`${pathname === "/" ? 'bg-yellow-400 text-black font-bold rounded-xl' : ''}`} href="/">Home</Link>
+              <Link className={`${pathname === "/" ? 'bg-yellow-400 text-black font-bold rounded-xl' : ''}`} href="/">Home</Link>
             </li>
             <li>
-              <Link className={`${pathname === "/about" ? 'bg-yellow-400 text-black font-bold   rounded-xl' : ''}`}  href="/about">About</Link>
+              <Link className={`${pathname === "/about" ? 'bg-yellow-400 text-black font-bold   rounded-xl' : ''}`} href="/about">About</Link>
             </li>
             <li>
               <Link className={`${pathname === "/customers" ? 'bg-yellow-400 text-black font-bold  rounded-xl' : ''}`} href="/customers">Customer</Link>
