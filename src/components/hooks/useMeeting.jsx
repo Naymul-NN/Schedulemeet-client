@@ -14,7 +14,7 @@ const useMeeting = (id) => {
     queryKey: ["meeting", id],
     queryFn: async () => {
       const response = await axiosSecure.get(
-        `/api/v1/meeting/getMeeting/${id}`
+        `/api/v1/meetings/getMeeting/${id}`
       );
       return response.data.meeting;
     },
