@@ -90,7 +90,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -119,7 +119,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -148,68 +148,7 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
-   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
-    Read More
-      </Link>
-  </div>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
-<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
- <div className='px-4 py-6 bg-[#F7F7F7]'>
-  <h2 className='my-2'>#staffing</h2>
-   <h2 className='font-semibold'>SEEK CAREERS</h2>
-  </div>
-
-
-
-<div className='bg-[#fff]'>
-  <div className='flex justify-center'>
-   <div>
-   <h2 className="text-[60px] font-bold">150K</h2>
-    <p>candidates engaged</p>
-   </div>
-  </div>
-
-  <div className='flex justify-center my-6'>
-   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
-    Read More
-      </Link>
-  </div>
-</div>
-
-</div>
-
-</div>
-
-
-
-
-<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
-<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
- <div className='px-4 py-6 bg-[#F7F7F7]'>
-  <h2 className='my-2'>#staffing</h2>
-   <h2 className='font-semibold'>SEEK CAREERS</h2>
-  </div>
-
-
-
-<div className='bg-[#fff]'>
-  <div className='flex justify-center'>
-   <div>
-   <h2 className="text-[60px] font-bold">150K</h2>
-    <p>candidates engaged</p>
-   </div>
-  </div>
-
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
@@ -239,7 +178,68 @@ import Link from 'next/link';
    </div>
   </div>
 
-  <div className='flex justify-center my-6'>
+  <div className='flex justify-center my-6 pb-3'>
+   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
+    Read More
+      </Link>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
+<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
+ <div className='px-4 py-6 bg-[#F7F7F7]'>
+  <h2 className='my-2'>#staffing</h2>
+   <h2 className='font-semibold'>SEEK CAREERS</h2>
+  </div>
+
+
+
+<div className='bg-[#fff]'>
+  <div className='flex justify-center'>
+   <div>
+   <h2 className="text-[60px] font-bold">150K</h2>
+    <p>candidates engaged</p>
+   </div>
+  </div>
+
+  <div className='flex justify-center my-6 pb-3'>
+   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
+    Read More
+      </Link>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div className='border-t-[#FFECBB] border-t-[10px] rounded-md m-2'>
+<div className='h-[350px] shadow-md transition-all hover:shadow-lg rounded-md'>
+ <div className='px-4 py-6 bg-[#F7F7F7]'>
+  <h2 className='my-2'>#staffing</h2>
+   <h2 className='font-semibold'>SEEK CAREERS</h2>
+  </div>
+
+
+
+<div className='bg-[#fff]'>
+  <div className='flex justify-center'>
+   <div>
+   <h2 className="text-[60px] font-bold">150K</h2>
+    <p>candidates engaged</p>
+   </div>
+  </div>
+
+  <div className='flex justify-center my-6 pb-3'>
    <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
