@@ -47,6 +47,10 @@ const PaymentForm = () => {
             },
           }}
         />
+
+        <button>pay
+          
+        </button>
       </form>
     </div>
   );
