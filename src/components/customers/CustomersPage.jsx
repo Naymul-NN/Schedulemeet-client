@@ -179,7 +179,7 @@ import Link from 'next/link';
   </div>
 
   <div className='flex justify-center my-6 pb-3'>
-   <Link className='px-6 py-2 block w-max rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
+   <Link className='px-6 py-2 block w-max bg-yellow-400 rounded-md hover:bg-black hover:text-white hover:border-transparent transition-all border-[1px] border-black' href="/">
     Read More
       </Link>
   </div>

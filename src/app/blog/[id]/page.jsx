@@ -5,12 +5,12 @@ import BlogErrors from "../../../components/blog/BlogErrors.jsx";
 
 
 const SingleBlog = async ({params}) => {  
-const id = params; 
-
-const seeData = await SingleData(id.id);
-
+const {id} = params; 
+const seeData = await SingleData(id);
+console.log(seeData.result[0])
   return (
     <Layout>
+     
       {
 
       }
