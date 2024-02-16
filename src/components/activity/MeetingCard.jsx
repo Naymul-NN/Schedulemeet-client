@@ -5,9 +5,10 @@ import toast from 'react-hot-toast';
 
 const MeetingCard = ({ meeting, index }) => {
 
-    const { _id, meetingTitle, hostEmail, date } = meeting;
+    const { _id, meetingTitle,  date } = meeting;
     const { refetch } = useMeetings();
     const axiosSecure = useAxiosSecure();
+    console.log(date)
 
     //   there will be a modal to confirm the delete
     const handleDelete = async () => {
