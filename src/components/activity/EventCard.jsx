@@ -2,8 +2,9 @@ import React from 'react';
 import useMeetings from '../hooks/useMeetings';
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import toast from 'react-hot-toast';
+import Link from 'next/link';
 
-const MeetingCard = ({ event, index }) => {
+const EventCard = ({ event, index }) => {
 
     const { _id, eventTitle, hostEmail, date } = event;
     const { refetch } = useMeetings();
@@ -34,8 +35,9 @@ const MeetingCard = ({ event, index }) => {
                             className="btn btn-outline btn-error">
                             Delete
                         </button>
-                        <button className="btn btn-outline btn-success">Invite</button>
-                        <button className="btn btn-outline btn-warning">Update</button>
+                        <Link href={`/eventDetail/${_id}`}><button className='btn btn-outline btn-success'>View Details</button></Link>
+                        {/* <button className="btn btn-outline btn-success">Invite</button>
+                        <button className="btn btn-outline btn-warning">Update</button> */}
                     </div>
                 </div>
             </div>
@@ -43,4 +45,4 @@ const MeetingCard = ({ event, index }) => {
     );
 };
 
-export default MeetingCard;
+export default EventCard;
