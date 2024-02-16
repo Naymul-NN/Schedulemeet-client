@@ -30,10 +30,6 @@ const [seeDatas] = seeData
 
 <p className="p-4 whitespace-pre-wrap">{seeDatas?.blogMessage}</p>
 </div>
-
-
-
-
 </div>  
 
 
