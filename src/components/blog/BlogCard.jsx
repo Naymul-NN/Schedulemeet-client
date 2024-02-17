@@ -6,7 +6,7 @@ const BlogCard = ({ blog }) => {
 
 const {blogUserName, blogTitle,  blogMessage, blogUserEmail, blogUserImage, blogImage, blogCategorys, blogTime, _id} = blog;
 
-console.log(blog);
+
 
   return (
 <div className="flex flex-col justify-between border-[1px] rounded-md p-2">

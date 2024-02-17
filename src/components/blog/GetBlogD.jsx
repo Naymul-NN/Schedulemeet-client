@@ -43,6 +43,9 @@ const Blogs = () => {
         <div className="blogWrapper   m-auto pt-6  ">
         
           <div className="allBlogs   py-3 w-[90%] m-auto  ">
+            <h1 className="  text-4xl text-center font-semibold py-3   ">
+              Our blogs
+            </h1>
   
             <div className="blogCards mt-4  grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-9  ">
               {blogs &&
