@@ -30,7 +30,7 @@ const PaymentForm = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-sky-300 w-3/5 mx-auto placeholder:bg-white min-h-5xl my-10">
+      <div className="bg-sky-300 w-3/5 mx-auto placeholder:bg-white min-h-5xl my-10 px-5 py-3">
         <form onSubmit={handleSubmit(handlePayment)}>
           <CardElement
             options={{

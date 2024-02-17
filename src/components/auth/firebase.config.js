@@ -2,14 +2,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBKMIb2oncKAPE7a5r6ytSyB-CMbXijdYo",
-  authDomain: "schedulemeet-b49e7.firebaseapp.com",
-  projectId: "schedulemeet-b49e7",
-  storageBucket: "schedulemeet-b49e7.appspot.com",
-  messagingSenderId: "297162276419",
-  appId: "1:297162276419:web:f79a95fa51f69510e25ef6"
+  apiKey: process.env.NEXT_API_KEY,
+  authDomain: process.env.NEXT_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PROJECT_ID,
+  storageBucket: process.env.NEXT_STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_APP_ID,
 };
 
 // Initialize Firebase
