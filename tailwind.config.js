@@ -28,4 +28,30 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: [
+    {
+      lightTheme: {
+        primary: "#e500ff",
+        secondary: "#00aaff",
+        accent: "#0097b3",
+        neutral: "#000816",
+        "base-100": "#f2ffff",
+        info: "#00b9de",
+        success: "#1ef79a",
+        warning: "#c39b00",
+        error: "#ff8091",
+      },
+      darkTheme: {
+        primary: "#00d099",
+        secondary: "#00e700",
+        accent: "#00af00",
+        neutral: "#1a1300",
+        "base-100": "#232329",
+        info: "#5cd6ff",
+        success: "#00ef94",
+        warning: "#cd6400",
+        error: "#dd3859",
+      },
+    },
+  ],
 };
