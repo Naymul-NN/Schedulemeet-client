@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+
 import useEvent from "../hooks/useEvent";
 import Image from "next/image";
+import Link from "next/link";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
@@ -12,7 +13,6 @@ const EventDetail = ({ id }) => {
   const axiosSecure = useAxiosSecure();
   const { register, handleSubmit } = useForm();
   const { user } = useAuth();
-
   console.log(event);
 
   if (eventsLoading) {
@@ -67,7 +67,7 @@ const EventDetail = ({ id }) => {
 
   return (
     <div className="pt-12 md:pt-20">
-      <div className="max-w-[80%] mx-auto  card md:card-side bg-base-100 shadow-xl">
+      <div className="max-w-[70%] mx-auto  card md:card-side bg-base-100 shadow-xl">
         <figure>
           <Image
             src={eventData.image}
@@ -78,10 +78,16 @@ const EventDetail = ({ id }) => {
         <div className="card-body">
           <h2 className="card-title text-black">{eventData.eventTitle}</h2>
           <p className="text-black">{eventData.description}</p>
+          <p className="text-black">Date: {eventData.date}</p>
+          <p className="text-black">Time: {eventData.time}</p>
+          <p className="text-black">Duration: {eventData.duration}</p>
           <div className="card-actions justify-end">
+            <Link href={`/eventUpdate/${eventData._id}`}>
+              <button className="btn btn-outline">Update</button>
+            </Link>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <button
-              className="btn"
+              className="btn btn-outline"
               onClick={() => document.getElementById("my_modal_4").showModal()}>
               Advertise
             </button>
@@ -90,7 +96,6 @@ const EventDetail = ({ id }) => {
               onClick={() => document.getElementById("my_modal_5").showModal()}>
               Invite Users
             </button>
-
             {/* ad post modal */}
             <dialog
               id="my_modal_4"
