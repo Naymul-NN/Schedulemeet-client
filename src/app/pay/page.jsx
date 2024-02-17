@@ -1,6 +1,7 @@
 import PaymentConfig from "@/config/PaymentConfig";
 
 const PaymentPage = () => {
+  
   return (
     <div>
       <PaymentConfig />

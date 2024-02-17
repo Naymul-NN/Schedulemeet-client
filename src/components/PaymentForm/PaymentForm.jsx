@@ -29,29 +29,29 @@ const PaymentForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(handlePayment)}>
-        <CardElement
-          options={{
-            style: {
-              base: {
-                fontSize: "16px",
-                color: "#424770",
-                "::placeholder": {
-                  color: "#aab7c4",
+    <div className="flex justify-center items-center h-screen">
+      <div className="bg-sky-300 w-3/5 mx-auto placeholder:bg-white min-h-5xl my-10">
+        <form onSubmit={handleSubmit(handlePayment)}>
+          <CardElement
+            options={{
+              style: {
+                base: {
+                  fontSize: "16px",
+                  color: "#424770",
+                  "::placeholder": {
+                    color: "#aab7c4",
+                  },
+                },
+                invalid: {
+                  color: "#9e2146",
                 },
               },
-              invalid: {
-                color: "#9e2146",
-              },
-            },
-          }}
-        />
+            }}
+          />
 
-        <button>pay
-          
-        </button>
-      </form>
+          <button className="btn btn-primary">pay</button>
+        </form>
+      </div>
     </div>
   );
 };
