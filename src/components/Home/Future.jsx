@@ -15,7 +15,7 @@ const Future = () => {
             The purpose of an interview is to gather information, assess
             qualifications, explore opinions, or make decisions. Interviews are
             commonly used in various contexts, such as employment of
-            development, journalism, research, and admissions.
+            development, journalism, research, and admissions go ashed.
           </p>
 
           <button className="btn btn-warning px-12 text-xl">
