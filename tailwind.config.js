@@ -31,27 +31,31 @@ module.exports = {
   daisyui: [
     {
       lightTheme: {
-        primary: "#e500ff",
-        secondary: "#00aaff",
-        accent: "#0097b3",
-        neutral: "#000816",
-        "base-100": "#f2ffff",
-        info: "#00b9de",
-        success: "#1ef79a",
-        warning: "#c39b00",
-        error: "#ff8091",
+        primary: "#4CAF50", //green
+        secondary: "#2196F3", //blue
+        accent: "#FF5722", //orange
+        neutral: "#E0E0E0 ", //light gray
+        "base-100": "#FFFFFF ", //white
+        info: "#03A9F4 ", //light blue
+        success: "#8BC34A ", //light green
+        warning: "#FFC107 ", //amber
+        error: "#FF5252", //red
       },
       darkTheme: {
-        primary: "#00d099",
-        secondary: "#00e700",
-        accent: "#00af00",
-        neutral: "#1a1300",
-        "base-100": "#232329",
-        info: "#5cd6ff",
-        success: "#00ef94",
-        warning: "#cd6400",
-        error: "#dd3859",
+        primary: "#8BC34A ", //light green
+        secondary: "#03A9F4", //light blue
+        accent: "#FF9800 ", //deep orange
+        neutral: "#546E7A ", //medium blue gray
+        "base-100": "#263238 ", //dark blue gray
+        info: "#2196F3 ", //blue
+        success: "#4CAF50 ", //success
+        warning: "#FFEB3B ", //yellow
+        error: "#F44336 ", //red
       },
     },
   ],
 };
+
+// Primary, Secondary, and Accent Colors: These colors are chosen to provide variety and visual interest while ensuring key elements stand out.
+// Base-100 and Neutral Colors: These colors serve as the background and base for the interface, providing contrast for content and maintaining visual balance.
+// Error, Info, Success, and Warning Colors: These colors help communicate different states or messages to users, such as error alerts, informational messages, successful actions, and warnings.
