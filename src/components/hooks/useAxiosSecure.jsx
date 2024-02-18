@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
-  // TODO: deploy link will be added
+  baseURL: process.env.NEXT_DB_URL,
 
   withCredentials: true,
 });
