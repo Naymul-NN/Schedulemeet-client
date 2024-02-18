@@ -7,7 +7,7 @@ const SingleShowData = ({seeData}) => {
 
 
 // const {seeData} = data;
-console.log(seeData.result[0])
+// console.log(seeData.result[0])
 
 
     return (
