@@ -1,138 +1,250 @@
 "use client";
-import React from "react";
-import TitleDashboard from "../../shared/TitleDashboard/TitleDashboard.jsx";
+
+import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
+import useAuth from "@/components/hooks/useAuth";
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
-import axios from "axios";
-import uploadImg from "@/util/uploadImg.js";
 
 const SetUpEvent = () => {
+  const { user } = useAuth();
+
   const {
     register,
-    handleSubmit,
-    watch,
     formState: { errors },
+    handleSubmit,
   } = useForm();
 
-  const onSubmit = async (data) => {
-    console.log(data.image[0]);
-
-    const img = await uploadImg(data.image[0]);
-
-    console.log(img);
+  const handleCreateEvent =async (data) => {
+    
   };
 
   return (
-    <div className="mt-12 w-[80%] mx-auto">
-      <TitleDashboard title={"Set Your Event"}></TitleDashboard>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="card-body bg-[#0d0c22] mt-6 px-6 md:px-12 pb-8 md:pb-12 rounded-3xl">
-        {/* dividing the form elements */}
-        <div className="flex flex-col md:flex-row md:gap-5">
-          {/* left side elements */}
-          <div className="flex-1">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Event Title
-                </span>
-              </label>
-              <input
-                {...register("eventTitle")}
-                type="text"
-                placeholder="Event Title"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Description
-                </span>
-              </label>
-              <input
-                {...register("description")}
-                type="text"
-                placeholder="description"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Date
-                </span>
-              </label>
-              <input
-                {...register("date")}
-                type="date"
-                placeholder="Date"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
-          </div>
+    <div className="my-5">
+      <TitleDashboard title={"Set Your Events"} />
 
-          {/* right side elements */}
-          <div className="flex-1">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Starting Time
-                </span>
-              </label>
+      <form
+        onSubmit={handleSubmit(handleCreateEvent)}
+        className="max-w-xl mt-10 mx-auto bg-base-100 px-4 py-5 card shadow-xl space-y-3">
+        <div>
+          {/* host name */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Your name?
+              </span>
+            </div>
+            <input
+              type="text"
+              default={user?.displayName || ""}
+              placeholder={user?.displayName || "Your Name"}
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("hostName")}
+            />
+          </label>
+        </div>
+
+        <div>
+          {/* Event Title */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Title
+              </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Event Title"
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("title", { required: "Event title is required" })}
+            />
+            {errors.title && errors.title.type === "required" && (
+              <span className="text-error text-xs">{errors.title.message}</span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* image */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info ">
+                Pick a file
+              </span>
+            </div>
+            <input
+              type="file"
+              className="file-input file-input-bordered bg-neutral text-info-content file-input-primary w-full "
+              {...register("imageFile", {
+                required: "Event Thumbnail is required",
+              })}
+            />
+            {errors.imageFile && errors.imageFile.type === "required" && (
+              <span className="text-error text-xs">
+                {errors.imageFile.message}
+              </span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* Event Duration */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Duration
+              </span>
+            </div>
+            <select
+              className="select select-bordered bg-neutral text-info-content select-primary"
+              {...register("duration")}>
+              <option
+                disabled
+                value=""
+                defaultValue
+                selected
+                className="bg-neutral text-info-content max-w-md">
+                Pick your preferred one
+              </option>
+              <option value="1 Hour">1 Hour</option>
+              <option value="2 Hour">2 Hour</option>
+              <option value="3 Hour">3 Hour</option>
+            </select>
+            {errors.duration && errors.duration.type === "required" && (
+              <span className="text-error text-xs">
+                {errors.duration.message}
+              </span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* Event Capacity */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Capacity
+              </span>
+            </div>
+            <input
+              type="number"
+              placeholder="Event Capacity"
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("capacity", {
+                required: "Event capacity is required",
+                min: { value: 3, message: "Minimum 3 is required" },
+                max: { value: 100, message: "Maximum 100" },
+              })}
+            />
+            {errors.capacity && (
+              <span className="text-error text-xs">
+                {errors.capacity.type === "required" ||
+                errors.capacity.type === "min" ||
+                errors.capacity.type === "max"
+                  ? errors.capacity.message
+                  : ""}
+              </span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* Event Time */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Date
+              </span>
+            </div>
+            <input
+              type="datetime-local"
+              placeholder="Event Time"
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("time", { required: "Event time is required" })}
+            />
+            {errors.time && errors.time.type === "required" && (
+              <span className="text-error text-xs">{errors.time.message}</span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* Event Description */}
+          <label className="form-control">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Description
+              </span>
+            </div>
+            <textarea
+              className="textarea textarea-bordered h-24 bg-neutral text-info-content"
+              placeholder="Event Description"
+              {...register("description", {
+                required: "event description is required",
+              })}
+            />
+            {errors.description && errors.description.type === "required" && (
+              <span className="text-error text-xs">
+                {errors.description.message}
+              </span>
+            )}
+          </label>
+        </div>
+        <div>
+          {/* is public */}
+          <div className="form-control">
+            <label className="label cursor-pointer">
+              <span className="label-text font-medium text-info">
+                Is Public
+              </span>
               <input
-                {...register("time")}
-                type="time"
-                placeholder="Time"
-                className="input input-bordered text-black"
-                required
+                type="checkbox"
+                defaultChecked
+                className="checkbox"
+                {...register("isPublic")}
               />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Duration
-                </span>
-              </label>
-              {/* <input {...register("hostName")} type="text" placeholder="Host Name" className="input input-bordered text-black" required /> */}
-              <select
-                {...register("duration")}
-                className="select select-bordered w-full"
-                required>
-                <option
-                  disabled
-                  selected>
-                  Duration
-                </option>
-                <option>15 minutes</option>
-                <option>30 minutes</option>
-                <option>45 minutes</option>
-                <option>1 hour</option>
-              </select>
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-green-500 text-sm md:text-lg font-medium">
-                  Image
-                </span>
-              </label>
-              <input
-                {...register("image")}
-                type="file"
-                placeholder="Image"
-                className="input input-bordered text-black"
-                required
-              />
-            </div>
+            </label>
           </div>
         </div>
-        <div className="form-control mt-6">
-          <button className="btn bg-green-700 text-white text-sm md:text-lg">
-            Submit
+
+        <div>
+          {/* is premium */}
+          <div className="form-control">
+            <label className="label cursor-pointer">
+              <span className="label-text font-medium text-info">
+                Is Premium
+              </span>
+              <input
+                type="checkbox"
+                defaultChecked={false}
+                className="checkbox"
+                {...register("isPremium")}
+              />
+            </label>
+          </div>
+        </div>
+
+        <div>
+          {/* Event Price */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Price
+              </span>
+            </div>
+            <input
+              type="number"
+              placeholder="Event Price"
+              default={0}
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("price")}
+            />
+          </label>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            className="btn-primary bg-white btn-block">
+            Create
           </button>
         </div>
       </form>
