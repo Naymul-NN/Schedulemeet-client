@@ -28,32 +28,34 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: [
-    {
-      lightTheme: {
-        primary: "#4CAF50", //green
-        secondary: "#2196F3", //blue
-        accent: "#FF5722", //orange
-        neutral: "#E0E0E0 ", //light gray
-        "base-100": "#FFFFFF ", //white
-        info: "#03A9F4 ", //light blue
-        success: "#8BC34A ", //light green
-        warning: "#FFC107 ", //amber
-        error: "#FF5252", //red
+  daisyui: {
+    themes: [
+      {
+        darkTheme: {
+          primary: "#8BC34A", // Light green
+          secondary: "#03A9F4", // Light blue
+          accent: "#FF9800", // Deep orange
+          neutral: "#F5F5F5", // Light gray (changed for better contrast)
+          "base-100": "#263238", // Dark blue gray
+          info: "#2196F3", // Blue
+          success: "#4CAF50", // Success
+          warning: "#FFEB3B", // Yellow
+          error: "#F44336", // Red
+        },
+        lightTheme: {
+          primary: "#4CAF50", // Green
+          secondary: "#2196F3", // Blue
+          accent: "#FF5722", // Orange
+          neutral: "#263238", // Dark blue gray (changed for contrast)
+          "base-100": "#FFFFFF", // White
+          info: "#03A9F4", // Light blue
+          success: "#8BC34A", // Light green
+          warning: "#FFC107", // Amber
+          error: "#FF5252", // Red
+        },
       },
-      darkTheme: {
-        primary: "#8BC34A ", //light green
-        secondary: "#03A9F4", //light blue
-        accent: "#FF9800 ", //deep orange
-        neutral: "#546E7A ", //medium blue gray
-        "base-100": "#263238 ", //dark blue gray
-        info: "#2196F3 ", //blue
-        success: "#4CAF50 ", //success
-        warning: "#FFEB3B ", //yellow
-        error: "#F44336 ", //red
-      },
-    },
-  ],
+    ],
+  },
 };
 
 // Primary, Secondary, and Accent Colors: These colors are chosen to provide variety and visual interest while ensuring key elements stand out.

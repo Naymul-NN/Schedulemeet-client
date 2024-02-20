@@ -35,18 +35,19 @@ const AdSlider = () => {
         modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper">
         {ads.map((ad) => (
-          <SwiperSlide key={ad._id}>
+          <SwiperSlide  key={ad._id}>
             <div
-              className="hero min-h-screen"
+              className="hero h-[400px] bg-center bg-cover"
+              //  need to center and fit
               style={{
-                backgroundImage: ad.thumbnail,
+                backgroundImage: `url('${ad.thumbnail}')`
               }}>
-              <div className="hero-overlay bg-opacity-60"></div>
+              <div className="hero-overlay bg-opacity-10"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                  <h1 className="mb-5 text-5xl font-bold">{ad.tag}</h1>
-                  <p className="mb-5">{ad.title}</p>
-                  <button className="btn btn-primary">View Details</button>
+                  <h1 className="mb-5 text-5xl  font-italic">{ad.tag}</h1>
+                  <p className="mb-5 font-medium text-secondary-content text-3xl">{ad.title}</p>
+                  <button className="btn btn-info">View Details</button>
                 </div>
               </div>
             </div>
