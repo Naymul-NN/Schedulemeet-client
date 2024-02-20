@@ -2,7 +2,15 @@
 
 import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 import useAuth from "@/components/hooks/useAuth";
+import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import { useForm } from "react-hook-form";
+import uploadImg from "@/util/uploadImg";
+import toast from "react-hot-toast"
+
+// TODO: verify link and name
+// TODO: form should be two columns
+// TODO: loading button should be added
+// TODO: price input should be disable if isPremiem false
 
 const SetUpEvent = () => {
   const { user } = useAuth();
@@ -13,8 +21,36 @@ const SetUpEvent = () => {
     handleSubmit,
   } = useForm();
 
-  const handleCreateEvent =async (data) => {
-    
+  const axiosSecure=useAxiosSecure()
+
+  const handleCreateEvent = async (data) => {
+    const imgUrl = await uploadImg(data.imageFile[0]);
+
+    const [date, time] = data.time.split("T");
+
+    const event = {
+      title: data.title,
+      hostName: data.hostName,
+      hostEmail: user.email,
+      image: imgUrl,
+      duration: data.duration,
+      capacity: data.capacity,
+      date: new Date(date),
+      time,
+      description: data.description,
+      link: data.link,
+      isPremium: data.isPremium,
+      fee: data.price,
+      isPublic: data.isPublic,
+    };
+
+
+
+const res=await axiosSecure.post("/api/v1/events/createEvent",event)
+
+if(res.data.success){
+    toast.success("Event Created Successfully")
+}
   };
 
   return (
@@ -58,6 +94,26 @@ const SetUpEvent = () => {
             />
             {errors.title && errors.title.type === "required" && (
               <span className="text-error text-xs">{errors.title.message}</span>
+            )}
+          </label>
+        </div>
+
+        <div>
+          {/* Event Link */}
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text font-medium text-info">
+                Event Link
+              </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Event Link"
+              className="input input-bordered w-full  bg-neutral text-info-content"
+              {...register("link", { required: "Event link is required" })}
+            />
+            {errors.link && errors.link.type === "required" && (
+              <span className="text-error text-xs">{errors.link.message}</span>
             )}
           </label>
         </div>
@@ -243,7 +299,7 @@ const SetUpEvent = () => {
         <div>
           <button
             type="submit"
-            className="btn-primary bg-white btn-block">
+            className="btn-primary btn btn-block">
             Create
           </button>
         </div>
