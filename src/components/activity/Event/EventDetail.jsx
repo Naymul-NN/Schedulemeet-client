@@ -13,7 +13,8 @@ const EventDetail = ({ id }) => {
     return <p className="">loading</p>;
   }
 
-  const { title, image, description, _id, date, time, duration } = event;
+  const { title, image, description, _id, date, time, duration, isPublic } =
+    event;
 
   const formattedDate = new Date(date).toLocaleDateString("en-UK");
 
@@ -39,11 +40,16 @@ const EventDetail = ({ id }) => {
               <button className="btn btn-outline btn-warning">Update</button>
             </Link>
 
-            <button
-              className="btn btn-outline btn-secondary"
-              onClick={() => document.getElementById("my_modal_4").showModal()}>
-              Advertise
-            </button>
+            {isPublic && (
+              <button
+                className="btn btn-outline btn-secondary"
+                onClick={() =>
+                  document.getElementById("my_modal_4").showModal()
+                }>
+                Advertise
+              </button>
+            )}
+
             <button
               className="btn btn-outline btn-accent"
               onClick={() => document.getElementById("my_modal_5").showModal()}>
