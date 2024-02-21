@@ -5,12 +5,12 @@ import useAuth from "@/components/hooks/useAuth";
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import { useForm } from "react-hook-form";
 import uploadImg from "@/util/uploadImg";
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
 
 // TODO: verify link and name
 // TODO: form should be two columns
 // TODO: loading button should be added
-// TODO: price input should be disable if isPremiem false
+// TODO: price input should be disable if isPremium false
 
 const SetUpEvent = () => {
   const { user } = useAuth();
@@ -21,7 +21,7 @@ const SetUpEvent = () => {
     handleSubmit,
   } = useForm();
 
-  const axiosSecure=useAxiosSecure()
+  const axiosSecure = useAxiosSecure();
 
   const handleCreateEvent = async (data) => {
     const imgUrl = await uploadImg(data.imageFile[0]);
@@ -44,13 +44,11 @@ const SetUpEvent = () => {
       isPublic: data.isPublic,
     };
 
+    const res = await axiosSecure.post("/api/v1/events/createEvent", event);
 
-
-const res=await axiosSecure.post("/api/v1/events/createEvent",event)
-
-if(res.data.success){
-    toast.success("Event Created Successfully")
-}
+    if (res.data.success) {
+      toast.success("Event Created Successfully");
+    }
   };
 
   return (

@@ -1,48 +1,57 @@
-import React from 'react';
-import useMeetings from '../hooks/useMeetings';
-import useAxiosSecure from '../hooks/useAxiosSecure';
-import toast from 'react-hot-toast';
-import Link from 'next/link';
+import React from "react";
+import useMeetings from "../hooks/useMeetings";
+import useAxiosSecure from "../hooks/useAxiosSecure";
+import toast from "react-hot-toast";
+import Link from "next/link";
+import Image from "next/image";
 
 const EventCard = ({ event, index }) => {
+  const { refetch } = useMeetings();
+  const axiosSecure = useAxiosSecure();
 
-    const { _id, eventTitle, hostEmail, date } = event;
-    const { refetch } = useMeetings();
-    const axiosSecure = useAxiosSecure();
+  const { _id, title, date, image } = event;
 
-    //   there will be a modal to confirm the delete
-    const handleDelete = async () => {
-        const res = await axiosSecure.delete(
-            `/api/v1/events/deleteEvent/${_id}`
-        );
+  //   there will be a modal to confirm the delete
+  const handleDelete = async () => {
+    const res = await axiosSecure.delete(`/api/v1/events/deleteEvent/${_id}`);
 
-        if (res.data.success) {
-            toast.success("Deleted Successfully");
-            refetch()
-        }
-    };
+    if (res.data.success) {
+      toast.success("Deleted Successfully");
+      refetch();
+    }
+  };
 
-    return (
-        <div>
-            <div className="bg-[#0d0c22] text-primary-content rounded-lg">
-                <div className="card-body">
-                    <h2 className="card-title">{eventTitle}</h2>
-                    <p>{date}</p>
-                    <p>One on one</p>
-                    <div className="card-actions justify-between">
-                        <button
-                            onClick={handleDelete}
-                            className="btn btn-outline btn-error">
-                            Delete
-                        </button>
-                        <Link href={`/eventDetail/${_id}`}><button className='btn btn-outline btn-success'>View Details</button></Link>
-                        {/* <button className="btn btn-outline btn-success">Invite</button>
-                        <button className="btn btn-outline btn-warning">Update</button> */}
-                    </div>
-                </div>
-            </div>
+  const formattedDate = new Date(date).toLocaleDateString("en-UK");
+
+  return (
+    <div>
+      <div className="bg-neutral text-primary-content rounded-lg">
+        <div className="card-body">
+          <Image
+            alt={title}
+            src={image}
+            width={300}
+            height={230}
+          />
+          <h2 className="card-title text-primary-content">{title}</h2>
+          <p>{formattedDate}</p>
+
+          <div className="card-actions justify-between">
+            <button
+              onClick={handleDelete}
+              className="btn btn-outline btn-error">
+              Delete
+            </button>
+            <Link href={`/eventDetail/${_id}`}>
+              <button className="btn btn-outline btn-success">
+                View Details
+              </button>
+            </Link>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default EventCard;
