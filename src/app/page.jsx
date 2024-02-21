@@ -8,34 +8,32 @@ import Reminder from "@/components/Reminder/reminder";
 import React from "react";
 import Layout from "./mainlayout";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";
+import AdSlider from "@/components/Home/AdSlider";
 
 const Home = () => {
   return (
-   <Layout>
-    <Container>
-      <div className="min-h-screen bg-[#0d0c22]">
-        <Banner></Banner>
-        <Records></Records>
-        <ScheduleFaster></ScheduleFaster>
-        <Reminder></Reminder>
-        <Faq></Faq>
-        <Future></Future>
-   
+    <Layout>
+      <Container>
+        <div className="min-h-screen bg-[#0d0c22]">
+          <Banner></Banner>
+          <Records></Records>
+          <ScheduleFaster></ScheduleFaster>
+          <Reminder></Reminder>
+          <Faq></Faq>
+          <Future></Future>
+          <AdSlider />
+        </div>
+      </Container>
+
+      <div>
+        <div className="bg-[#0D0C22]">
+          <Container>
+            <Testimonials></Testimonials>
+          </Container>
+        </div>
       </div>
-     </Container>     
-
-<div>
-<div className="bg-[#0D0C22]">
-<Container>
-<Testimonials></Testimonials>
-</Container>
-</div>
-</div>
-
     </Layout>
-
-
- );
+  );
 };
 
 export default Home;
