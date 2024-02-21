@@ -1,6 +1,7 @@
 import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
-import EventCard from "../EventCard";
+
 import useMyEvents from "@/components/hooks/useMyEvents";
+import EventCard from "../EventCard";
 
 const EventsTable = () => {
   const { eventsLoading, events } = useMyEvents();
@@ -16,11 +17,11 @@ const EventsTable = () => {
       <div className="my-12">
         {events?.length ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {events.map((event, index) => (
+            {events.map((event) => (
               <EventCard
                 key={event._id}
-                index={index}
-                event={event}></EventCard>
+                event={event}
+              />
             ))}
           </div>
         ) : (

@@ -1,11 +1,11 @@
 import React from "react";
-import useMeetings from "../hooks/useMeetings";
-import useAxiosSecure from "../hooks/useAxiosSecure";
+import useMeetings from "@/components/hooks/useMeetings";
+import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import Image from "next/image";
 
-const EventCard = ({ event, index }) => {
+const EventCard = ({ event }) => {
   const { refetch } = useMeetings();
   const axiosSecure = useAxiosSecure();
 
