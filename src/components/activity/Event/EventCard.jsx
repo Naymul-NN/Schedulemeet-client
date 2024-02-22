@@ -42,7 +42,7 @@ const EventCard = ({ event }) => {
               className="btn btn-outline btn-error">
               Delete
             </button>
-            <Link href={`/eventDetail/${_id}`}>
+            <Link href={`/dashboard/eventDetail/${_id}`}>
               <button className="btn btn-outline btn-success">
                 View Details
               </button>
