@@ -1,10 +1,11 @@
 import Events from "@/components/events/Events";
+import Layout from "../mainlayout";
 
 const EventsPage = () => {
   return (
-    <div>
+    <Layout>
       <Events />
-    </div>
+    </Layout>
   );
 };
 
