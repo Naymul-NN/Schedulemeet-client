@@ -19,6 +19,7 @@ const SetUpEvent = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
   const axiosSecure = useAxiosSecure();
@@ -46,8 +47,10 @@ const SetUpEvent = () => {
 
     const res = await axiosSecure.post("/api/v1/events/createEvent", event);
 
+
     if (res.data.success) {
       toast.success("Event Created Successfully");
+      reset();
     }
   };
 

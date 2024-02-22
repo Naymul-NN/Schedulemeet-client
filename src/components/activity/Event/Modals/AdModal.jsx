@@ -3,13 +3,15 @@
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import useCheckIfAdvertised from "@/components/hooks/useCheckIfAdvertised";
 
 const AdModal = ({ event }) => {
-  
   const { register, handleSubmit } = useForm();
   const axiosSecure = useAxiosSecure();
 
   const { _id, image, title } = event;
+
+  const { refetch } = useCheckIfAdvertised(_id);
 
   const handleAdvertisementPosting = async (data) => {
     const adInfo = {
@@ -17,11 +19,17 @@ const AdModal = ({ event }) => {
       tag: data.tag,
       thumbnail: image,
       title: title,
+      expiresIn: data.adDuration,
     };
-    const res = await axiosSecure.post("/api/v1/ad/post", adInfo);
+    const res = await axiosSecure.post("/api/v1/demos/post", adInfo);
+
+    if (res.status === 400) {
+      toast.error("No more quota for advertisement");
+    }
 
     if (res.data.success) {
       toast.success("Ad Posted Successfully");
+      refetch();
     }
   };
 

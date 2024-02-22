@@ -5,13 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import InviteModal from "./Modals/InviteModal";
 import AdModal from "./Modals/AdModal";
+import useCheckIfAdvertised from "@/components/hooks/useCheckIfAdvertised";
 
 const EventDetail = ({ id }) => {
   const { event, eventsLoading } = useEvent(id);
+  const { checkLoading, isAdvertised } = useCheckIfAdvertised(id);
 
-  if (eventsLoading) {
+  if (eventsLoading || checkLoading) {
     return <p className="">loading</p>;
   }
+
+  console.log(isAdvertised);
 
   const { title, image, description, _id, date, time, duration, isPublic } =
     event;
@@ -40,7 +44,7 @@ const EventDetail = ({ id }) => {
               <button className="btn btn-outline btn-warning">Update</button>
             </Link>
 
-            {isPublic && (
+            {isPublic && !isAdvertised && (
               <button
                 className="btn btn-outline btn-secondary"
                 onClick={() =>
@@ -55,6 +59,7 @@ const EventDetail = ({ id }) => {
               onClick={() => document.getElementById("my_modal_5").showModal()}>
               Invite Users
             </button>
+
             {/* ad post modal */}
             <AdModal event={event} />
 
