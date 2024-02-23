@@ -23,7 +23,7 @@ const EventDetail = ({ id }) => {
   const formattedDate = new Date(date).toLocaleDateString("en-UK");
 
   return (
-    <div className="pt-12 md:pt-20">
+    <div className="pt-12 px-3 md:pt-20">
       <div className="max-w-[70%] mx-auto  card md:card-side bg-base-100 shadow-xl">
         <figure>
           <Image

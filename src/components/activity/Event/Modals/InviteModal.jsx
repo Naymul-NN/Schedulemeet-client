@@ -43,7 +43,7 @@ const InviteModal = ({ event }) => {
     <dialog
       id="my_modal_5"
       className="modal">
-      <div className="modal-box ">
+      <div className="modal-box bg-base-100">
         <h3 className="font-bold text-lg text-primary text-center">
           Invite Others
         </h3>
@@ -53,12 +53,14 @@ const InviteModal = ({ event }) => {
           onSubmit={handleSubmit(handleInviteUser)}>
           <label className="form-control w-full max-w-xs mb-1">
             <div className="label">
-              <span className="label-text">Users Email</span>
+              <span className="label-text font-medium text-info">
+                Users Email
+              </span>
             </div>
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs bg-neutral text-info-content"
               {...register("invitedEmail")}
               required
             />
