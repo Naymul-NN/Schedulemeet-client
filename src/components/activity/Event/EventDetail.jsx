@@ -40,7 +40,7 @@ const EventDetail = ({ id }) => {
           <p className="text-secondary">Time: {time}</p>
           <p className="text-accent">Duration: {duration}</p>
           <div className="card-actions justify-end">
-            <Link href={`/eventUpdate/${_id}`}>
+            <Link href={`/dashboard/UpdateEvent/${_id}`}>
               <button className="btn btn-outline btn-warning">Update</button>
             </Link>
 
