@@ -1,6 +1,6 @@
 "use client";
 
-import EventsTable from "./EventsTable/EventsTable";
+import EventsTable from "./Event/EventsTable/EventsTable";
 import MeetingTable from "./MeetingTable/MeetingTable";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
