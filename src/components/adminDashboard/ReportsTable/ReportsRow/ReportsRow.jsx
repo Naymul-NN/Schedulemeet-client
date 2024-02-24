@@ -4,12 +4,15 @@ import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import useReports from "@/components/hooks/useReports";
 import useAuth from "@/components/hooks/useAuth";
+import formateDate from "@/util/formateDate";
 
 const ReportsRow = ({ report, index }) => {
   const { userId, _id, reportedBy, reportedTo, reason, reportDate } = report;
   const axiosSecure = useAxiosSecure();
   const { refetch } = useReports();
   const { user: admin } = useAuth();
+
+  const formattedDate = formateDate(reportDate);
 
   const handleAcceptReport = async () => {
     try {
@@ -56,7 +59,7 @@ const ReportsRow = ({ report, index }) => {
       <td align="center">{reportedBy}</td>
       <td align="center">{reportedTo}</td>
       <td align="center">{reason}</td>
-      <td align="center">{reportDate}</td>
+      <td align="center">{formattedDate}</td>
       <td
         className="space-x-3 "
         align="center">

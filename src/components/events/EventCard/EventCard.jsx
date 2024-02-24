@@ -4,11 +4,12 @@ import Image from "next/image";
 import { CiCalendarDate } from "react-icons/ci";
 import { MdAttachMoney } from "react-icons/md";
 import Link from "next/link";
+import formateDate from "@/util/formateDate";
 
 const EventCard = ({ event }) => {
   const { title, image, isPremium, fee, date, _id } = event;
 
-  const formattedDate = new Date(date).toLocaleDateString("en-UK");
+  const formattedDate = formateDate(date);
 
   return (
     <Link href={`/events/details/${_id}`}>
