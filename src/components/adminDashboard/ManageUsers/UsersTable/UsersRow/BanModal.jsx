@@ -41,7 +41,7 @@ const BanModal = ({ user }) => {
     <dialog
       id="ban"
       className="modal modal-bottom sm:modal-middle">
-      <div className="modal-box bg-base-100">
+      <div className="modal-box bg-base-100 px-4 py-6 rounded-xl shadow-xl">
         <h3 className="font-bold text-lg">Ban {name}</h3>
         <form
           onSubmit={handleSubmit(handleBanUser)}
@@ -98,8 +98,8 @@ const BanModal = ({ user }) => {
               />
             </label>
           </div>
-          <div className="flex">
-            <button className="btn btn-success">Ban</button>
+          <div className="flex items-center justify-center">
+            <button className="btn btn-warning btn-block">Ban</button>
           </div>
         </form>
 
