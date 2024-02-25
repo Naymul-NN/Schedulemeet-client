@@ -3,6 +3,7 @@
 import useEvent from "@/components/hooks/useEvent";
 import Image from "next/image";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
+import BookingModal from "../Modals/BookingModal";
 
 const EventDetails = ({ id }) => {
   const { event, eventsLoading } = useEvent(id);
@@ -11,8 +12,6 @@ const EventDetails = ({ id }) => {
     return <p>loading ...</p>;
   }
   const { image, title, description, date, time, fee } = event;
-
-  console.log(time);
 
   const formattedDate = new Date(date).toLocaleDateString("en-UK");
 
@@ -45,8 +44,14 @@ const EventDetails = ({ id }) => {
       </div>
 
       <div className="flex">
-        <button className="btn btn-success rounded-md ">Book for ${fee}</button>
+        <button
+          className="btn btn-success rounded-md"
+          onClick={() => document.getElementById("booking").showModal()}>
+          Book for ${fee}
+        </button>
       </div>
+
+      <BookingModal event={event} />
     </div>
   );
 };
