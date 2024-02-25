@@ -65,13 +65,13 @@ const Signin = () => {
             {/* email info */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text font-medium text-info">Email</span>
               </label>
               <input
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered text-white"
+                className="input input-bordered bg-neutral text-info-content"
                 {...register("email", { required: "email is required" })}
               />
               {errors.email && (
@@ -82,13 +82,15 @@ const Signin = () => {
             {/* password info */}
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text font-medium text-info">
+                  Password
+                </span>
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
-                className="input input-bordered text-white"
+                className="input input-bordered bg-neutral text-info-content"
                 {...register("password", { required: "password is required" })}
               />
               <span

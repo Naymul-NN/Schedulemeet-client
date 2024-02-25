@@ -25,6 +25,7 @@
     "react-icons": "^5.0.1",
     "react-particles": "^2.12.2",
     "react-tabs": "^6.0.2",
+    "swiper": "^11.0.6",
     "tsparticles": "^3.2.1",
     "tsparticles-slim": "^2.12.0"
   },

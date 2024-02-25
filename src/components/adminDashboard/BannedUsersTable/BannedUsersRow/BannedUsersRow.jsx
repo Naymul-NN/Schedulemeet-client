@@ -2,14 +2,18 @@
 
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import useBannedUsers from "@/components/hooks/useBannedUsers";
+import formateDate from "@/util/formateDate";
 import toast from "react-hot-toast";
 
 const BannedUsersRow = ({ user, index }) => {
   const { _id, userId, userEmail, bannedBy, reason, bannedFrom } = user;
+
+  const formattedDate = formateDate(bannedFrom);
+
   const { refetch } = useBannedUsers();
   const axiosSecure = useAxiosSecure();
 
-  const handleRemoveBan = async (req, res) => {
+  const handleRemoveBan = async () => {
     try {
       const res = await axiosSecure.delete(`/api/v1/ban/unBan/${_id}`, {
         data: { userId },
@@ -30,7 +34,7 @@ const BannedUsersRow = ({ user, index }) => {
       <td align="center">{userEmail}</td>
       <td align="center">{bannedBy}</td>
       <td align="center">{reason}</td>
-      <td align="center">{bannedFrom}</td>
+      <td align="center">{formattedDate}</td>
       <td
         className="space-x-3 "
         align="center">

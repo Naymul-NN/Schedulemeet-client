@@ -2,6 +2,7 @@ import useAuth from "@/components/hooks/useAuth";
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 import useUsers from "@/components/hooks/useUsers";
 import toast from "react-hot-toast";
+import BanModal from "./BanModal";
 
 const UsersRow = ({ user, index }) => {
   const { _id, name, email, role } = user;
@@ -72,11 +73,13 @@ const UsersRow = ({ user, index }) => {
         </button>
 
         <button
-          onClick={handleBanUser}
+          onClick={()=>document.getElementById('ban').showModal()}
           className="btn  btn-error">
           Ban User
         </button>
       </td>
+
+      <BanModal user={user}/>
     </tr>
   );
 };

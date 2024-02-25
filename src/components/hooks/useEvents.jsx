@@ -1,10 +1,10 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "./useAxiosSecure";
+import useAxiospublic from "./useAxious";
 
 const useEvents = () => {
-  const axiosSecure = useAxiosSecure();
+  const axiosPublic = useAxiospublic();
 
   const {
     data: events,
@@ -13,7 +13,7 @@ const useEvents = () => {
   } = useQuery({
     queryKey: ["events"],
     queryFn: async () => {
-      const response = await axiosSecure.get("/api/v1/events/getEvents");
+      const response = await axiosPublic.get("/api/v1/events/getEvents");
       return response.data.events;
     },
   });
