@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
 
 
   return (
-    <div className="flex flex-col justify-between rounded-md p-2">
+    <div className="flex flex-col bg-gradient-to-r from-[#584c97] to-[#5555d8]  justify-between rounded-md p-2">
 
       <div>
 
@@ -27,8 +27,8 @@ const BlogCard = ({ blog }) => {
             </div>
 
             <div>
-              <h2 className="font-bold">{blogUserName}</h2>
-              <h2 className="text-[#676767]">{blogCategorys ? blogCategorys : ""}</h2>
+              <h2 className="font-bold text-white">{blogUserName}</h2>
+              <h2 className="text-white">{blogCategorys ? blogCategorys : ""}</h2>
             </div>
 
           </div>
@@ -43,8 +43,8 @@ const BlogCard = ({ blog }) => {
 
 
         <div className="my-2">
-          <h2 className="font-semibold">{blogTitle}</h2>
-          <p className="my-2">{blogMessage.slice(0, 100)}...</p>
+          <h2 className="font-semibold text-center text-white">{blogTitle}</h2>
+          <p className="my-2 text-black">{blogMessage.slice(0, 100)}...</p>
         </div>
 
       </div>
