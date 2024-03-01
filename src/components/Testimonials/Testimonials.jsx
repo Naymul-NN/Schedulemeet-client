@@ -15,7 +15,7 @@ const data = await res.json();
 
 
     return (
-        <div className="w-full my-10 bg-[#0d0c22] h-[600px]">
+        <div className="w-full my-10 bg-[#0d0c2298] h-[600px]">
 
    <div className="text-white">
    <h2 className="text-center  font-bold pt-4 text-[25px] border-b-2 border-orange-500 w-max mx-auto">Testimonials</h2>
@@ -33,13 +33,13 @@ const data = await res.json();
 {
     data.result.map((dataAll, index) => {
         return(
-        <div key={index} className="text-black w-[50%] mx-2 text-center bg-[#fff] shadow-lg p-10 border-[1px]">
+        <div key={index} className="text-white font-semibold w-[50%] mx-2 text-center bg-gradient-to-r from-[#584c97] to-[#5555d8] shadow-lg p-10 border-[1px]">
 
 <Image className="block mx-auto border-[2px] border-orange-500" src={dataAll.userImage} alt="Profile Image" width={100} height={100} style={{ borderRadius: '100%', height: '100px', objectFit: "cover" }} />
 
 <div className="flex justify-center items-center">
 
-<div className="border-[1px] bg-orange-500 text-white rounded-full px-2 my-2">Star {dataAll.rating.length}</div> 
+{/* <div className="border-[1px] bg-orange-500 text-white rounded-full px-2 my-2">Star {dataAll.rating.length}</div>  */}
   <div className="flex justify-center">
     {
         dataAll.rating.map((ratingID, index) => {
