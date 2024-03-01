@@ -103,7 +103,7 @@ const Navbar = () => {
             // <><button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
             <h1 className="pr-2">
               <Link href="/dashboard">
-                <button className="btn  btn-sm bg-transparent hover:text-black  text-white">
+                <button className="btn  btn-sm bg-transparent hover:bg-yellow-400 hover:text-black">
                   My Account
                 </button>
               </Link>
