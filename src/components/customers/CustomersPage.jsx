@@ -17,7 +17,7 @@ const CustomerPages = () => {
     <div className='w-[70%] mx-auto bg-[#0d0c22d8]'>
 
 
-      <div className="h-[800px]">
+      <div className="h-[700px]">
         <div className="flex justify-center items-center h-full">
 
 
@@ -58,12 +58,12 @@ const CustomerPages = () => {
     </div>
 
     {/* See how Sense helps recruiting teams achieve their goals */}
-    <div className="bg-gradient-to-r from-[#584c97] to-[#5555d8]  text-black h-auto py-10">
+    <div className="bg-gradient-to-r from-[#584c97] to-[#5555d8]  text-black h-auto py-5">
       <div className="xl:w-[70%] lg:w-[70%] w-[95%] mx-auto">
 
 
         <div>
-          <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center text-white xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how Sense helps recruiting teams achieve their goals</h2>
+          <h2 className="xl:w-[40%] md:w-[40%] lg:w-[40%] w-[100%] mx-auto text-center text-white xl:text-[45px] lg:text-[30px] md:text-[30px] py-20">See how ScheduleMeet helps recruiting teams achieve their goals</h2>
         </div>
 
 
@@ -266,7 +266,7 @@ const CustomerPages = () => {
     {/* Get a customized demo today start */}
     <div className='bg-[#111133] text-white'>
 
-      <div className="xl:w-[70%] lg:w-[70%] w-[90%] mx-auto h-[800px]">
+      <div className="xl:w-[70%] lg:w-[70%] w-[90%] mx-auto h-[700px]">
 
         <div className='flex justify-center items-center h-full xl:flex-row lg:flex-row flex-col-reverse'>
           <div className='xl:w-[50%] lg:w-[60%] w-[100%]'>
