@@ -13,8 +13,8 @@ const Benefits = () => {
     ];
 
     return (
-        <section className="max-w-6xl min-h-52 mx-auto bg-teal-200 px-4 py-6 my-5 rounded-xl shadow-sm">
-            <h2 className="text-gray-800 text-4xl font-bold text-center my-5">
+        <section className="max-w-6xl min-h-52 mx-auto text-white px-4 py-6 my-5 rounded-xl shadow-sm">
+            <h2 className=" text-4xl text-white font-bold text-center my-5">
                 Why Should Use ScheduleMeet
             </h2>
             <div className="flex flex-col lg:flex-row items-center justify-around">
@@ -24,7 +24,7 @@ const Benefits = () => {
                         {benefits.map((benefit) => (
                             <li
                                 key={benefit}
-                                className="list-disc list-inside text-lg font-semibold my-1 text-black">
+                                className="list-disc list-inside text-lg text-white font-semibold my-1 text-black">
                                 {benefit}
                             </li>
                         ))}

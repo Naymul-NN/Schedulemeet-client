@@ -7,18 +7,18 @@ const SingleShowData = (data) => {
 
 
     const { seeData } = data;
-    console.log(seeData.result)
+    // console.log(seeData.result)
 
     return (
-        <div className="text-black bg-white min-h-screen py-10">
+        <div className="text-black min-h-screen py-10">
 
             <div className="flex justify-center items-center h-full">
-                <div className="w-[50%] bg-white rounded-md shadow-md p-4 my-4 border-[1px] space-y-4">
+                <div className="w-[50%] bg-gradient-to-r from-[#584c97] to-[#5555d8]  rounded-xl shadow-md p-4 my-4 space-y-4">
                     <div className="flex items-center gap-2">
                         <Image className="w-[50px]  h-[50px] rounded-full" src={seeData.result?.blogUserImage} width={100} height={100} alt="blog Image"></Image>
                         <div>
                             <h2>{seeData.result?.blogUserName}</h2>
-                            <h2 className="text-[#676767]">{seeData.result?.blogTime?.dates}-{seeData.result?.blogTime.months}-2024</h2>
+                            <h2 className="">{seeData.result?.blogTime?.dates}-{seeData.result?.blogTime.months}-2024</h2>
                         </div>
 
                     </div>
