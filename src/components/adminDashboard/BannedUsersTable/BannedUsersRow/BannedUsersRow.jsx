@@ -58,7 +58,7 @@ const BannedUsersRow = ({ user, index }) => {
         </button>
         <button
           onClick={handlePermanentBan}
-          className="btn  btn-warning mx-2">
+          className="btn  btn-error mx-2">
           Ban Permanent
         </button>
       </td>
