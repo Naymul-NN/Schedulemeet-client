@@ -15,7 +15,6 @@ const useCheckAdmin = () => {
           `/api/v1/admin/checkAdmin/${user?.email}`
         );
 
-        console.log(response.data);
         return response.data.admin;
       }
 
