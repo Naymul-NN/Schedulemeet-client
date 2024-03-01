@@ -54,7 +54,7 @@ const Signin = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-blue-300">
+    <div className="hero min-h-screen bg-blue-200">
       <div className="hero-content flex-col lg:flex-row">
         <div className="text-center lg:text-left  mr-24">
           <Image
@@ -66,7 +66,7 @@ const Signin = () => {
           />
         </div>
 
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-100">
           <form
             onSubmit={handleSubmit(handleLogin)}
             className="card-body">
@@ -77,13 +77,13 @@ const Signin = () => {
             {/* email info */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium text-info">Email</span>
+                <span className="label-text font-medium text-black">Email</span>
               </label>
               <input
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered bg-neutral text-info-content"
+                className="input input-bordered border-gray-500 text-black bg-white"
                 {...register("email", { required: "email is required" })}
               />
               {errors.email && (
@@ -94,7 +94,7 @@ const Signin = () => {
             {/* password info */}
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text font-medium text-info">
+                <span className="label-text font-medium text-black">
                   Password
                 </span>
               </label>
@@ -102,7 +102,7 @@ const Signin = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
-                className="input input-bordered bg-neutral text-info-content"
+                className="input input-bordered bg-white text-black border-gray-500"
                 {...register("password", { required: "password is required" })}
               />
               <span
@@ -117,7 +117,7 @@ const Signin = () => {
                 {/* TODO: will implement later */}
                 <Link
                   href="#"
-                  className="label-text-alt link link-hover">
+                  className="label-text-alt link text-black link-hover">
                   Forgot password?
                 </Link>
               </label>

@@ -77,14 +77,14 @@ const WriteBlog = () => {
                         height={700}
                     />
                 </div>
-                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100 ">
+                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-gray-100 ">
                     <form className="card-body " onSubmit={wirteBlogs}>
                         <div className="space-y-4">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="text-xl text-black">Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="name" className="input input-bordered  text-black" required />
+                                <input type="text" name="name" placeholder="name" className="input border-gray-500 input-bordered bg-white text-black " required />
                             </div>
 
 
@@ -93,16 +93,16 @@ const WriteBlog = () => {
                                 <label className="label">
                                     <span className="text-xl text-black">Title</span>
                                 </label>
-                                <input type="text" name="title" placeholder="title" className="input input-bordered text-black" required />
+                                <input type="text" name="title" placeholder="title" className="input border-gray-500 input-bordered bg-white text-black " required />
                             </div>
 
 
                             <div className="form-control text-black">
                                 <label className="label">
-                                    <span className="text-xl text-black">Option</span>
+                                    <span className="text-xl ">Option</span>
                                 </label>
 
-                                <select name="postOptions" className="select select-bordered w-full max-w-xs">
+                                <select name="postOptions" className="select select-bordered border-gray-500 w-full bg-white text-black max-w-xs">
                                     <option disabled selected>You Choose One</option>
                                     <option value="Business Tips">Business Tips</option>
                                     <option value="Entrepreneur">Entrepreneur</option>
@@ -124,7 +124,7 @@ const WriteBlog = () => {
                                 <label className="label">
                                     <span className="text-xl text-black">Image</span>
                                 </label>
-                                <input type="text" name="blogImage" placeholder="image" className="input input-bordered text-black" required />
+                                <input type="text" name="blogImage" placeholder="image" className="input border-gray-500 input-bordered bg-white text-black" required />
                             </div>
 
 
@@ -133,12 +133,12 @@ const WriteBlog = () => {
                                 <label className="label">
                                     <span className="text-xl text-black">Description</span>
                                 </label>
-                                <textarea name="message" placeholder="Write here........" className="textarea textarea-bordered textarea-lg w-full max-w-xl text-black" ></textarea>
+                                <textarea name="message" placeholder="Write here........" className="textarea textarea-bordered bg-white text-black textarea-lg w-full max-w-xl " ></textarea>
                             </div>
 
                         </div>
                         <div className="form-control mt-4">
-                            <button className="btn btn-primary">Publish</button>
+                            <button className="btn btn-warning">Publish</button>
                         </div>
 
                     </form>

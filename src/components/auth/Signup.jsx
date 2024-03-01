@@ -68,7 +68,7 @@ const Register = () => {
         </div>
 
         {/* register form */}
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-pink-100">
+        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-white">
           <form
             onSubmit={handleSubmit(handleRegister)}
             className="card-body text-black">
@@ -77,13 +77,13 @@ const Register = () => {
             {/* email info */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium text-info">Email</span>
+                <span className="label-text font-medium text-black">Email</span>
               </label>
               <input
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered bg-neutral text-info-content"
+                className="input input-bordered bg-white border-gray-500 text-info-content"
                 {...register("email", { required: "email is required" })}
               />
               {errors.email && (
@@ -94,15 +94,13 @@ const Register = () => {
             {/* password info */}
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text font-medium text-info">
-                  Password
-                </span>
+                <span className="label-text font-medium text-black">Password</span>
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
-                className="input input-bordered bg-neutral text-info-content"
+                className="input input-bordered bg-white border-gray-500 text-black"
                 {...register("password", { required: "password is required" })}
                 // TODO: password validation will added later
               />
@@ -118,7 +116,7 @@ const Register = () => {
                 {/* TODO: no need to forget password in register form */}
                 <Link
                   href="#"
-                  className="label-text-alt link link-hover">
+                  className="label-text-alt link text-black link-hover">
                   Forgot password?
                 </Link>
               </label>

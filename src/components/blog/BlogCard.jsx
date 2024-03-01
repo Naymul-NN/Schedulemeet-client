@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
 
 
   return (
-    <div className="flex flex-col justify-between border-[1px] rounded-md p-2">
+    <div className="flex flex-col bg-gradient-to-r from-[#584c97] to-[#5555d8]  justify-between rounded-md p-2">
 
       <div>
 
@@ -27,15 +27,15 @@ const BlogCard = ({ blog }) => {
             </div>
 
             <div>
-              <h2 className="font-bold">{blogUserName}</h2>
-              <h2 className="text-[#676767]">{blogCategorys ? blogCategorys : ""}</h2>
+              <h2 className="font-bold text-white">{blogUserName}</h2>
+              <h2 className="text-white">{blogCategorys ? blogCategorys : ""}</h2>
             </div>
 
           </div>
 
 
           <div className="flex gap-1 items-center">
-            <h2 className=" text-black">{blogTime.seconds}s</h2>
+            <h2 className=" text-white">{blogTime.seconds}s</h2>
             <MdAccessTime className="text-[20px]"></MdAccessTime>
           </div>
 
@@ -43,15 +43,15 @@ const BlogCard = ({ blog }) => {
 
 
         <div className="my-2">
-          <h2 className="font-semibold">{blogTitle}</h2>
-          <p className="my-2">{blogMessage.slice(0, 100)}...</p>
+          <h2 className="font-semibold text-center text-white">{blogTitle}</h2>
+          <p className="my-2 text-black">{blogMessage.slice(0, 100)}...</p>
         </div>
 
       </div>
 
       <div>
 
-        <Link href={`/blog/${_id}`}><button className="px-2 py-2 hover:bg-[#deac50] bg-[#ffc43a] font-medium border-[1px] rounded-md">Read more</button></Link>
+        <Link href={`/blog/${_id}`}><button className="px-2 py-2 hover:bg-[#deac50] bg-[#ffc43a] text-black font-medium  rounded-md">Read more</button></Link>
       </div>
 
 
