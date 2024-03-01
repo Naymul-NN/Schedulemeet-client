@@ -16,7 +16,7 @@ const Events = () => {
       <Title title={"Upcoming Events"} />
 
       <div
-        className="max-w-7xl my-10 mx-auto p-3 rounded-xl bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-co
+        className=" my-10  p-3 rounded-xl bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-co
       ls-3 space-y-4 space-x-3">
         {events?.map((event) => (
           <EventCard

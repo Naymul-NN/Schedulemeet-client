@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
 
 
   return (
-    <div className="flex flex-col justify-between border-[1px] rounded-md p-2">
+    <div className="flex flex-col justify-between rounded-md p-2">
 
       <div>
 
@@ -35,7 +35,7 @@ const BlogCard = ({ blog }) => {
 
 
           <div className="flex gap-1 items-center">
-            <h2 className=" text-black">{blogTime.seconds}s</h2>
+            <h2 className=" text-white">{blogTime.seconds}s</h2>
             <MdAccessTime className="text-[20px]"></MdAccessTime>
           </div>
 
@@ -51,7 +51,7 @@ const BlogCard = ({ blog }) => {
 
       <div>
 
-        <Link href={`/blog/${_id}`}><button className="px-2 py-2 hover:bg-[#deac50] bg-[#ffc43a] font-medium border-[1px] rounded-md">Read more</button></Link>
+        <Link href={`/blog/${_id}`}><button className="px-2 py-2 hover:bg-[#deac50] bg-[#ffc43a] text-black font-medium  rounded-md">Read more</button></Link>
       </div>
 
 

@@ -34,7 +34,7 @@ const Blogs = () => {
     <div>
 
 {
-  blogsLoading ? <BlogLoading></BlogLoading> : <div className="blogContainer bg-gray-50 text-gray-950  min-h-screen">
+  blogsLoading ? <BlogLoading></BlogLoading> : <div className="blogContainer text-white min-h-screen">
 
   <div className=" bg-[#e3e3e3] w-full h-full">
    <div className="mx-[100px] p-2 flex justify-between">
