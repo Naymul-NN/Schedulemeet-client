@@ -9,13 +9,16 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FaEyeSlash, FaEye, FaSpinner } from "react-icons/fa";
 import useAxiospublic from "../hooks/useAxious";
+import { useRouter } from "next/navigation";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { createUser } = useAuth();
+  const { createUser, logOut } = useAuth();
   const axios = useAxiospublic();
+
+  const router = useRouter();
 
   const {
     register,
@@ -33,7 +36,14 @@ const Register = () => {
 
       const res = await axios.post("/api/v1/users/saveUser", { email });
 
+      if (res.data.banned) {
+        await logOut();
+        setLoading(false);
+        return toast.error("You are banned");
+      }
+
       if (res.data.success) {
+        router.push("/");
         toast.success("Congratulations, Registration Successful");
       }
       setLoading(false);

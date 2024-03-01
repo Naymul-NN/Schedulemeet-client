@@ -47,7 +47,6 @@ const SetUpEvent = () => {
 
     const res = await axiosSecure.post("/api/v1/events/createEvent", event);
 
-
     if (res.data.success) {
       toast.success("Event Created Successfully");
       reset();
@@ -111,10 +110,22 @@ const SetUpEvent = () => {
               type="text"
               placeholder="Event Link"
               className="input input-bordered w-full  bg-neutral text-info-content"
-              {...register("link", { required: "Event link is required" })}
+              {...register("link", {
+                required: "Event link is required",
+                pattern: {
+                  value:
+                    /^(?:https?:\/\/)?(?:(?:zoom\.us\/(?:j\/)?)|(?:us[0-9]{2}web\.zoom\.us\/join)\/|meet\.google\.com\/lookup\/)[a-zA-Z0-9\-_]+$/,
+                  message: "Enter a valid zoom or meet meeting link",
+                },
+              })}
             />
-            {errors.link && errors.link.type === "required" && (
-              <span className="text-error text-xs">{errors.link.message}</span>
+            {errors.link && (
+              <span className="text-error text-xs">
+                {errors.link.type === "required" ||
+                errors.link.type === "pattern"
+                  ? errors.link.message
+                  : null}
+              </span>
             )}
           </label>
         </div>

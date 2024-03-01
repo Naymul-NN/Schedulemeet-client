@@ -28,6 +28,19 @@ const BannedUsersRow = ({ user, index }) => {
     }
   };
 
+  const handlePermanentBan = async () => {
+    const banInfo = {
+      userId,
+      banId: _id,
+    };
+
+    const res = await axiosSecure.put("/api/v1/ban/permanent", banInfo);
+
+    if (res.data.success) {
+      toast.success(res.data.message);
+    }
+  };
+
   return (
     <tr key={index}>
       <th align="center">{index + 1}</th>
@@ -40,8 +53,13 @@ const BannedUsersRow = ({ user, index }) => {
         align="center">
         <button
           onClick={handleRemoveBan}
-          className="btn btn-outline btn-success ">
+          className="btn  btn-success ">
           Remove Ban
+        </button>
+        <button
+          onClick={handlePermanentBan}
+          className="btn  btn-error mx-2">
+          Ban Permanent
         </button>
       </td>
     </tr>
