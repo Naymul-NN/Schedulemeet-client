@@ -17,10 +17,6 @@ const Future = () => {
             commonly used in various contexts, such as employment of
             development, journalism, research, and admissions.
           </p>
-
-          <button className="btn btn-warning px-12 text-xl">
-            Good Interview
-          </button>
         </div>
 
         <div className="rightCOntainer  hidden md:block md:w-[45%] lg:w-[50%]  ">

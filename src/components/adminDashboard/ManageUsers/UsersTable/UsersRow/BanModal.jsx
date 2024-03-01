@@ -23,7 +23,7 @@ const BanModal = ({ user }) => {
         userEmail: user.email,
         userId: user._id,
         reason: data.reason,
-        bannedFrom: new Date().toLocaleDateString("en-UK"),
+        bannedFrom: new Date(),
       };
 
       const res = await axiosSecure.post(`/api/v1/ban/banUser`, banInfo);
