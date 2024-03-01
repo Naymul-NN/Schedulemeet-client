@@ -16,7 +16,7 @@ const Footer = () => {
               width={50}
               height={40}
             />
-    <p> ScheduleMeet.<br/>Providing reliable tech since 2022</p>
+    <p> <span className='text-2xl'>  ScheduleMeet.</span><br/>Providing reliable tech since 2022</p>
   </aside> 
   <nav>
     <h6 className="footer-title">Service</h6> 
@@ -29,7 +29,7 @@ const Footer = () => {
     <h6 className="footer-title">Company</h6> 
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Press kit</a>
+    
   </nav> 
   <nav>
     <h6 className="footer-title">Social</h6> 
