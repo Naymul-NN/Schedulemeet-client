@@ -10,12 +10,15 @@ import Image from "next/image";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaSpinner } from "react-icons/fa";
+import useAxiospublic from "../hooks/useAxious";
 
 const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { userLogin } = useAuth();
+  const axiosPublic = useAxiospublic();
+
+  const { userLogin, logOut } = useAuth();
 
   const home = useRouter();
 
@@ -31,6 +34,15 @@ const Signin = () => {
       const { email, password } = data;
 
       await userLogin(email, password);
+
+      const res = await axiosPublic.post("/api/v1/users/saveUser", { email });
+
+      if (res.data.banned) {
+        await logOut();
+        setLoading(false);
+        return toast.error("You are banned");
+      }
+
       home.push("/");
       toast.success("Login successfully");
       setLoading(false);
