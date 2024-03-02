@@ -34,12 +34,12 @@ const Blogs = () => {
     <div>
 
 {
-  blogsLoading ? <BlogLoading></BlogLoading> : <div className="blogContainer bg-gray-50 text-gray-950  min-h-screen">
+  blogsLoading ? <BlogLoading></BlogLoading> : <div className="blogContainer text-black min-h-screen">
 
   <div className=" bg-[#e3e3e3] w-full h-full">
    <div className="mx-[100px] p-2 flex justify-between">
   <h2>{pathname}</h2>
-  <Link href="/writeblog" className="flex justify-center items-center gap-1"> <FaRegPenToSquare />
+  <Link href="/writeblog" className="flex justify-center text-black items-center gap-1"> <FaRegPenToSquare />
  write</Link>
 </div> 
   </div>
