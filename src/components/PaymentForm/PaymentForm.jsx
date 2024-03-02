@@ -30,26 +30,26 @@ const PaymentForm = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-sky-300 w-3/5 mx-auto placeholder:bg-white min-h-5xl my-10 px-5 py-3">
+      <div className="bg-base-100 w-3/5 mx-auto  text-info min-h-5xl my-10 px-5 py-3 rounded-xl shadow-xl">
         <form onSubmit={handleSubmit(handlePayment)}>
           <CardElement
             options={{
               style: {
                 base: {
                   fontSize: "16px",
-                  color: "#424770",
+                  color: "#87CEEB",
                   "::placeholder": {
-                    color: "#aab7c4",
+                    color: "#f1f1f1",
                   },
                 },
                 invalid: {
-                  color: "#9e2146",
+                  color: "#FF0000",
                 },
               },
             }}
           />
 
-          <button className="btn btn-primary">pay</button>
+          <button className="btn btn-primary mt-10">pay</button>
         </form>
       </div>
     </div>

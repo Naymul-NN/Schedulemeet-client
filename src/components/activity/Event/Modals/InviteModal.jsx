@@ -10,29 +10,22 @@ const InviteModal = ({ event }) => {
   const { register, handleSubmit } = useForm();
   const axiosSecure = useAxiosSecure();
 
-  const { hostName, _id, title, date } = event;
+  const { hostName, _id, title, date, time } = event;
 
   const handleInviteUser = async (data) => {
     const inviteInfo = {
-      invitedEmail: data.invitedEmail,
-      inviteeEmail: user?.email,
-      hostName: hostName,
+      hostName,
+      guestEmail: data.invitedEmail,
+      date,
+      time,
       eventId: _id,
-      eventTitle: title,
-      date: date,
+      title,
     };
 
-    console.log(inviteInfo);
-
     const res = await axiosSecure.post(
-      "/api/v1/invites/inviteUser",
+      "/api/v1/invites/event/inviteUser",
       inviteInfo
     );
-
-    if (res.status === 400) {
-      toast.error("User email doesn't exits in database");
-      return;
-    }
 
     if (res.data.success) {
       toast.success("Invited Successfully");

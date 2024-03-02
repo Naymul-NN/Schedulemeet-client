@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import useAxiospublic from "@/components/hooks/useAxious";
 
 const SocialLogin = () => {
-  const { googleLogin } = useContext(AuthContext);
+  const { googleLogin,logOut } = useContext(AuthContext);
 
   const axiosPublic = useAxiospublic();
 
@@ -27,6 +27,12 @@ const SocialLogin = () => {
       };
 
       const res = await axiosPublic.post("/api/v1/users/saveUser", userInfo);
+
+      if (res.data.banned) {
+        await logOut();
+        setLoading(false)
+        return toast.error("You are banned");
+      }
 
       if (res.data.success) {
         home.push("/");

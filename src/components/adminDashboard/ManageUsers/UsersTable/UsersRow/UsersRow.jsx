@@ -57,30 +57,31 @@ const UsersRow = ({ user, index }) => {
   };
 
   return (
-    <tr key={index}>
-      <th align="center">{index + 1}</th>
-      <td align="center">{name}</td>
-      <td align="center">{email}</td>
-      <td align="center">{role}</td>
-      <td
-        className="space-x-3 "
-        align="center">
-        <button
-          onClick={handleMakeAdmin}
-          disabled={role === "admin"}
-          className="btn btn-outline btn-success ">
-          Make Admin
-        </button>
+    <>
+      <tr key={index}>
+        <th align="center">{index + 1}</th>
+        <td align="center">{name}</td>
+        <td align="center">{email}</td>
+        <td align="center">{role}</td>
+        <td
+          className="space-x-3 "
+          align="center">
+          <button
+            onClick={handleMakeAdmin}
+            disabled={role === "admin"}
+            className="btn btn-outline btn-success ">
+            Make Admin
+          </button>
 
-        <button
-          onClick={()=>document.getElementById('ban').showModal()}
-          className="btn  btn-error">
-          Ban User
-        </button>
-      </td>
-
-      <BanModal user={user}/>
-    </tr>
+          <button
+            onClick={() => document.getElementById("ban").showModal()}
+            className="btn  btn-error">
+            Ban User
+          </button>
+        </td>
+      </tr>
+      <BanModal user={user} />
+    </>
   );
 };
 
