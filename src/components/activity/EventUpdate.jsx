@@ -4,7 +4,8 @@ import React from 'react';
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
 import axios from "axios";
-import useEvent from '../../hooks/useEvent';
+import useEvent from '../hooks/useEvent';
+// import useEvent from '../../hooks/useEvent';
 
 const EventUpdate = ({id}) => {
 
