@@ -2,6 +2,7 @@
 
 import useBannedUsers from "@/components/hooks/useBannedUsers";
 import BannedUsersRow from "./BannedUsersRow/BannedUsersRow";
+import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 
 const BannedUsersTable = () => {
   const { userLoading, users } = useBannedUsers();
@@ -13,9 +14,7 @@ const BannedUsersTable = () => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <h3 className="text-center text-3xl font-bold text-blue-700">
-          Manage Users
-        </h3>
+        <TitleDashboard title={"Manage Banned Users"} />
 
         <table className="table">
           {/* head */}
