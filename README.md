@@ -3,7 +3,7 @@
 
 # Schedule Meet
 
-Schedule Meett is scheduling management website, where user can schedule events and meetings and share their details with other users.
+Schedule Meet is scheduling management website, where user can schedule events and meetings and share their details with other users.
 
 
 
