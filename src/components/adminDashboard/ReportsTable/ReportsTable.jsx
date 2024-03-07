@@ -2,6 +2,7 @@
 
 import useReports from "@/components/hooks/useReports";
 import ReportsRow from "./ReportsRow/ReportsRow";
+import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 
 const ReportsTable = () => {
   const { reports, reportsLoading } = useReports();
@@ -13,9 +14,7 @@ const ReportsTable = () => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <h3 className="text-center text-3xl my-5 font-bold text-blue-700">
-          Manage Reports
-        </h3>
+        <TitleDashboard title={"Manage Reports"} />
 
         <table className="table">
           {/* head */}

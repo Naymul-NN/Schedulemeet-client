@@ -29,13 +29,13 @@ const MyBlog = () => {
             <h1>{data.result.blogMessage}</h1>
             {
                 data.result?.map ((item) => 
-                ( <div key={item._id} className="flex justify-center items-center h-full">
-                <div className="w-[50%] bg-white rounded-md shadow-md p-4 my-4 border-[1px] space-y-4">
+                ( <div key={item._id} className="flex justify-center bg-[#0d0c22] items-center h-full">
+                <div className="w-[50%] bg-gradient-to-r from-[#584c97] to-[#5555d8]  rounded-md shadow-md p-4 my-4 border-[1px] space-y-4">
                     <div className="flex items-center gap-2">
                         <Image className="w-[50px]  h-[50px] rounded-full" src={item?.blogUserImage} width={100} height={100} alt="blog Image"></Image>
                         <div>
                             <h2>{item?.blogUserName}</h2>
-                            <h2 className="text-[#676767]">{item?.blogTime?.dates}-{item?.blogTime.months}-2024</h2>
+                            <h2 className="text-white">{item?.blogTime?.dates}-{item?.blogTime.months}-2024</h2>
                         </div>
 
                     </div>

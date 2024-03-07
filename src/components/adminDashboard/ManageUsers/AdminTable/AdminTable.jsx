@@ -2,6 +2,7 @@
 
 import useUsers from "@/components/hooks/useUsers";
 import AdminRow from "./AdminRow/AdminRow";
+import TitleDashboard from "@/shared/TitleDashboard/TitleDashboard";
 
 const AdminTable = () => {
   const { users, userLoading } = useUsers();
@@ -15,9 +16,7 @@ const AdminTable = () => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <h3 className="text-center text-3xl font-bold text-blue-700">
-          View  Admins
-        </h3>
+      <TitleDashboard title={"View Admins"} />
 
         <table className="table">
           {/* head */}

@@ -16,7 +16,8 @@ const EventsTable = () => {
       <TitleDashboard title={"Scheduled Events"}></TitleDashboard>
       <div className="my-12">
         {events?.length ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className=" my-10 h-[200px] p-3 rounded-xl bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-co
+      ls-3 space-y-4 space-x-3">
             {events.map((event) => (
               <EventCard
                 key={event._id}
@@ -26,7 +27,7 @@ const EventsTable = () => {
           </div>
         ) : (
           <h3 className="text-center my-10 tex-4xl text-blue-600 font-bold">
-            You don{"'"}t have any meeting{" "}
+            You don{"'"}t have any Event{" "}
           </h3>
         )}
       </div>
