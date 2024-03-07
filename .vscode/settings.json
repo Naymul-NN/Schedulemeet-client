@@ -3,16 +3,21 @@
     "Analycis",
     "Authprovider",
     "Axiospublic",
+    "Axiospublics",
     "Axious",
     "emnu",
+    "getblog",
     "mainlayout",
     "navbars",
+    "navigations",
     "Repots",
     "Rought",
     "sehedulemeet",
     "setupevents",
     "setupinterview",
     "setuser",
-    "Signin"
+    "Signin",
+    "splitbuttons",
+    "syncfusion"
   ]
 }

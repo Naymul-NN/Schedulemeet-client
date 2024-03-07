@@ -27,7 +27,7 @@
 
 const SingleData = async(_id) => {
     const result = await fetch(
-        `http://localhost:5000/api/v1/blogs/getblog/${_id}`
+        `${process.env.NEXT_DB_URL}/api/v1/blogs/getblog/${_id}`
     );
 return result.json();
 };
