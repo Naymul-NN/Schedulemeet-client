@@ -13,13 +13,13 @@ const EventCard = ({ event }) => {
 
   return (
     <Link href={`/events/details/${_id}`}>
-      <div className="card bg-neutral cursor-pointer px-4 py-5 space-y-3 flex flex-col items-center justify-center">
+      <div className="card bg-neutral  cursor-pointer px-3 py-4  space-y-3 flex flex-col items-center justify-center">
         <Image
           alt={title}
           src={image}
-          width={300}
-          height={220}
-          className="rounded-sm"
+          width={250}
+          height={400}
+          className="rounded-sm w-4/5 h-[400px] mx-auto  object-center"
         />
 
         <h2 className="text-primary font-bold text-2xl text-center ">
